@@ -404,6 +404,44 @@
         </div> 
     <div style="margin: 32px;display: flex;gap: 10px;flex-wrap: wrap;align-content: baseline;max-height: 100%;overflow-y: scroll;overflow-x: hidden;justify-content: center;/*! margin-top: 32px; */">
         
+        <!-- BeepBox -->
+
+        <div class="modDivider" id="BeepBox">
+            <div class="modDividerImage" style="background-image: url(https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
+                <div class="modDividerGradient"></div>
+            </div>
+            <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
+                <div style="text-align: center;/*! width: 100%; */ font-weight: bold;flex: 3;">BeepBox</div>
+                <button class="playButton" onclick="goToWebsite('https://beepbox.co')">▶</button>
+                <button class="descButton" onclick="goToWebsite('BeepBoxPrompt', true)" >≡</button>
+            </div>
+            <button class="updateText" style="display:none;" onclick="goToWebsite('https://beepbox.miraheze.org/wiki/BeepBox#Version_History')">
+                <div style="pointer-events: none;">New Update</div>
+            </button>
+            <div class="versionText">
+                <div style="margin-top: 2px;">V4.2</div>
+            </div>
+        </div>
+
+        <!-- JummBox -->
+
+        <div class="modDivider" id="JummBox">
+            <div class="modDividerImage" style="background-position-y: -100px !important; background-image: url(https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
+                <div class="modDividerGradient"></div>
+            </div>
+            <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
+                <div style="text-align: center;/*! width: 100%; */ font-weight: bold;flex: 3;">JummBox</div>
+                <button class="playButton" onclick="goToWebsite('https://jummb.us')">▶</button>
+                <button class="descButton" onclick="goToWebsite('JummBoxPrompt', true)" >≡</button>
+            </div>
+            <button class="updateText" style="display:none;" onclick="goToWebsite('https://jummb.us/patch_notes/')">
+                <div style="pointer-events: none;">New Update</div>
+            </button>
+            <div class="versionText">
+                <div style="margin-top: 2px;">V2.6</div>
+            </div>
+        </div>
+
         <!-- UltraBox -->
 
         <div class="modDivider" id="UltraBox">
@@ -568,6 +606,56 @@
             <button class="cancelButton" onclick="closePrompt('SlarmoosBoxPrompt')"></button>
         </div>
 
+        <!-- BeepBox Prompt -->
+
+        <div id="BeepBoxPrompt" style="flex-direction: column;  display: none;">
+            <div class="promptTitle">
+                <h2 class="BeepBoxTitle" style="margin-bottom: 0.5em;">BeepBox:</h2>
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                BeepBox is a music program made by <a href="https://johnnesky.com/" target="_blank">John Nesky</a> 
+                and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. It's current version is V4.2.
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                You can find BeepBox's <a href="https://beepbox.miraheze.org/wiki/BeepBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
+            </div>
+            <div class="promptTitle">
+                <h2 class="BeepBoxTitle" style="margin-bottom: 0.5em;">Alternate BeepBox Versions:</h2>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 0.5em;">
+                <div>
+                    <div style="margin-bottom: 0.5em;">
+                        <a href="https://beepbox.co/2_3/" target="_blank">BeepBox 2.3</a>
+                    </div>
+
+                    <div style="margin-bottom: 0.5em;">
+                        <a href="https://beepbox.co/3_0/" target="_blank">BeepBox 3.0</a>
+                    </div>
+
+                    <div style="margin-bottom: 0.5em;">
+                        <a href="https://beepbox.co/competition/" target="_blank">BeepBox Competition - V4.2</a>
+                    </div>
+                </div>
+            </div>
+            <button class="cancelButton" onclick="closePrompt('BeepBoxPrompt')"></button>
+        </div>
+
+        <!-- JummBox Prompt -->
+
+        <div id="JummBoxPrompt" style="flex-direction: column;  display: none;">
+            <div class="promptTitle">
+                <h2 class="JummBoxTitle" style="margin-bottom: 0.5em;">JummBox:</h2>
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                JummBox is a mod of BeepBox made by <a href="https://johnnesky.com/" target="_blank">Jummbus</a> 
+                and it was released on July 30th of 2019. It's main appeal is it's Modulation and limiter settings. It's current version is V2.6.
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                You can find JummBox's <a href="https://beepbox.miraheze.org/wiki/JummBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
+            </div>
+            <button class="cancelButton" onclick="closePrompt('JummBoxPrompt')"></button>
+        </div>
+
         <!-- End of Prompts -->
 
     </div>
@@ -594,7 +682,7 @@
                 document.getElementById(promptName).style.display = "none"; 
         }
         function searchForMod(result) {
-            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox"];
+            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox"];
 
             if (result != "") {
                 var blank = 0;
