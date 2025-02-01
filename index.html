@@ -424,7 +424,7 @@
                 <button class="playButton" onclick="goToWebsite('https://beepbox.co')">▶</button>
                 <button class="descButton" onclick="goToWebsite('BeepBoxPrompt', true)" >≡</button>
             </div>
-            <button class="updateText" style="display:none;" onclick="goToWebsite('https://beepbox.miraheze.org/wiki/BeepBox#Version_History')">
+            <button class="updateText" id="beepBoxUpdate" onclick="goToWebsite('https://beepbox.miraheze.org/wiki/BeepBox#Version_History')">
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
@@ -443,7 +443,7 @@
                 <button class="playButton" onclick="goToWebsite('https://jummb.us')">▶</button>
                 <button class="descButton" onclick="goToWebsite('JummBoxPrompt', true)" >≡</button>
             </div>
-            <button class="updateText" style="display:none;" onclick="goToWebsite('https://jummb.us/patch_notes/')">
+            <button class="updateText" id="jummBoxUpdate" onclick="goToWebsite('https://jummb.us/patch_notes/')">
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
@@ -462,7 +462,7 @@
                 <button class="playButton" onclick="goToWebsite('https://ultraabox.github.io')">▶</button>
                 <button class="descButton" onclick="goToWebsite('UltraBoxPrompt', true)" >≡</button>
             </div>
-            <button class="updateText" style="display:none;" onclick="goToWebsite('https://ultraabox.github.io/patch_notes.html')">
+            <button class="updateText" id="ultraBoxUpdate" onclick="goToWebsite('https://ultraabox.github.io/patch_notes.html')">
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
@@ -481,7 +481,7 @@
                 <button class="playButton" onclick="goToWebsite('https://slarmoo.github.io/slarmoosbox/website/')">▶</button>
                 <button class="descButton" onclick="goToWebsite('SlarmoosBoxPrompt', true)">≡</button>
             </div>
-            <button class="updateText" style="display:none;" onclick="goToWebsite('https://slarmoo.github.io/slarmoosbox/website/patch_notes.html')">
+            <button class="updateText" id="slarmoosBoxUpdate" onclick="goToWebsite('https://slarmoo.github.io/slarmoosbox/website/patch_notes.html')">
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
@@ -500,7 +500,7 @@
                 <button class="playButton" onclick="goToWebsite('https://choptop84.github.io/abyssbox-app/')">▶</button>
                 <button class="descButton" onclick="goToWebsite('AbyssBoxPrompt', true)">≡</button>
             </div>
-            <button class="updateText" style="display:none;" onclick="goToWebsite('https://choptop84.github.io/abyssbox-app/patch-notes')">
+            <button class="updateText" id="abyssBoxUpdate" onclick="goToWebsite('https://choptop84.github.io/abyssbox-app/patch-notes')">
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
@@ -771,6 +771,35 @@
 </div>
 
     <script> 
+
+            // - Update Times - //
+            var time = new Date(); 
+        var day = time.getDate();
+        var month = time.getMonth() +1;
+        var year = time.getYear() + 1900;
+
+        // PN stands for Patch Notes
+
+        // ((month < [NextMonth] ? day <= 31 : day <= [setDay]) && month <= [NextMonth] && year == 2025); Template For when the date crosses months
+        // (day <= [setDay] && month <= [setMonth] && year == 2025); Template for Same Month updates
+        
+        // Make sure to set the date to 3 days after the update happens 
+
+        var abyssboxPN = false;
+        document.getElementById("abyssBoxUpdate").style.display = abyssboxPN ? "unset" : "none";
+
+        var slarmoosBoxPN = ((month < 2 ? day <= 31 : day <= 1) && month <= 2 && year == 2025);
+        document.getElementById("slarmoosBoxUpdate").style.display = slarmoosBoxPN ? "unset" : "none";
+
+        var ultraboxPN = false;
+        document.getElementById("ultraBoxUpdate").style.display = ultraboxPN ? "unset" : "none";
+
+        var beepBoxPN = false;
+        document.getElementById("beepBoxUpdate").style.display = beepBoxPN ? "unset" : "none";
+
+        var jummBoxPN = false;
+        document.getElementById("jummBoxUpdate").style.display = jummBoxPN ? "unset" : "none";
+
         const promptBg = document.getElementById("promptContainerBG");
 
         function goToWebsite(websiteLink, hasUniqueVers = false) {
