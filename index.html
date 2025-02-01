@@ -524,6 +524,21 @@
             </div>
         </div>
 
+        <div class="modDivider" id="Sandbox">
+            <div class="modDividerImage AA"
+                style="background-image: url(https://static.wikitide.net/beepboxwiki/d/dd/Sandbox_logo.png) !important;">
+                <div class="modDividerGradient"></div>
+            </div>
+            <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
+                <div style="text-align: center;/*! width: 100%; */ font-weight: bold; flex: 3;">ModBox</div>
+                <button class="playButton" onclick="goToWebsite('https://fillygroove.github.io/sandbox-3.1/')">▶</button>
+                <button class="descButton" onclick="goToWebsite('SandboxPrompt', true)">≡</button>
+            </div>
+            <div class="versionText">
+                <div style="margin-top: 2px;">V3.1.2</div>
+            </div>
+        </div>
+
 
         <!-- Coming Soon! -->
 
@@ -690,13 +705,13 @@
             </div>
             <div style="margin-bottom: 0.5em;">
                 ModBox is a mod of BeepBox made by SuperPotato, ashedragon, Theepicosity, and dare DARE. 
-                and it was released on May 25th of 2019. It's known for being the first BeepBox Mod ever. Its current version is V3.2.2.
+                and it was released on May 25th of 2017. It's known for being the first BeepBox Mod ever. Its current version is V3.2.2.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find ModBox's <a href="https://beepbox.miraheze.org/wiki/ModBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
             </div>
             <div class="promptTitle">
-                <h2 class="ModBoxTitle" style="margin-bottom: 0.5em;">Alternate BeepBox Versions:</h2>
+                <h2 class="ModBoxTitle" style="margin-bottom: 0.5em;">Alternate ModBox Versions:</h2>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 0.5em;">
                 <div>
@@ -714,6 +729,40 @@
                 </div>
             </div>
             <button class="cancelButton" onclick="closePrompt('ModBoxPrompt')"></button>
+        </div>
+
+        <!-- Sandbox Prompt -->
+        
+        <div id="SandboxPrompt" style="flex-direction: column;  display: none;">
+            <div class="promptTitle">
+                <h2 class="SandboxTitle" style="margin-bottom: 0.5em;">ModBox:</h2>
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                Sandbox is a mod of BeepBox by Parad0x, Theepicosity, and FillyGroove. It was released on June 15, 2017. It 
+                is most known for its duty cycle instrument type, among several other smaller additions. Its current version is 3.1.2
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                You can find Sandbox's <a href="https://beepbox.miraheze.org/wiki/Sandbox" target="_blank">Wiki Page</a> here.
+                Which contains extensive information about the mod.
+            </div>
+            <!-- <div class="promptTitle">
+                <h2 class="SandboxTitle" style="margin-bottom: 0.5em;">Alternate Sandbox Versions:</h2>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 0.5em;">
+                <div> -->
+        
+                    <!-- List out archived versions? -->
+
+                    <!-- <div style="margin-bottom: 0.5em;">
+                        <a href="https://moddedbeepbox.github.io/3.3/" target="_blank">ModBox 3.3</a>
+                    </div>
+        
+                    <div style="margin-bottom: 0.5em;">
+                        <a href="https://moddedbeepbox.github.io/beta/" target="_blank">ModBox BETA</a>
+                    </div> -->
+                </div>
+            </div>
+            <button class="cancelButton" onclick="closePrompt('SandboxPrompt')"></button>
         </div>
 
         <!-- End of Prompts -->
@@ -742,16 +791,17 @@
                 document.getElementById(promptName).style.display = "none"; 
         }
         function searchForMod(result) {
-            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox"];
+            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox"];
 
             const modTags = {
-                "all":["#active", "#discontinued", "#samples", "#2024", "#2023", "#2012", "#2019"], //contains any possible tag
+                "all":["#active", "#discontinued", "#samples", "#2024", "#2023", "#2012", "#2019", "#2017"], //contains any possible tag
                 "UltraBox":["#active", "#samples", "#2023"], 
                 "Slarmoo's Box":["#active", "#samples", "#2024"], 
                 "AbyssBox":["#active", "#samples", "#2024"], 
                 "BeepBox":["#active", "#2012"], 
                 "JummBox":["#active", "#2019"],
-                "ModBox":["#discontinued", "#2019"]
+                "ModBox":["#discontinued", "#2017"],
+                "Sandbox":["#discontinued", "#2017"]
             }
 
             if(result[0] == "#") { //do tag searching instead
