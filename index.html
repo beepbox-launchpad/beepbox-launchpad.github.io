@@ -618,7 +618,7 @@
                 and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.
             </div>
             <div style="margin-bottom: 0.5em;">
-                You can find BeepBox's <a href="https://beepbox.miraheze.org/wiki/BeepBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
+                You can find BeepBox's <a href="https://beepbox.miraheze.org/wiki/BeepBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the website.
             </div>
             <div class="promptTitle">
                 <h2 class="BeepBoxTitle" style="margin-bottom: 0.5em;">Alternate BeepBox Versions:</h2>
@@ -648,13 +648,29 @@
                 <h2 class="JummBoxTitle" style="margin-bottom: 0.5em;">JummBox:</h2>
             </div>
             <div style="margin-bottom: 0.5em;">
-                JummBox is a mod of BeepBox made by <a href="https://johnnesky.com/" target="_blank">Jummbus</a> 
+                JummBox is a mod of BeepBox made by <a href="https://github.com/jummbus" target="_blank">Jummbus</a> 
                 and it was released on July 30th of 2019. It's main appeal is it's Modulation and limiter settings. Its current version is V2.6.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find JummBox's <a href="https://beepbox.miraheze.org/wiki/JummBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
             </div>
             <button class="cancelButton" onclick="closePrompt('JummBoxPrompt')"></button>
+        </div>
+
+        <!-- JummBox Prompt -->
+
+        <div id="ModBoxPrompt" style="flex-direction: column;  display: none;">
+            <div class="promptTitle">
+                <h2 class="ModBoxTitle" style="margin-bottom: 0.5em;">ModBox:</h2>
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                ModBox is a mod of BeepBox made by SuperPotato, ashedragon, Theepicosity, and dare DARE. 
+                and it was released on May 25th of 2019. It's known for being the first BeepBox Mod ever. Its current version is V3.2.2.
+            </div>
+            <div style="margin-bottom: 0.5em;">
+                You can find ModBox's <a href="https://beepbox.miraheze.org/wiki/ModBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
+            </div>
+            <button class="cancelButton" onclick="closePrompt('ModBoxPrompt')"></button>
         </div>
 
         <!-- End of Prompts -->
@@ -683,7 +699,7 @@
                 document.getElementById(promptName).style.display = "none"; 
         }
         function searchForMod(result) {
-            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox"];
+            var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox"];
 
             const modTags = {
                 "all":["#active", "#discontinued", "#samples", "#2024", "#2023", "#2012", "#2019"], //contains any possible tag
@@ -691,7 +707,8 @@
                 "Slarmoo's Box":["#active", "#samples", "#2024"], 
                 "AbyssBox":["#active", "#samples", "#2024"], 
                 "BeepBox":["#active", "#2012"], 
-                "JummBox":["#active", "#2019"]
+                "JummBox":["#active", "#2019"],
+                "ModBox":["#discontinued", "#2019"]
             }
 
             if(result[0] == "#") { //do tag searching instead
