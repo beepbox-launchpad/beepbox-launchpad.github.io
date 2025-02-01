@@ -403,7 +403,10 @@
 <body>
 
     <div style="width: 100%; height: 64px; background: #23222b; border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row;">
-        <input class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)">
+        <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
+            <datalist id="tags">
+                <option value="BeepBox"></option>
+            </datalist>
         <div style="align-self: center; margin-right: 16px; color: var(--mod-title); text-align: center;">BeepBox Launchpad</div>
     </div>
     <div style="display: grid; grid-template-columns: 64px 1fr;">
@@ -754,9 +757,18 @@
 </div>
 
     <script> 
+        const setList = [
+            "JummBox", "UltraBox", "Slarmoo's Box", "AbyssBox", "ModBox", "SandBox",
+            "#active", "#discontinued", "#samples", "#2024", "#2023", "#2012", "#2019", "#2017"];
 
-            // - Update Times - //
-            var time = new Date(); 
+            for (i = 0; i < setList.length; i++) {
+                var tag = new Option();
+                tag.value = setList[i]
+                document.getElementById("tags").appendChild(tag);
+            }
+
+        // - Update Times - //
+        var time = new Date(); 
         var day = time.getDate();
         var month = time.getMonth() +1;
         var year = time.getYear() + 1900;
