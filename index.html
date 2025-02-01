@@ -783,7 +783,7 @@
         var abyssboxPN = false;
         document.getElementById("abyssBoxUpdate").style.display = abyssboxPN ? "unset" : "none";
 
-        var slarmoosBoxPN = ((month < 2 ? day <= 31 : day <= 1) && month <= 2 && year == 2025);
+        var slarmoosBoxPN = (day <= 31 && month <= 1 && year == 2025);
         document.getElementById("slarmoosBoxUpdate").style.display = slarmoosBoxPN ? "unset" : "none";
 
         var ultraboxPN = false;
