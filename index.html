@@ -477,7 +477,7 @@
                 <div style="pointer-events: none;">New Update</div>
             </button>
             <div class="versionText">
-                <div style="margin-top: 2px;">V1.3.7</div>
+                <div style="margin-top: 2px;">V1.3.8</div>
             </div>
         </div>
 
@@ -520,7 +520,7 @@
                 <h2 class="AbyssBoxTitle" style="margin-bottom: 0.5em;">AbyssBox:</h2>
             </div>
             <div style="margin-bottom: 0.5em;">
-                AbyssBox is a mod of UltraBox that was created by <a href="https://www.youtube.com/@choptop84" target="_blank">choptop84</a> and was released on January 1st of 2024. It's main appeal is its unique themes, effects, and quality of life features. It's most recent version is V1.5.1.
+                AbyssBox is a mod of UltraBox that was created by <a href="https://www.youtube.com/@choptop84" target="_blank">choptop84</a> and was released on January 1st of 2024. Its main appeal is its unique themes, effects, and quality of life features. Its most recent version is V1.5.1.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find AbyssBox's <a href="https://beepbox.miraheze.org/wiki/AbyssBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
@@ -550,7 +550,7 @@
             </div>
             <div style="margin-bottom: 0.5em;">
                 UltraBox is a mod of GoldBox that was created by <a href="https://www.youtube.com/@neputendo" target="_blank">Neptendo</a>, <a href="https://github.com/MainCharacteroftheProblem" target="_blank">Main</a>, <a href="https://github.com/leovoel" target="_blank">LeoV</a> and many others, 
-                it was released on June 4th of 2023. It's main appeal is its Custom Samples, which allow you to import any sound into the mod and use them as instruments. It's current version is V2.2.14.
+                it was released on June 4th of 2023. It's main appeal is its Custom Samples, which allow you to import any sound into the mod and use them as instruments. Its current version is V2.2.14.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find UltraBox's <a href="https://beepbox.miraheze.org/wiki/UltraBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
@@ -584,7 +584,7 @@
             </div>
             <div style="margin-bottom: 0.5em;">
                 Slarmoo's Box is a mod of UltraBox that was created by <a href="https://www.youtube.com/@Slarmoo" target="_blank">Slarmoo</a> and was released on May 13th of 2024. 
-                It's main appeal is it's highly customizable envelopes, which make automation a lot more intuitive. It's current version is V1.3.7.
+                It's main appeal is it's highly customizable envelopes, which make automation a lot more intuitive. Its current version is V1.3.8.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find Slarmoo's Box <a href="https://beepbox.miraheze.org/wiki/Slarmoo%27s_Box" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
@@ -615,7 +615,7 @@
             </div>
             <div style="margin-bottom: 0.5em;">
                 BeepBox is a music program made by <a href="https://johnnesky.com/" target="_blank">John Nesky</a> 
-                and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. It's current version is V4.2.
+                and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find BeepBox's <a href="https://beepbox.miraheze.org/wiki/BeepBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
@@ -649,7 +649,7 @@
             </div>
             <div style="margin-bottom: 0.5em;">
                 JummBox is a mod of BeepBox made by <a href="https://johnnesky.com/" target="_blank">Jummbus</a> 
-                and it was released on July 30th of 2019. It's main appeal is it's Modulation and limiter settings. It's current version is V2.6.
+                and it was released on July 30th of 2019. It's main appeal is it's Modulation and limiter settings. Its current version is V2.6.
             </div>
             <div style="margin-bottom: 0.5em;">
                 You can find JummBox's <a href="https://beepbox.miraheze.org/wiki/JummBox" target="_blank">Wiki Page</a> here. Which contains extensive information about the mod.
@@ -685,7 +685,45 @@
         function searchForMod(result) {
             var modList = ["UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox"];
 
-            if (result != "") {
+            const modTags = {
+                "all":["#active", "#discontinued", "#samples", "#2024", "#2023", "#2012", "#2019"], //contains any possible tag
+                "UltraBox":["#active", "#samples", "#2023"], 
+                "Slarmoo's Box":["#active", "#samples", "#2024"], 
+                "AbyssBox":["#active", "#samples", "#2024"], 
+                "BeepBox":["#active", "#2012"], 
+                "JummBox":["#active", "#2019"]
+            }
+
+            if(result[0] == "#") { //do tag searching instead
+                var blank = 0;
+
+                const foundMods = [];
+                for (i = 0; i < modTags.all.length; i++) {
+                    var thing = modTags.all[i];
+                    var lowercaseThing = thing.toLowerCase();
+                    if (lowercaseThing.indexOf(result.toLowerCase()) > -1) {
+                        for(let j = 0; j < modList.length; j++) {
+                            let found = false;
+                            // console.log(modList[j], modTags[modList[j]], lowercaseThing);
+                            for (let k = 0; k < modTags[modList[j]].length; k++) {
+                                if (modTags[modList[j]][k].toLowerCase()==(lowercaseThing)) found = true;
+                            }
+                            if(found) foundMods.push(modList[j]);
+                        }
+                    }
+                }
+                for(let i = 0; i < modList.length; i++) {
+                    if (foundMods.indexOf(modList[i]) > -1) {
+                        document.getElementById(modList[i]).style.display = "flex";
+                        blank = 0;
+                        document.getElementById("noResults").style.display = "none";
+                    } else {
+                        document.getElementById(modList[i]).style.display = "none";
+                        blank++;
+                    }
+                }
+
+            } else if (result != "") {
                 var blank = 0;
 
                 for (i = 0; i < modList.length; i++) {
