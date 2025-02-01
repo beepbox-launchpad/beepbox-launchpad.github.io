@@ -360,6 +360,14 @@
             background-size: cover !important;
         }
 
+        .modDividerImage.AA { /*These are Anti-Aliased backgrounds*/
+            image-rendering: -moz-crisp-edges !important;
+            image-rendering: -webkit-optimize-contrast !important;
+            image-rendering: -o-crisp-edges !important;
+            image-rendering: pixelated !important;
+            image-rendering: optimizeSpeed !important;
+        }
+
         .modDividerGradient {
             width: 100%;
             height: 100%; 
@@ -427,7 +435,7 @@
         <!-- JummBox -->
 
         <div class="modDivider" id="JummBox">
-            <div class="modDividerImage" style="background-position-y: -100px !important; background-image: url(https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
+            <div class="modDividerImage AA" style="background-position-y: -100px !important; background-image: url(https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
                 <div class="modDividerGradient"></div>
             </div>
             <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
@@ -465,7 +473,7 @@
         <!-- Slarmoo's Box -->
 
         <div class="modDivider" id="Slarmoo's Box">
-            <div class="modDividerImage" style="background-image: url(https://github.com/slarmoo/slarmoosboxtesting/blob/main/website/icon_shadow_192.png?raw=true) !important;">
+            <div class="modDividerImage AA" style="background-image: url(https://github.com/slarmoo/slarmoosboxtesting/blob/main/website/icon_shadow_192.png?raw=true) !important;">
                 <div class="modDividerGradient" ></div>
             </div>
             <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
@@ -484,7 +492,7 @@
         <!-- AbyssBox -->
 
         <div class="modDivider" id="AbyssBox">
-            <div class="modDividerImage" style="background-image: url(https://github.com/choptop84/abyssbox-source/blob/2.3-porting/website/icon_maskable_192.png?raw=true) !important;">
+            <div class="modDividerImage AA" style="background-image: url(https://github.com/choptop84/abyssbox-source/blob/2.3-porting/website/icon_maskable_192.png?raw=true) !important;">
                 <div class="modDividerGradient"></div>
             </div>
             <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
@@ -499,6 +507,23 @@
                 <div style="margin-top: 2px;">V1.5.1</div>
             </div>
         </div>
+
+        <!-- ModBox -->
+
+        <div class="modDivider" id="ModBox">
+            <div class="modDividerImage AA" style="background-image: url(https://static.wikitide.net/beepboxwiki/2/25/Modbox_logo.png?20240121012328) !important;">
+                <div class="modDividerGradient"></div>
+            </div>
+            <div style="display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;">
+                <div style="text-align: center;/*! width: 100%; */ font-weight: bold; flex: 3;">ModBox</div>
+                <button class="playButton" onclick="goToWebsite('https://choptop84.github.io/abyssbox-app/')">▶</button>
+                <button class="descButton" onclick="goToWebsite('ModBoxPrompt', true)">≡</button>
+            </div>
+            <div class="versionText">
+                <div style="margin-top: 2px;">V3.2.2</div>
+            </div>
+        </div>
+
 
         <!-- Coming Soon! -->
 
@@ -657,7 +682,7 @@
             <button class="cancelButton" onclick="closePrompt('JummBoxPrompt')"></button>
         </div>
 
-        <!-- JummBox Prompt -->
+        <!-- ModBox Prompt -->
 
         <div id="ModBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
