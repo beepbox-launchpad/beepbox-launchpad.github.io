@@ -419,7 +419,7 @@
         var slarmoosBoxPN = (day <= 31 && month <= 1 && year == 2025);
         document.getElementById("slarmoosBoxUpdate").style.display = slarmoosBoxPN ? "unset" : "none";
 
-        var ultraboxPN = false;
+        var ultraboxPN = (day <= 20 && month <= 2 && year == 2025);
         document.getElementById("ultraBoxUpdate").style.display = ultraboxPN ? "unset" : "none";
 
         var beepBoxPN = false;
