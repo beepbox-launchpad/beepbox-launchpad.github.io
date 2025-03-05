@@ -328,7 +328,7 @@ button.updateText:hover {
 }
 
 .modDividerImage.AA {
-    /*These are Anti-Aliased backgrounds*/
+    /*These are Non Anti-Aliased backgrounds*/
     image-rendering: -moz-crisp-edges !important;
     image-rendering: -webkit-optimize-contrast !important;
     image-rendering: -o-crisp-edges !important;
