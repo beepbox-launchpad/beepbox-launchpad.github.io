@@ -1,7 +1,7 @@
 <html>
     <head>
 
-        <link rel='shortcut icon' type='image/x-icon' href='https://static.wikitide.net/beepboxwiki/c/cb/GearBox.png' />
+        <link rel='shortcut icon' type='image/x-icon' href='./beepboxModding.png' />
     <!-- CDN for jQuery and select2 -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -25,8 +25,8 @@
     <meta name="msapplication-TileColor" content="#9a6bff" />
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://static.wikitide.net/beepboxwiki/c/cb/GearBox.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://static.wikitide.net/beepboxwiki/c/cb/GearBox.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./beepboxModding.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./beepboxModding.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
     <link rel="stylesheet" href="./main.css" />
@@ -856,7 +856,7 @@
             "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox",
             "ZefBox", "WideBox", "BlackBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", "Midbox", "Dogebox2",
             "Nepbox", "Unbox", "shitbox4", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "LemmBox", //mods
-            "#active", "#discontinued", "#samples", "#modulation", //attributes
+            "#active", "#discontinued", "#samples", "#modulation", "#songPlayer", //attributes
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025", //dates
             "#before:", "#after:"]; //special cases
 
@@ -922,14 +922,14 @@
 
             const modTags = {
                 "all": ["#active", "#discontinued",
-                    "#samples", "#modulation",
+                    "#samples", "#modulation", "#songPlayer",
                     "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025"], //contains any possible tag
 
-                "UltraBox":["#active", "#samples", "#modulation", "#2023"], 
-                "Slarmoo's Box":["#active", "#samples", "#modulation", "#2024"], 
-                "AbyssBox":["#active", "#samples", "#modulation", "#2024"], 
-                "BeepBox":["#active", "#2012"], 
-                "JummBox":["#active", "#modulation", "#2019"],
+                "UltraBox":["#active", "#samples", "#modulation", "#songPlayer", "#2023"], 
+                "Slarmoo's Box":["#active", "#samples", "#modulation", "#songPlayer", "#2024"], 
+                "AbyssBox":["#active", "#samples", "#modulation", "#songPlayer", "#2024"], 
+                "BeepBox":["#active", "#songPlayer", "#2012"], 
+                "JummBox":["#active", "#modulation", "#songPlayer", "#2019"],
                 "ModBox":["#discontinued", "#2017"],
                 "Sandbox":["#discontinued", "#2017"],
                 "GoldBox":["#discontinued", "#modulation", "#2021"], 
