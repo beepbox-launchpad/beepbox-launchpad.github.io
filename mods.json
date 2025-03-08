@@ -1,0 +1,96 @@
+[
+    {
+        "name": "BeepBox",
+        "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "website": "https://beepbox.co",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
+        "version": "V4.2",
+        "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox",
+        "alternateVersions": [
+            {
+                "link": "https://beepbox.co/2_3/",
+                "name": "BeepBox 2.3"
+            },
+            {
+                "link": "https://beepbox.co/3_0/",
+                "name": "BeepBox 3.0"
+            },
+            {
+                "link": "https://beepbox.co/competition/",
+                "name": "BeepBox Competition - V4.2"
+            }
+        ]
+    },
+    {
+        "name": "JummBox",
+        "image": "https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "website": "https://jummb.us",
+        "patchNotes": "https://jummb.us/patch_notes/",
+        "version": "V2.6",
+        "description": "JummBox is a mod of BeepBox made by <a href=\"https://github.com/jummbus\" target=\"_blank\">Jummbus</a> and it was released on July 30th of 2019. Its main appeal is its Modulation and limiter settings. Its current version is V2.6.",
+        "wiki": "https://beepbox.miraheze.org/wiki/JummBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "UltraBox",
+        "image": "https://github.com/ultraabox/ultrabox_typescript/blob/main/website/icon_maskable_192.png?raw=true",
+        "website": "https://ultraabox.github.io",
+        "patchNotes": "https://ultraabox.github.io/patch_notes.html",
+        "version": "V2.2.15",
+        "description": "UltraBox is a mod of GoldBox that was created by <a href=\"https://www.youtube.com/@neputendo\" target=\"_blank\">Neptendo</a>, <a href=\"https://github.com/MainCharacteroftheProblem\" target=\"_blank\">Main</a>, <a href=\"https://www.youtube.com/@_leovoel\" target=\"_blank\">LeoV</a> and many others, it was released on June 4th of 2023. It's main appeal is its Custom Samples, which allow you to import any sound into the mod and use them as instruments. Its current version is V2.2.15.",
+        "wiki": "https://beepbox.miraheze.org/wiki/UltraBox",
+        "alternateVersions": [
+            {
+                "link": "https://ultraabox.github.io/testing/",
+                "name": "UltraBox Testing - V2.3"
+            },
+            {
+                "link": "https://ultraabox.github.io/archives/ultrabox_microtonal/",
+                "name": "UltraBox Microtonal - V2.1.0"
+            },
+            {
+                "link": "https://github.com/ultraabox/ultrabox_typescript/releases",
+                "name": "UltraBox Offline - V2.2.15"
+            }
+        ]
+    },
+    {
+        "name": "AbyssBox",
+        "image": "https://github.com/choptop84/abyssbox-source/blob/2.3-porting/website/icon_maskable_192.png?raw=true",
+        "website": "https://choptop84.github.io/abyssbox-app/",
+        "patchNotes": "https://choptop84.github.io/abyssbox-app/patch-notes",
+        "version": "V1.5.1",
+        "description": "AbyssBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@choptop84\" target=\"_blank\">choptop84</a> and was released on January 1st of 2024. Its main appeal is its unique themes, effects, and quality of life features. Its most recent version is V1.5.1.",
+        "wiki": "https://beepbox.miraheze.org/wiki/AbyssBox",
+        "alternateVersions": [
+            {
+                "link": "https://choptop84.github.io/abyssbox-testing/",
+                "name": "AbyssBox Testing - V1.5.1"
+            },
+            {
+                "link": "https://choptop84.github.io/abyssbox-experimental/",
+                "name": "AbyssBox Experimental - V1.6"
+            }
+        ]
+    },
+    {
+        "name": "Slarmoo's Box",
+        "image": "https://github.com/slarmoo/slarmoosbox/blob/main/website/icon_shadow_192.png?raw=true",
+        "website": "https://slarmoo.github.io/slarmoosbox/website/",
+        "patchNotes": "https://slarmoo.github.io/slarmoosbox/website/patch_notes.html",
+        "version": "V1.3.9",
+        "description": "Slarmoo's Box is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@Slarmoo\" target=\"_blank\">Slarmoo</a> and was released on May 13th of 2024. Its main appeal is its highly customizable envelopes, which make automation a lot more intuitive. Its current version is V1.3.9.",
+        "wiki": "https://beepbox.miraheze.org/wiki/Slarmoo%27s_Box",
+        "alternateVersions": [
+            {
+                "link": "https://slarmoo.github.io/slarmoosboxtesting/website/",
+                "name": "Slarmoo's Box Testing - V1.4"
+            },
+            {
+                "link": "https://github.com/slarmoo/slarmoosbox/releases",
+                "name": "Slarmoo's Box Offline - V1.3.9"
+            }
+        ]
+    }
+]
