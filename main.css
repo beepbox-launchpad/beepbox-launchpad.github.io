@@ -310,13 +310,21 @@ button.updateText:hover {
     width: 256px;
     background: linear-gradient(#373640, #23222b);
     height: 128px;
+    margin-top:8px;
     border: var(--ui-widget-background) 2px solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
     position: relative;
+    transition: all 0.25s ease-in-out;
 }
+
+.modDivider:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.08);
+}
+
 
 .modDividerImage {
     width: 100%;
@@ -356,6 +364,7 @@ button.updateText:hover {
 }
 
 #comingSoon {
+    margin-top:8px;
     width: 256px;
     background: linear-gradient(#373640, #23222b);
     height: 128px;
@@ -365,3 +374,4 @@ button.updateText:hover {
     align-items: last baseline;
     max-height: 128px;
 }
+
