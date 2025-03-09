@@ -92,5 +92,28 @@
                 "name": "Slarmoo's Box Offline - V1.3.9"
             }
         ]
+    },
+    {
+        "name": "ModBox",
+        "image": "https://static.wikitide.net/beepboxwiki/2/25/Modbox_logo.png?20240121012328",
+        "website": "https://moddedbeepbox.github.io/3.0/",
+        "patchNotes": "",
+        "version": "V3.2.2",
+        "description": "ModBox is a mod of BeepBox made by SuperPotato, ashedragon, Theepicosity, and dare DARE. and it was released on May 25th of 2017. It's known for being the first BeepBox Mod ever. Its current version is V3.2.2.",
+        "wiki": "https://beepbox.miraheze.org/wiki/ModBox",
+        "alternateVersions": [
+            {
+                "link": "https://thestarworld.github.io/modboxfixed/",
+                "name": "ModBox Fixed"
+            },
+            {
+                "link": "https://moddedbeepbox.github.io/3.3/",
+                "name": "ModBox 3.3"
+            },
+            {
+                "link": "https://moddedbeepbox.github.io/beta/",
+                "name": "ModBox BETA"
+            }
+        ]
     }
 ]

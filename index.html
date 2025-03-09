@@ -50,7 +50,7 @@
         
         <!-- BeepBox -->
 
-        <div class="modDivider" id="BeepBox">
+        <!-- <div class="modDivider" id="BeepBox">
             <div class="modDividerImage" style="background-image: url(https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
                 <div class="modDividerGradient"></div>
             </div>
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <!-- JummBox -->
+        JummBox
 
         <div class="modDivider" id="JummBox">
             <div class="modDividerImage AA" style="background-position-y: -100px !important; background-image: url(https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true) !important;">
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <!-- UltraBox -->
+        UltraBox
 
         <div class="modDivider" id="UltraBox">
             <div class="modDividerImage" style="background-image: url(https://github.com/ultraabox/ultrabox_typescript/blob/main/website/icon_maskable_192.png?raw=true) !important;">
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <!-- Slarmoo's Box -->
+        Slarmoo's Box
 
         <div class="modDivider" id="Slarmoo's Box">
             <div class="modDividerImage AA" style="background-image: url(https://github.com/slarmoo/slarmoosbox/blob/main/website/icon_shadow_192.png?raw=true) !important;">
@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <!-- AbyssBox -->
+        AbyssBox
 
         <div class="modDivider" id="AbyssBox">
             <div class="modDividerImage AA" style="background-image: url(https://github.com/choptop84/abyssbox-source/blob/2.3-porting/website/icon_maskable_192.png?raw=true) !important;">
@@ -143,7 +143,7 @@
             </div>
         </div>
 
-        <!-- ModBox -->
+        ModBox
 
         <div class="modDivider" id="ModBox">
             <div class="modDividerImage AA" style="background-image: url(https://static.wikitide.net/beepboxwiki/2/25/Modbox_logo.png?20240121012328) !important;">
@@ -157,7 +157,7 @@
             <div class="versionText">
                 <div style="margin-top: 2px;">V3.2.2</div>
             </div>
-        </div>
+        </div> -->
 
         <!-- SandBox -->
 
@@ -599,7 +599,7 @@
 
         <!-- AbyssBox Prompt -->
 
-        <div id="AbyssBoxPrompt" style="flex-direction: column; display: none;">
+        <!-- <div id="AbyssBoxPrompt" style="flex-direction: column; display: none;">
             <div class="promptTitle">
                 <h2 class="AbyssBoxTitle" style="margin-bottom: 0.5em;">AbyssBox:</h2>
             </div>
@@ -626,7 +626,7 @@
             <button class="cancelButton" onclick="closePrompt('AbyssBoxPrompt')"></button>
         </div>
 
-        <!-- UltraBox Prompt -->
+        UltraBox Prompt
 
         <div id="UltraBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
@@ -660,7 +660,7 @@
             <button class="cancelButton" onclick="closePrompt('UltraBoxPrompt')"></button>
         </div>
 
-        <!-- Slarmoo's Box Prompt -->
+        Slarmoo's Box Prompt
 
         <div id="SlarmoosBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
@@ -691,7 +691,7 @@
             <button class="cancelButton" onclick="closePrompt('SlarmoosBoxPrompt')"></button>
         </div>
 
-        <!-- BeepBox Prompt -->
+        BeepBox Prompt
 
         <div id="BeepBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
@@ -725,7 +725,7 @@
             <button class="cancelButton" onclick="closePrompt('BeepBoxPrompt')"></button>
         </div>
 
-        <!-- JummBox Prompt -->
+        JummBox Prompt
 
         <div id="JummBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
@@ -741,7 +741,7 @@
             <button class="cancelButton" onclick="closePrompt('JummBoxPrompt')"></button>
         </div>
 
-        <!-- ModBox Prompt -->
+        ModBox Prompt
 
         <div id="ModBoxPrompt" style="flex-direction: column;  display: none;">
             <div class="promptTitle">
@@ -773,7 +773,7 @@
                 </div>
             </div>
             <button class="cancelButton" onclick="closePrompt('ModBoxPrompt')"></button>
-        </div>
+        </div> -->
 
         <!-- Sandbox Prompt -->
         
@@ -1255,7 +1255,7 @@
         var jummBoxPN = false;
         document.getElementById("jummBoxUpdate").style.display = jummBoxPN ? "unset" : "none";
 
-        const promptBg = document.getElementById("promptContainerBG");
+        
 
         function goToWebsite(websiteLink, hasUniqueVers = false) {
             if (hasUniqueVers == false) {
@@ -1266,13 +1266,15 @@
         }
 
         function displayPrompt(promptName) {
-                promptBg.style.display = "flex";
-                document.getElementById(promptName).style.display = "flex"; 
+            const promptBg = document.getElementById("promptContainerBG");
+            promptBg.style.display = "flex";
+            document.getElementById(promptName).style.display = "flex"; 
         }
 
         function closePrompt(promptName) {
-                promptBg.style.display = "none";
-                document.getElementById(promptName).style.display = "none"; 
+            const promptBg = document.getElementById("promptContainerBG");
+            promptBg.style.display = "none";
+            document.getElementById(promptName).style.display = "none"; 
         }
 
         function searchForMod(result) {

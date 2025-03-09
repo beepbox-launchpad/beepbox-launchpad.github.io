@@ -16,27 +16,32 @@ async function createMods() {
     console.log(Mods);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
+
+        const updateButton = modInfo.patchNotes == "" ? "" :
+            button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
+                div({ style: "pointer-events: none;" }, "New Update")
+            );
+
         const mod = div({ class: "modDivider", id: modInfo.name },
-            div({ class: "modDividerImage", style: "background-image: url(" + modInfo.image +") !important;" },
+            div({ class: "modDividerImage", style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },
-                div({style:"text-align: center;/*! width: 100%; */ font-weight: bold;flex: 3;"}, modInfo.name),
-                button({class:"playButton", onclick:"goToWebsite('" + modInfo.website + "')"}, "▶"),
-                button({class:"descButton", onclick:"goToWebsite('" + modInfo.name + "Prompt', true)"}, "≡")
+                div({ style: "text-align: center;/*! width: 100%; */ font-weight: bold;flex: 3;" }, modInfo.name),
+                button({ class: "playButton", onclick: "goToWebsite('" + modInfo.website + "')" }, "▶"),
+                button({ class: "descButton", onclick: "goToWebsite(`" + modInfo.name + "Prompt`, true)" }, "≡")
             ),
-            button({class:"updateText", id: modInfo.name + "Update", onclick:"goToWebsite('" + modInfo.patchNotes + "')"},
-                div({style:"pointer-events: none;"}, "New Update")
-            ),
-            div({class: "versionText"},
-                div({style:"margin-top: 2px;"}, modInfo.version)
+            updateButton,
+            div({ class: "versionText" },
+                div({ style: "margin-top: 2px;" }, modInfo.version)
             )
-        )
+        );
+
         modContainer.appendChild(mod);
 
         const alternateVersionTitle = modInfo.alternateVersions.length > 0 ?
             div({ class: "promptTitle" },
-                h2({ class: "BeepBoxTitle", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.name + "Versions:")
+                h2({ class: modInfo.name + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.name + "Versions:")
             )
             : "";
         let alternateVersions = "";
@@ -68,7 +73,7 @@ async function createMods() {
             ),
             alternateVersionTitle,
             alternateVersions,
-            button({class:"cancelButton", onclick:"closePrompt('" + modInfo.name + "Prompt')"})
+            button({class:"cancelButton", onclick:"closePrompt(`" + modInfo.name + "Prompt`)"})
         );
 
         promptContainer.appendChild(prompt);
