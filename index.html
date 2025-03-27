@@ -1453,7 +1453,11 @@
         }
 
         function shareURL(result) {
-            window.history.replaceState(null, "", location.pathname + "#s=" + result);
+            if (!result.includes(" ")) {
+                window.history.replaceState(null, "", location.pathname + "#s=" + result);
+            } else {
+                alert("Url's cannot contain Spaces! Remove the space in this search result to share!");
+            }
         }
 
         var urlThing = String(window.location.hash);
