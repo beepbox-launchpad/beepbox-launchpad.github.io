@@ -34,7 +34,10 @@
 <body>
 
     <div style="width: 100%; height: 64px; background: #23222b; border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row;">
-        <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
+        <div style="display: flex; flex-direction: row; gap: 5px;">
+            <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
+            <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)"></div> 
+        </div>
             <datalist id="tags">
                 <option value="BeepBox"></option>
             </datalist>
@@ -1430,6 +1433,24 @@
                 document.getElementById("noResults").style.display = "none";
 
             }
+
+            
+            if (result.length == 0) {
+                window.history.replaceState(null, "", location.pathname);
+            }
+
+        }
+
+        function shareURL(result) {
+            window.history.replaceState(null, "", location.pathname + "#s=" + result);
+        }
+
+        var urlThing = String(window.location.hash);
+        var urlThing2 = urlThing.substring(3);
+
+        if ((window.location == location.pathname + "/#s=")) {
+            document.getElementById("searchbar").value = urlThing2;
+            searchForMod(urlThing2);
         }
     </script>
 

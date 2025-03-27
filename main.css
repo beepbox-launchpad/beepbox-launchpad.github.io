@@ -49,6 +49,11 @@
     --logo-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 10 10"><defs><clipPath id="a"><path d="M0 0h36v36H0z"/></clipPath></defs><path d="M 0 5 C 0 8 2 10 5 10 C 8 10 10 8 10 5 C 10 2 8 0 5 0 C 2 0 0 2 0 5 M 3 5 C 3 4 4 3 5 3 C 6 3 7 4 7 5 C 7 6 6 7 5 7 C 4 7 3 6 3 5"/></svg>');
     /*M 0 20 C 0 32 8 40 20 40 C 32 40 40 32 40 20 C 40 8 32 0 20 0 C 8 0 0 8 0 20 M 12 20 C 12 16 16 12 20 12 C 24 12 28 16 28 20 C 28 24 24 28 20 28 C 16 28 12 24 12 20*/
 
+    --share-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30"><path d="M 23 3 A 4 4 0 0 0 19 7 A 4 4 0 0 0 19.09375 7.8359375 L 10.011719 12.376953 A 4 4 0 0 0 7 11 A 4 4 0 0 0 3 15 A 4 4 0 0 0 7 19 A 4 4 0 0 0 10.013672 17.625 L 19.089844 22.164062 A 4 4 0 0 0 19 23 A 4 4 0 0 0 23 27 A 4 4 0 0 0 27 23 A 4 4 0 0 0 23 19 A 4 4 0 0 0 19.986328 20.375 L 10.910156 15.835938 A 4 4 0 0 0 11 15 A 4 4 0 0 0 10.90625 14.166016 L 19.988281 9.625 A 4 4 0 0 0 23 11 A 4 4 0 0 0 27 7 A 4 4 0 0 0 23 3 z"></path></svg>');
+    /*M <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30">
+<path d="M 23 3 A 4 4 0 0 0 19 7 A 4 4 0 0 0 19.09375 7.8359375 L 10.011719 12.376953 A 4 4 0 0 0 7 11 A 4 4 0 0 0 3 15 A 4 4 0 0 0 7 19 A 4 4 0 0 0 10.013672 17.625 L 19.089844 22.164062 A 4 4 0 0 0 19 23 A 4 4 0 0 0 23 27 A 4 4 0 0 0 27 23 A 4 4 0 0 0 23 19 A 4 4 0 0 0 19.986328 20.375 L 10.910156 15.835938 A 4 4 0 0 0 11 15 A 4 4 0 0 0 10.90625 14.166016 L 19.988281 9.625 A 4 4 0 0 0 23 11 A 4 4 0 0 0 27 7 A 4 4 0 0 0 23 3 z"></path>
+</svg>*/
+
     --page-margin: #101014;
     --editor-background: #23222b;
     --hover-preview: white;
@@ -111,6 +116,80 @@ body {
     display: grid;
     grid-template-rows: 64px 1fr;
     height: 100%;
+}
+
+.shareButton {
+    align-self: center; 
+    height: var(--button-size);
+    width: var(--button-size);
+    background: var(--ui-widget-background);
+    border-radius: 5px; 
+    position: relative; 
+    font-size: inherit; 
+    font-family: inherit; 
+    font-weight: inherit; 
+    transition: all 0.1s ease-in-out;
+}
+
+.shareButton::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    mask-image: var(--share-symbol);
+    -webkit-mask-image: var(--share-symbol);
+    pointer-events: none;
+    background: #747280;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: -o-crisp-edges !important;
+    image-rendering: pixelated !important;
+    image-rendering: optimizeSpeed !important;
+}
+
+.shareButton:hover {
+    filter: brightness(150%);
+}
+
+.clearButton {
+    align-self: center; 
+    height: var(--button-size);
+    width: var(--button-size);
+    background: var(--ui-widget-background);
+    border-radius: 5px; 
+    position: relative; 
+    font-size: inherit; 
+    font-family: inherit; 
+    font-weight: inherit; 
+    transition: all 0.1s ease-in-out;
+}
+
+.clearButton::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    mask-image: var(--logo-symbol);
+    -webkit-mask-image: var(--logo-symbol);
+    pointer-events: none;
+    background: #747280;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: -o-crisp-edges !important;
+    image-rendering: pixelated !important;
+    image-rendering: optimizeSpeed !important;
+}
+
+.clearButton:hover {
+    filter: brightness(150%);
 }
 
 h1 {
