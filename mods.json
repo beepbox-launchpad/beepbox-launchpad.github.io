@@ -53,7 +53,8 @@
                 "link": "https://github.com/ultraabox/ultrabox_typescript/releases",
                 "name": "UltraBox Offline - V2.2.15"
             }
-        ]
+        ],
+        "hasTestingVersion": true
     },
     {
         "name": "AbyssBox",
@@ -72,7 +73,8 @@
                 "link": "https://choptop84.github.io/abyssbox-experimental/",
                 "name": "AbyssBox Experimental - V1.6"
             }
-        ]
+        ],
+        "hasTestingVersion": true
     },
     {
         "name": "Slarmoo's Box",
@@ -91,7 +93,8 @@
                 "link": "https://github.com/slarmoo/slarmoosbox/releases",
                 "name": "Slarmoo's Box Offline - V1.3.9"
             }
-        ]
+        ],
+        "hasTestingVersion": true
     },
     {
         "name": "ModBox",
@@ -115,5 +118,95 @@
                 "name": "ModBox BETA"
             }
         ]
+    },
+    {
+        "name": "Sandbox",
+        "image": "https://static.wikitide.net/beepboxwiki/d/dd/Sandbox_logo.png",
+        "website": "https://fillygroove.github.io/sandbox-3.1/",
+        "patchNotes": "",
+        "version": "V3.1.2",
+        "description": "Sandbox is a mod of BeepBox by Parad0x, Theepicosity, and FillyGroove. It was released on June 15, 2017. It is most known for its duty cycle instrument type, among several other smaller additions. Its current version is 3.1.2",
+        "wiki": "https://beepbox.miraheze.org/wiki/Sandbox",
+        "alternateVersions": []
+    },
+    {
+        "name": "GoldBox",
+        "image": "https://aurysystem.github.io/goldbox/favicon.ico",
+        "website": "https://aurysystem.github.io/goldbox/",
+        "patchNotes": "",
+        "version": "V2.5",
+        "description": "GoldBox is a mod of JummBox by Aury System. It was released on June 16, 2021. It is most known for its Advanced FM-O6 and other small, but notable changes. Its current version is 2.4",
+        "wiki": "https://beepbox.miraheze.org/wiki/GoldBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "HaileyBox",
+        "image": "https://haileylgbt.github.io/harrybox/BeepBox_files/favicon.ico",
+        "website": "https://haileylgbt.github.io/harrybox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "HaileyBox is a mod of BeepBox by cudsys. It was released on July 10, 2017.",
+        "wiki": "https://beepbox.miraheze.org/wiki/HaileyBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "BruceBox",
+        "image": "https://ultraabox.github.io/archives/brucebox/BeepBox_files/favicon.ico",
+        "website": "https://ultraabox.github.io/archives/brucebox/",
+        "patchNotes": "",
+        "version": "V2.2",
+        "description": "BruceBox is a mod of BeepBox by the_beesh.spweesh. It's notable for being a very controversial mod. It was released on August 26, 2017.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BruceBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "ZefBox",
+        "image": "https://static.wikitide.net/beepboxwiki/thumb/8/8d/Zefbox_Logo.webp/500px-Zefbox_Logo.webp.png?20240121020813",
+        "website": "https://ultraabox.github.io/archives/zefbox/",
+        "patchNotes": "",
+        "version": "BETA",
+        "description": "ZefBox is a mod of Sandbox by Zefyrith. It's notable for the new rhythm divisions and chipwaves. It was released on November 15, 2018.",
+        "wiki": "https://beepbox.miraheze.org/wiki/ZefBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "WideBox",
+        "image": "https://logn35.github.io/WideBox/favicon.ico",
+        "website": "https://logn35.github.io/WideBox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "WideBox is a mod of ModBox by Lognes. The purpose of WideBox is to improve usability by making the editor far wider than before. It was released on June 26, 2019. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/WideBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "BlackBox",
+        "image": "https://lihzahrd.github.io/blackbox/favicon.ico",
+        "website": "https://lihzahrd.github.io/blackbox/",
+        "patchNotes": "",
+        "version": "V1.0",
+        "description": "BlackBox is a mod of BeepBox by Lihzahrd. It was released on July 1, 2019.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BlackBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "CardboardBox",
+        "image": "https://hidden-realm.github.io/cardboardbox/favicon.ico",
+        "website": "https://hidden-realm.github.io/cardboardbox",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "CardboardBox is a mod of JummBox by Lihzahrd. CardboardBox increases the maximum chord size to 16. It was released on March 9, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/CardboardBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "BluBox",
+        "image": "https://i.imgur.com/sm62GJe.png",
+        "website": "https://ultraabox.github.io/archives/blubox/",
+        "patchNotes": "",
+        "version": "BETA",
+        "description": "BluBox was a mod of JummBox by Bluto. It was released on June 15, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BluBox",
+        "alternateVersions": []
     }
 ]

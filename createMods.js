@@ -41,7 +41,7 @@ async function createMods() {
 
         const alternateVersionTitle = modInfo.alternateVersions.length > 0 ?
             div({ class: "promptTitle" },
-                h2({ class: modInfo.name + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.name + "Versions:")
+                h2({ class: modInfo.name + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.name + " Versions:")
             )
             : "";
         let alternateVersions = "";
@@ -58,13 +58,14 @@ async function createMods() {
                 div( ...altVersionList)
             )
         }
+        const testingWarning = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes and issues, so use with caution.") : "";
 
         const prompt = div({id: modInfo.name + "Prompt", style: "flex-direction: column;  display: none;" },
             div({ class: "promptTitle" },
                 h2({ class: modInfo.name + "Title", style: "margin-bottom: 0.5em;" }, modInfo.name + ":")
             ),
             div({ style: "margin-bottom: 0.5em;" },
-                modInfo.description
+                ...parseForUrls(modInfo.description + "")
             ),
             div({style:"margin-bottom: 0.5em;"},
                 "You can find " + modInfo.name + "'s ",
@@ -73,11 +74,40 @@ async function createMods() {
             ),
             alternateVersionTitle,
             alternateVersions,
+            testingWarning,
             button({class:"cancelButton", onclick:"closePrompt(`" + modInfo.name + "Prompt`)"})
         );
 
         promptContainer.appendChild(prompt);
     }
+}
+
+function parseForUrls(text) {
+    let urls = (text).match(/< ?a href\=\"(\w|\s|:|\/|\.|\@|\\|\"|\=|\=)+>(\w| )+<\/a>/gi);
+    if (urls == null) return [text];
+
+    let textList = (text).split(/< ?a href\=\"(\w|\s|:|\/|\.|\@|\\|\"|\=|\=)+>(\w| )+<\/a>/gi);
+    console.log(urls);
+
+    urls = urls.filter(match => match.length > 2);
+    textList = textList.filter(match => (match.length > 2 || match.includes(",")));
+    console.log(urls);
+    console.log(textList);
+
+    let parsed = [];
+    for (let i = 0; i < textList.length; i++) {
+        parsed.push(textList[i]);
+        if (urls[i]) {
+            let url = urls[i].match(/https?:\/\/(\w|\.|\/|\@)+/i)[0];
+            let link = urls[i].match(/>(\w| )+</i)[0].replace(">", "").replace("<", "");
+            console.log(url, link);
+            parsed.push(a({ href: url, target: "_blank" }, link));
+        }
+        console.log(parsed);
+    }
+
+
+    return parsed;
 }
 
 createMods();
