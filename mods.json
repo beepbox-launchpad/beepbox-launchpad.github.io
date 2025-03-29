@@ -371,8 +371,18 @@
         "website": "https://voxeldeev.github.io/voxbox/website/",
         "patchNotes": "",
         "version": "Alpha",
-        "description": "VoxBox is a mod of UltraBox by Voxel. It adds the pitch envelope and an invert toggle for each envelope. It was released on May 23, 2024,",
+        "description": "VoxBox is a mod of UltraBox by Voxel. It adds the pitch envelope and an invert toggle for each envelope. It was released on May 23, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/VoxBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "Box",
+        "image": "https://boxbox-app.github.io/box/box.png",
+        "website": "https://boxbox-app.github.io/box/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "Box is a mod of ultrabox by boxbox. It aims to remove everything. It was released on August 22, 2024. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=vanilla%20for%20showcasing.-,Box,-boxbox",
         "alternateVersions": []
     },
     {

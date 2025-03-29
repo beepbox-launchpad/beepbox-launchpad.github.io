@@ -2,7 +2,7 @@ export function searchForMod(result) {
     var modList = [
         "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox",
         "ZefBox", "WideBox", "BlackBox", "CardboardBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", "Midbox", "Dogebox2",
-        "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "LemmBox"
+        "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox"
     ];
 
     const modTags = {
@@ -42,6 +42,7 @@ export function searchForMod(result) {
         "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
         "AwesomeBox": ["#active", "#songPlayer", "#modulation", "#2024"],
         "VoxBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2024"],
+        "Box": ["#discontinued", "#2024"],
         "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     }
 
