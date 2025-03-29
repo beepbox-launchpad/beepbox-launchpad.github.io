@@ -6,7 +6,6 @@ export async function createMods() {
     const promptContainer = document.getElementById("prompt");
     const modContainer = document.getElementById("modContainer");
     const Mods = await getMods();
-    console.log(Mods);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
 
