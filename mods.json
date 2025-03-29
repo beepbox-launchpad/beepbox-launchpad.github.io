@@ -135,7 +135,7 @@
         "website": "https://aurysystem.github.io/goldbox/",
         "patchNotes": "",
         "version": "V2.5",
-        "description": "GoldBox is a mod of JummBox by Aury System. It was released on June 16, 2021. It is most known for its Advanced FM-O6 and other small, but notable changes. Its current version is 2.4",
+        "description": "GoldBox is a mod of JummBox by Aury System. It was released on June 16, 2021. It is most known for its Advanced FM-O6 and other small, but notable changes. Its current version is 2.5",
         "wiki": "https://beepbox.miraheze.org/wiki/GoldBox",
         "alternateVersions": []
     },
@@ -307,7 +307,13 @@
         "version": "V0.0.9",
         "description": "Unbox is a mod of UltraBox by un_conventional. Unbox recreates the Duty Cycle from Sandbox and makes 0-100% pulse width range possible. It was released on January 20, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/Unbox",
-        "alternateVersions": []
+        "alternateVersions": [
+            {
+                "link": "https://un-conventional.github.io/Testing/",
+                "name": "Unbox Testing 0.0.11"
+            }
+        ],
+        "hasTestingVersion": true
     },
     {
         "name": "shitbox4",
