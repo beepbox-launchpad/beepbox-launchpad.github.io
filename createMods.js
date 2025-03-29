@@ -1,21 +1,10 @@
-import { HTML, SVG } from "./node_modules/imperative-html/dist/esm/elements-strict.js";
+import { HTML, SVG } from "./imperative-html/elements-strict.js";
 
 const { div, a, button, h2 } = HTML;
 
-const promptContainer = document.getElementById("prompt");
-const modContainer = document.getElementById("modContainer");
-
-
-createMods();
-// calculateNewUpdate();
-
-async function getMods() {
-    let response = await fetch("./mods.json");
-    return await response.json();
-}
-
-
-async function createMods() {
+export async function createMods() {
+    const promptContainer = document.getElementById("prompt");
+    const modContainer = document.getElementById("modContainer");
     const Mods = await getMods();
     console.log(Mods);
     for (let modNumber in Mods) {
@@ -91,6 +80,11 @@ async function createMods() {
     //make special case "mods"
     modContainer.append(div({ id: "comingSoon" }, div({ style: "text-align: center;width: 100%;margin-bottom: 10px;" }, "Coming Soon!")));
     modContainer.append(div({ id: "noResults", style: "display:none; text-align: center;width: 100%; margin-bottom: 10px; font-size: 32px;" }, "No results found"));
+}
+
+async function getMods() {
+    let response = await fetch("./mods.json");
+    return await response.json();
 }
 
 function parseForUrls(text) {
