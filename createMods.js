@@ -8,6 +8,8 @@ export async function createMods() {
     const Mods = await getMods();
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
+        var modDividerImage = "modDividerImage" + modInfo.aa == "true" ? " AA" : "";
+        console.log(modDividerImage)
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
@@ -18,7 +20,7 @@ export async function createMods() {
         }
 
         const mod = div({ class: "modDivider", id: modInfo.name },
-            div({ class: "modDividerImage" + modInfo.aa == "true" ? " AA" : "", style: "background-image: url(" + modInfo.image + ") !important;" },
+            div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },
