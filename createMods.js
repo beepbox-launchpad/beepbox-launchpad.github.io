@@ -9,7 +9,6 @@ export async function createMods() {
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
-        console.log(modDividerImage)
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
