@@ -8,7 +8,7 @@ export async function createMods() {
     const Mods = await getMods();
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
-        var modDividerImage = "modDividerImage" + modInfo.aa == "true" ? " AA" : "";
+        const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
         console.log(modDividerImage)
 
         const updateButton = modInfo.patchNotes == "" ? "" :
