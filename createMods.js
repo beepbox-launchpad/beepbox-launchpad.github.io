@@ -18,7 +18,7 @@ export async function createMods() {
         }
 
         const mod = div({ class: "modDivider", id: modInfo.name },
-            div({ class: "modDividerImage", style: "background-image: url(" + modInfo.image + ") !important;" },
+            div({ class: "modDividerImage" + modInfo.aa == "true" ? " AA" : "", style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },

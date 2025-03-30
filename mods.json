@@ -2,6 +2,7 @@
     {
         "name": "BeepBox",
         "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "aa": "false",
         "website": "https://beepbox.co",
         "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
         "version": "V4.2",
@@ -25,6 +26,7 @@
     {
         "name": "JummBox",
         "image": "https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "aa": "false",
         "website": "https://jummb.us",
         "patchNotes": "https://jummb.us/patch_notes/",
         "version": "V2.6",
@@ -35,6 +37,7 @@
     {
         "name": "UltraBox",
         "image": "https://github.com/ultraabox/ultrabox_typescript/blob/main/website/icon_maskable_192.png?raw=true",
+        "aa": "false",
         "website": "https://ultraabox.github.io",
         "patchNotes": "https://ultraabox.github.io/patch_notes.html",
         "version": "V2.2.15",
@@ -79,6 +82,7 @@
     {
         "name": "Slarmoo's Box",
         "image": "https://github.com/slarmoo/slarmoosbox/blob/main/website/icon_shadow_192.png?raw=true",
+        "aa": "false",
         "website": "https://slarmoo.github.io/slarmoosbox/website/",
         "patchNotes": "https://slarmoo.github.io/slarmoosbox/website/patch_notes.html",
         "version": "V1.3.9",
@@ -99,6 +103,7 @@
     {
         "name": "ModBox",
         "image": "https://static.wikitide.net/beepboxwiki/2/25/Modbox_logo.png?20240121012328",
+        "aa": "false",
         "website": "https://moddedbeepbox.github.io/3.0/",
         "patchNotes": "",
         "version": "V3.2.2",
@@ -122,6 +127,7 @@
     {
         "name": "Sandbox",
         "image": "https://static.wikitide.net/beepboxwiki/d/dd/Sandbox_logo.png",
+        "aa": "false",
         "website": "https://fillygroove.github.io/sandbox-3.1/",
         "patchNotes": "",
         "version": "V3.1.2",
@@ -132,6 +138,7 @@
     {
         "name": "GoldBox",
         "image": "https://aurysystem.github.io/goldbox/favicon.ico",
+        "aa": "true",
         "website": "https://aurysystem.github.io/goldbox/",
         "patchNotes": "",
         "version": "V2.5",
@@ -142,6 +149,7 @@
     {
         "name": "HaileyBox",
         "image": "https://haileylgbt.github.io/harrybox/BeepBox_files/favicon.ico",
+        "aa": "true",
         "website": "https://haileylgbt.github.io/harrybox/",
         "patchNotes": "",
         "version": "Release",
@@ -152,6 +160,7 @@
     {
         "name": "BruceBox",
         "image": "https://ultraabox.github.io/archives/brucebox/BeepBox_files/favicon.ico",
+        "aa": "true",
         "website": "https://ultraabox.github.io/archives/brucebox/",
         "patchNotes": "",
         "version": "V2.2",
@@ -162,6 +171,7 @@
     {
         "name": "ZefBox",
         "image": "https://static.wikitide.net/beepboxwiki/thumb/8/8d/Zefbox_Logo.webp/500px-Zefbox_Logo.webp.png?20240121020813",
+        "aa": "false",
         "website": "https://ultraabox.github.io/archives/zefbox/",
         "patchNotes": "",
         "version": "BETA",
@@ -172,6 +182,7 @@
     {
         "name": "WideBox",
         "image": "https://logn35.github.io/WideBox/favicon.ico",
+        "aa": "true",
         "website": "https://logn35.github.io/WideBox/",
         "patchNotes": "",
         "version": "Release",
@@ -182,6 +193,7 @@
     {
         "name": "BlackBox",
         "image": "https://lihzahrd.github.io/blackbox/favicon.ico",
+        "aa": "false",
         "website": "https://lihzahrd.github.io/blackbox/",
         "patchNotes": "",
         "version": "V1.0",
@@ -192,6 +204,7 @@
     {
         "name": "CardboardBox",
         "image": "https://hidden-realm.github.io/cardboardbox/favicon.ico",
+        "aa": "true",
         "website": "https://hidden-realm.github.io/cardboardbox",
         "patchNotes": "",
         "version": "Release",
@@ -203,6 +216,7 @@
         "name": "BluBox",
         "image": "https://i.imgur.com/sm62GJe.png",
         "website": "https://ultraabox.github.io/archives/blubox/",
+        "aa": "true",
         "patchNotes": "",
         "version": "BETA",
         "description": "BluBox was a mod of JummBox by Bluto. It was released on June 15, 2020. ",
@@ -212,6 +226,7 @@
     {
         "name": "Wackybox",
         "image": "https://bluecatgamer.github.io/Wackybox/icon_32.png",
+        "aa": "false",
         "website": "https://bluecatgamer.github.io/Wackybox/",
         "patchNotes": "",
         "version": "Uhh",
@@ -222,6 +237,7 @@
     {
         "name": "TodBox",
         "image": "https://todbox.github.io/icon_32.png",
+        "aa": "false",
         "website": "https://todbox.github.io/",
         "patchNotes": "",
         "version": "Pre-Alpha",
@@ -232,6 +248,7 @@
     {
         "name": "MicroBox",
         "image": "https://thethreadsnake.github.io/microbox/icon_shadow_192.png",
+        "aa": "true",
         "website": "https://thethreadsnake.github.io/microbox/",
         "patchNotes": "",
         "version": "V2.3",
@@ -242,6 +259,7 @@
     {
         "name": "PaandorasBox",
         "image": "https://paandorasbox.github.io/icon_32.png",
+        "aa": "true",
         "website": "https://paandorasbox.github.io/",
         "patchNotes": "",
         "version": "V2.3",
@@ -252,6 +270,7 @@
     {
         "name": "BlockBox",
         "image": "https://block-box.github.io/icon_32.png",
+        "aa": "true",
         "website": "https://block-box.github.io/",
         "patchNotes": "",
         "version": "V0.1",
@@ -262,6 +281,7 @@
     {
         "name": "Midbox",
         "image": "https://static.wikitide.net/beepboxwiki/0/06/MidboxFavicon.png?20240210022831",
+        "aa": "false",
         "website": "https://mid-the-modder.github.io/Midbox/",
         "patchNotes": "",
         "version": "V0.2.6",
@@ -282,6 +302,7 @@
     {
         "name": "Dogebox2",
         "image": "https://dogeiscut.github.io/dogebox2/favicon.ico",
+        "aa": "true",
         "website": "https://dogeiscut.github.io/dogebox2/",
         "patchNotes": "",
         "version": "V1.4.0",
@@ -292,6 +313,7 @@
     {
         "name": "Nepbox",
         "image": "https://static.wikitide.net/beepboxwiki/thumb/7/70/NepBoxIcon.png/600px-NepBoxIcon.png?20240207013111",
+        "aa": "true",
         "website": "https://neptendo.github.io/nepbox/",
         "patchNotes": "",
         "version": "V1.1",
@@ -302,6 +324,7 @@
     {
         "name": "Unbox",
         "image": "https://un-conventional.github.io/icon_32.png",
+        "aa": "true",
         "website": "https://un-conventional.github.io",
         "patchNotes": "",
         "version": "V0.0.9",
@@ -318,6 +341,7 @@
     {
         "name": "shitbox4",
         "image": "https://choptop84.github.io/shitbox4/apple-touch-icon.png",
+        "aa": "false",
         "website": "https://choptop84.github.io/shitbox4",
         "patchNotes": "",
         "version": "Release",
@@ -328,6 +352,7 @@
     {
         "name": "BariBox",
         "image": "",
+        "aa": "false",
         "website": "https://andrebariani.github.io/baribox/",
         "patchNotes": "",
         "version": "Release",
@@ -338,6 +363,7 @@
     {
         "name": "BoxBeep",
         "image": "https://choptop84.github.io/boxbeep/apple-touch-icon.png",
+        "aa": "false",
         "website": "https://choptop84.github.io/boxbeep",
         "patchNotes": "",
         "version": "Release",
@@ -348,6 +374,7 @@
     {
         "name": "AestheticBox",
         "image": "https://cnwmakescode.github.io/AestheticBox/favicon.ico",
+        "aa": "true",
         "website": "https://cnwmakescode.github.io/AestheticBox/",
         "patchNotes": "",
         "version": "Release",
@@ -358,6 +385,7 @@
     {
         "name": "AwesomeBox",
         "image": "https://mmmdonuts2008.github.io/AwesomeBox/website/appIcon.png",
+        "aa": "true",
         "website": "https://mmmdonuts2008.github.io/AwesomeBox/website/",
         "patchNotes": "",
         "version": "V0.1.4-b",
@@ -368,16 +396,18 @@
     {
         "name": "VoxBox",
         "image": "https://voxeldeev.github.io/voxbox/website/favicon.ico",
+        "aa": "true",
         "website": "https://voxeldeev.github.io/voxbox/website/",
         "patchNotes": "",
         "version": "Alpha",
-        "description": "VoxBox is a mod of UltraBox by Voxel. It adds the pitch envelope and an invert toggle for each envelope. It was released on May 23, 2024. ",
+        "description": "VoxBox is a mod of UltraBox by Voxel. It adds the pitch envelope and an invert toggle for each envelope. It was released on May 23, 2024,",
         "wiki": "https://beepbox.miraheze.org/wiki/VoxBox",
         "alternateVersions": []
     },
     {
         "name": "Box",
         "image": "https://boxbox-app.github.io/box/box.png",
+        "aa": "false",
         "website": "https://boxbox-app.github.io/box/",
         "patchNotes": "",
         "version": "Release",
@@ -388,9 +418,10 @@
     {
         "name": "LemmBox",
         "image": "https://lemmbox.github.io/theme_resources/LemmBoxLogo.png",
+        "aa": "false",
         "website": "https://lemmbox.github.io/",
         "patchNotes": "",
-        "version": "V0.9.1-b",
+        "version": "V0.8-b",
         "description": "LemmBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@ARealLemonLime\" target=\"_blank\">HappyLemonLime</a> and was released on January 7th of 2025. Its main appeal is its customization of the max values found in the editor, and extra chip waves.",
         "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
         "alternateVersions": []
