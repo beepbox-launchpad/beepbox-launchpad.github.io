@@ -44,7 +44,8 @@
     --drum-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40"> <defs> <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="%237e3302"/> <stop offset="40%" stop-color="%23ffec6b"/> <stop offset="100%" stop-color="%237e3302"/> </linearGradient> <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="%23faaf7d"/> <stop offset="15%" stop-color="%23fffba9"/> <stop offset="40%" stop-color="%23ffffe3"/> <stop offset="65%" stop-color="%23fffba9"/> <stop offset="100%" stop-color="%23faaf7d"/> </linearGradient> <radialGradient id="gold3" cx="0%" cy="0%" r="100%"> <stop offset="0%" stop-color="%23ffffe3"/> <stop offset="50%" stop-color="%23ffec6b"/> <stop offset="100%" stop-color="%237e3302"/> </radialGradient> <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="%23641919"/> <stop offset="40%" stop-color="%23cd2c2c"/> <stop offset="100%" stop-color="%23641919"/> </linearGradient> <radialGradient id="membrane"> <stop offset="10%" stop-color="%23cccccc" /> <stop offset="90%" stop-color="%23f6f6f7" /> <stop offset="100%" stop-color="%23999" /> </radialGradient> </defs> <ellipse cx="16" cy="26" rx="16" ry="14" fill="rgba(0,0,0,0.5)"/> <ellipse cx="16" cy="25" rx="16" ry="14" fill="url(%23gold1)"/> <rect x="0" y="23" width="32" height="2" fill="url(%23gold1)"/> <ellipse cx="16" cy="23" rx="16" ry="14" fill="url(%23gold2)"/> <ellipse cx="16" cy="23" rx="15" ry="13" fill="url(%23red)"/> <rect x="1" y="17" width="30" height="6" fill="url(%23red)"/> <rect x="5" y="27" width="1" height="5" rx="0.5" fill="rgba(0,0,0,0.5)"/> <rect x="15" y="31" width="2" height="5" rx="1" fill="rgba(0,0,0,0.5)"/> <rect x="26" y="27" width="1" height="5" rx="0.5" fill="rgba(0,0,0,0.5)"/> <rect x="5" y="26" width="1" height="5" rx="0.5" fill="url(%23gold3)"/> <rect x="15" y="30" width="2" height="5" rx="1" fill="url(%23gold3)"/> <rect x="26" y="26" width="1" height="5" rx="0.5" fill="url(%23gold3)"/> <ellipse cx="16" cy="18" rx="15" ry="13" fill="rgba(0,0,0,0.5)"/> <ellipse cx="16" cy="16" rx="16" ry="14" fill="url(%23gold1)"/> <rect x="0" y="14" width="32" height="2" fill="url(%23gold1)"/> <ellipse cx="16" cy="14" rx="16" ry="14" fill="url(%23gold2)"/> <ellipse cx="16" cy="14" rx="15" ry="13" fill="url(%23membrane)"/> </svg>');
     --piano-key-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="15" preserveAspectRatio="none" viewBox="0 -1 32 15"> <defs> <linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="rgba(0,0,0,0.5)"/> <stop offset="100%" stop-color="transparent"/> </linearGradient> </defs> <rect x="-1" y="1" width="31" height="1" rx="0.6" fill="rgba(255,255,255,0.4)"/> <path d="M -1 11 L 30 11 L 30 2 L 33 -1 L 33 14 L -1 14 z" fill="rgba(0,0,0,0.7)"/> <rect x="-1" y="-1" width="19" height="15" fill="url(%23shadow)"/> </svg>');
     --mod-key-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="80" preserveAspectRatio="none" viewBox="0 -1 32 80"> <defs> <linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="rgba(0,0,0,0.4)"/> <stop offset="100%" stop-color="transparent"/> </linearGradient> </defs> <rect x="-1" y="1" width="31" height="1" rx="0.6" fill="rgba(255,255,255,0.2)"/> <path d="M -1 76 L 30 76 L 30 1 L 33 -1 L 33 80 L -1 80 z" fill="rgba(0,0,0,0.7)"/> <rect x="-1" y="-1" width="19" height="80" fill="url(%23shadow)"/> </svg>');
-
+    --down-arrow: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M 0 10 L -8 2 L -2 2 L -2 -10 L 2 -10 L 2 2 L 8 2 z"/> </svg>');
+    --up-arrow: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M 0 -10 L -8 -2 L -2 -2 L -2 10 L 2 10 L 2 -2 L 8 -2 z"/> </svg>');
 
     --logo-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 10 10"><defs><clipPath id="a"><path d="M0 0h36v36H0z"/></clipPath></defs><path d="M 0 5 C 0 8 2 10 5 10 C 8 10 10 8 10 5 C 10 2 8 0 5 0 C 2 0 0 2 0 5 M 3 5 C 3 4 4 3 5 3 C 6 3 7 4 7 5 C 7 6 6 7 5 7 C 4 7 3 6 3 5"/></svg>');
     /*M 0 20 C 0 32 8 40 20 40 C 32 40 40 32 40 20 C 40 8 32 0 20 0 C 8 0 0 8 0 20 M 12 20 C 12 16 16 12 20 12 C 24 12 28 16 28 20 C 28 24 24 28 20 28 C 16 28 12 24 12 20*/
@@ -137,7 +138,7 @@ body {
     height: 100%;
 }
 
-.shareButton {
+.shareButton, .reverseButton {
     align-self: center; 
     height: var(--button-size);
     width: var(--button-size);
@@ -170,11 +171,51 @@ body {
     image-rendering: optimizeSpeed !important;
 }
 
-.shareButton:hover {
+.up::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    mask-image: var(--up-arrow);
+    -webkit-mask-image: var(--up-arrow);
+    pointer-events: none;
+    background: #747280;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: -o-crisp-edges !important;
+    image-rendering: pixelated !important;
+    image-rendering: optimizeSpeed !important;
+}
+
+.down::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    mask-image: var(--down-arrow);
+    -webkit-mask-image: var(--down-arrow);
+    pointer-events: none;
+    background: #747280;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    image-rendering: -moz-crisp-edges !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: -o-crisp-edges !important;
+    image-rendering: pixelated !important;
+    image-rendering: optimizeSpeed !important;
+}
+
+.shareButton:hover, .reverseButton:hover {
     filter: brightness(150%);
 }
 
-.clearButton {
+.clearButton{
     align-self: center; 
     height: var(--button-size);
     width: var(--button-size);

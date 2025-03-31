@@ -2,13 +2,12 @@ import { HTML } from "./imperative-html/elements-strict.js";
 
 const { div, a, button, h2 } = HTML;
 
-export async function createMods(method) {
-    console.log(method);
+export function createMods(ModsList, method, isReversed) {
     const promptContainer = document.getElementById("prompt");
     const modContainer = document.getElementById("modContainer");
-    let Mods = await getMods();
-    console.log(Mods);
-    Mods = sortMods(Mods, method);
+    // console.log(Mods);
+    let Mods = ModsList.slice();
+    Mods = sortMods(Mods, method, isReversed);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
@@ -85,27 +84,28 @@ export async function createMods(method) {
     modContainer.append(div({ id: "noResults", style: "display:none; text-align: center;width: 100%; margin-bottom: 10px; font-size: 32px;" }, "No results found"));
 }
 
-async function getMods() {
+export async function getMods() {
     let response = await fetch("./mods.json");
     return await response.json();
 }
 
-function sortMods(Mods, method) { //add reverse button later
+function sortMods(Mods, method, isReversed) { //add reverse button later
+    let sortedMods = [];
     switch (method) {
         case "name": {
-            return Mods.sort((modA, modB) => +(modA.name.toLowerCase() > modB.name.toLowerCase()) * 2 - 1);
+            sortedMods = Mods.sort((modA, modB) => +(modA.name.toLowerCase() > modB.name.toLowerCase()) * 2 - 1);
         }
         case "date": {
-            return Mods.sort((modA, modB) => { 
+            sortedMods = Mods.sort((modA, modB) => { 
                 return +(modA.date.year + modA.date.month / 12 + modA.date.day / 12 / 31 >
                     modB.date.year + modB.date.month / 12 + modB.date.day / 12 / 31) * 2 - 1
             });
         }
         case "relevant": {
-            return Mods;
+            sortedMods = Mods;
         }
     }
-    
+    return isReversed ? sortedMods.reverse() : sortedMods;
 }
 
 function parseForUrls(text) {
