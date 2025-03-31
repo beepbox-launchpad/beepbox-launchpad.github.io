@@ -37,7 +37,9 @@
     <div style="width: 100%; height: 64px; background: #23222b; border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row;">
         <div style="display: flex; flex-direction: row; gap: 5px;">
             <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
-            <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)"></div> 
+            <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)">
+                <div class="copyText" id="copyText"></div>
+            </div> 
         </div>
             <datalist id="tags">
                 <option value="BeepBox"></option>
@@ -97,10 +99,25 @@
             document.getElementById(promptName).style.display = "none"; 
         }
 
+        const copyText = document.getElementById("copyText");
+
+        const fade = [
+            { top: "36px", opacity: "100%" },
+            { top: "40px", opacity: "0%" }
+        ];
+
+        const fadeTiming = {
+            duration: 3000,
+            iterations: 1,
+        };
+
         function shareURL(result) {
             result = result.replace(" ", "");
             window.history.replaceState(null, "", location.pathname + "#s=" + result);
+            navigator.clipboard.writeText(window.location);
+            copyText.animate(fade, fadeTiming);
         }
+
     </script>
 
 </body>
