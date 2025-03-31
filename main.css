@@ -95,6 +95,25 @@
     --mod-title: #9a6bff;
 }
 
+.copyText {
+    position: absolute;
+    top: 36px;
+    height: 24px;
+    width: 64px;
+    background: var(--third-note);
+    font-size: 14px;
+    text-align: center;
+    align-content: center;
+    left: -16px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.copyText::before {
+    content: "Copied";
+}
+
 a {
     color: var(--link-accent, #98f);
 }

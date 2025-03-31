@@ -11,6 +11,7 @@ export async function createMods(method) {
     Mods = sortMods(Mods, method);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
+        const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
@@ -21,7 +22,7 @@ export async function createMods(method) {
         }
 
         const mod = div({ class: "modDivider", id: modInfo.name },
-            div({ class: "modDividerImage", style: "background-image: url(" + modInfo.image + ") !important;" },
+            div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },
