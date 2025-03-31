@@ -1,6 +1,11 @@
 [
     {
         "name": "BeepBox",
+        "date": {
+            "day": 20, 
+            "month": 20,
+            "year": 2012
+        }, 
         "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
         "website": "https://beepbox.co",
         "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
@@ -24,6 +29,11 @@
     },
     {
         "name": "JummBox",
+        "date": {
+            "day": 30,
+            "month": 7,
+            "year": 2019
+        },
         "image": "https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true",
         "website": "https://jummb.us",
         "patchNotes": "https://jummb.us/patch_notes/",
@@ -34,6 +44,11 @@
     },
     {
         "name": "UltraBox",
+        "date": {
+            "day": 4,
+            "month": 6,
+            "year": 2023
+        },
         "image": "https://github.com/ultraabox/ultrabox_typescript/blob/main/website/icon_maskable_192.png?raw=true",
         "website": "https://ultraabox.github.io",
         "patchNotes": "https://ultraabox.github.io/patch_notes.html",
@@ -58,6 +73,11 @@
     },
     {
         "name": "AbyssBox",
+        "date": {
+            "day": 1,
+            "month": 1,
+            "year": 2024
+        },
         "image": "https://github.com/choptop84/abyssbox-source/blob/2.3-porting/website/icon_maskable_192.png?raw=true",
         "website": "https://choptop84.github.io/abyssbox-app/",
         "patchNotes": "https://choptop84.github.io/abyssbox-app/patch-notes",
@@ -78,6 +98,11 @@
     },
     {
         "name": "Slarmoo's Box",
+        "date": {
+            "day": 13,
+            "month": 5,
+            "year": 2024
+        },
         "image": "https://github.com/slarmoo/slarmoosbox/blob/main/website/icon_shadow_192.png?raw=true",
         "website": "https://slarmoo.github.io/slarmoosbox/website/",
         "patchNotes": "https://slarmoo.github.io/slarmoosbox/website/patch_notes.html",
@@ -98,6 +123,11 @@
     },
     {
         "name": "ModBox",
+        "date": {
+            "day": 25,
+            "month": 5,
+            "year": 2017
+        },
         "image": "https://static.wikitide.net/beepboxwiki/2/25/Modbox_logo.png?20240121012328",
         "website": "https://moddedbeepbox.github.io/3.0/",
         "patchNotes": "",
@@ -121,6 +151,11 @@
     },
     {
         "name": "Sandbox",
+        "date": {
+            "day": 15,
+            "month": 6,
+            "year": 2017
+        },
         "image": "https://static.wikitide.net/beepboxwiki/d/dd/Sandbox_logo.png",
         "website": "https://fillygroove.github.io/sandbox-3.1/",
         "patchNotes": "",
@@ -131,6 +166,11 @@
     },
     {
         "name": "GoldBox",
+        "date": {
+            "day": 16,
+            "month": 6,
+            "year": 2021
+        },
         "image": "https://aurysystem.github.io/goldbox/favicon.ico",
         "website": "https://aurysystem.github.io/goldbox/",
         "patchNotes": "",
@@ -141,6 +181,11 @@
     },
     {
         "name": "HaileyBox",
+        "date": {
+            "day": 10,
+            "month": 7,
+            "year": 2017
+        },
         "image": "https://haileylgbt.github.io/harrybox/BeepBox_files/favicon.ico",
         "website": "https://haileylgbt.github.io/harrybox/",
         "patchNotes": "",
@@ -151,6 +196,11 @@
     },
     {
         "name": "BruceBox",
+        "date": {
+            "day": 26,
+            "month": 8,
+            "year": 2017
+        },
         "image": "https://ultraabox.github.io/archives/brucebox/BeepBox_files/favicon.ico",
         "website": "https://ultraabox.github.io/archives/brucebox/",
         "patchNotes": "",
@@ -161,6 +211,11 @@
     },
     {
         "name": "ZefBox",
+        "date": {
+            "day": 15,
+            "month": 11,
+            "year": 2018
+        },
         "image": "https://static.wikitide.net/beepboxwiki/thumb/8/8d/Zefbox_Logo.webp/500px-Zefbox_Logo.webp.png?20240121020813",
         "website": "https://ultraabox.github.io/archives/zefbox/",
         "patchNotes": "",
@@ -171,6 +226,11 @@
     },
     {
         "name": "WideBox",
+        "date": {
+            "day": 26,
+            "month": 6,
+            "year": 2019
+        },
         "image": "https://logn35.github.io/WideBox/favicon.ico",
         "website": "https://logn35.github.io/WideBox/",
         "patchNotes": "",
@@ -181,6 +241,11 @@
     },
     {
         "name": "BlackBox",
+        "date": {
+            "day": 1,
+            "month": 7,
+            "year": 2019
+        },
         "image": "https://lihzahrd.github.io/blackbox/favicon.ico",
         "website": "https://lihzahrd.github.io/blackbox/",
         "patchNotes": "",
@@ -191,6 +256,11 @@
     },
     {
         "name": "CardboardBox",
+        "date": {
+            "day": 9,
+            "month": 3,
+            "year": 2020
+        },
         "image": "https://hidden-realm.github.io/cardboardbox/favicon.ico",
         "website": "https://hidden-realm.github.io/cardboardbox",
         "patchNotes": "",
@@ -201,6 +271,11 @@
     },
     {
         "name": "BluBox",
+        "date": {
+            "day": 15,
+            "month": 6,
+            "year": 2020
+        },
         "image": "https://i.imgur.com/sm62GJe.png",
         "website": "https://ultraabox.github.io/archives/blubox/",
         "patchNotes": "",
@@ -211,6 +286,11 @@
     },
     {
         "name": "Wackybox",
+        "date": {
+            "day": 2,
+            "month": 1,
+            "year": 2021
+        },
         "image": "https://bluecatgamer.github.io/Wackybox/icon_32.png",
         "website": "https://bluecatgamer.github.io/Wackybox/",
         "patchNotes": "",
@@ -221,6 +301,11 @@
     },
     {
         "name": "TodBox",
+        "date": {
+            "day": 3,
+            "month": 4,
+            "year": 2021
+        },
         "image": "https://todbox.github.io/icon_32.png",
         "website": "https://todbox.github.io/",
         "patchNotes": "",
@@ -231,6 +316,11 @@
     },
     {
         "name": "MicroBox",
+        "date": {
+            "day": 30,
+            "month": 7,
+            "year": 2021
+        },
         "image": "https://thethreadsnake.github.io/microbox/icon_shadow_192.png",
         "website": "https://thethreadsnake.github.io/microbox/",
         "patchNotes": "",
@@ -241,6 +331,11 @@
     },
     {
         "name": "PaandorasBox",
+        "date": {
+            "day": 22,
+            "month": 12,
+            "year": 2021
+        },
         "image": "https://paandorasbox.github.io/icon_32.png",
         "website": "https://paandorasbox.github.io/",
         "patchNotes": "",
@@ -251,6 +346,11 @@
     },
     {
         "name": "BlockBox",
+        "date": {
+            "day": 24,
+            "month": 12,
+            "year": 2021
+        },
         "image": "https://block-box.github.io/icon_32.png",
         "website": "https://block-box.github.io/",
         "patchNotes": "",
@@ -261,6 +361,11 @@
     },
     {
         "name": "Midbox",
+        "date": {
+            "day": 12,
+            "month": 8,
+            "year": 2023
+        },
         "image": "https://static.wikitide.net/beepboxwiki/0/06/MidboxFavicon.png?20240210022831",
         "website": "https://mid-the-modder.github.io/Midbox/",
         "patchNotes": "",
@@ -281,6 +386,11 @@
     },
     {
         "name": "Dogebox2",
+        "date": {
+            "day": 9,
+            "month": 9,
+            "year": 2023
+        },
         "image": "https://dogeiscut.github.io/dogebox2/favicon.ico",
         "website": "https://dogeiscut.github.io/dogebox2/",
         "patchNotes": "",
@@ -291,6 +401,11 @@
     },
     {
         "name": "Nepbox",
+        "date": {
+            "day": 11,
+            "month": 1,
+            "year": 2024
+        },
         "image": "https://static.wikitide.net/beepboxwiki/thumb/7/70/NepBoxIcon.png/600px-NepBoxIcon.png?20240207013111",
         "website": "https://neptendo.github.io/nepbox/",
         "patchNotes": "",
@@ -301,6 +416,11 @@
     },
     {
         "name": "Unbox",
+        "date": {
+            "day": 20,
+            "month": 1,
+            "year": 2024
+        },
         "image": "https://un-conventional.github.io/icon_32.png",
         "website": "https://un-conventional.github.io",
         "patchNotes": "",
@@ -317,6 +437,11 @@
     },
     {
         "name": "shitbox4",
+        "date": {
+            "day": 13,
+            "month": 3,
+            "year": 2024
+        },
         "image": "https://choptop84.github.io/shitbox4/apple-touch-icon.png",
         "website": "https://choptop84.github.io/shitbox4",
         "patchNotes": "",
@@ -327,6 +452,11 @@
     },
     {
         "name": "BariBox",
+        "date": {
+            "day": 14,
+            "month": 3,
+            "year": 2024
+        },
         "image": "",
         "website": "https://andrebariani.github.io/baribox/",
         "patchNotes": "",
@@ -337,6 +467,11 @@
     },
     {
         "name": "BoxBeep",
+        "date": {
+            "day": 23,
+            "month": 3,
+            "year": 2024
+        },
         "image": "https://choptop84.github.io/boxbeep/apple-touch-icon.png",
         "website": "https://choptop84.github.io/boxbeep",
         "patchNotes": "",
@@ -347,6 +482,11 @@
     },
     {
         "name": "AestheticBox",
+        "date": {
+            "day": 23,
+            "month": 3,
+            "year": 2024
+        },
         "image": "https://cnwmakescode.github.io/AestheticBox/favicon.ico",
         "website": "https://cnwmakescode.github.io/AestheticBox/",
         "patchNotes": "",
@@ -357,6 +497,11 @@
     },
     {
         "name": "AwesomeBox",
+        "date": {
+            "day": 26,
+            "month": 4,
+            "year": 2024
+        },
         "image": "https://mmmdonuts2008.github.io/AwesomeBox/website/appIcon.png",
         "website": "https://mmmdonuts2008.github.io/AwesomeBox/website/",
         "patchNotes": "",
@@ -367,6 +512,11 @@
     },
     {
         "name": "VoxBox",
+        "date": {
+            "day": 23,
+            "month": 5,
+            "year": 2024
+        },
         "image": "https://voxeldeev.github.io/voxbox/website/favicon.ico",
         "website": "https://voxeldeev.github.io/voxbox/website/",
         "patchNotes": "",
@@ -377,6 +527,11 @@
     },
     {
         "name": "Box",
+        "date": {
+            "day": 22,
+            "month": 8,
+            "year": 2024
+        },
         "image": "https://boxbox-app.github.io/box/box.png",
         "website": "https://boxbox-app.github.io/box/",
         "patchNotes": "",
@@ -387,6 +542,11 @@
     },
     {
         "name": "LemmBox",
+        "date": {
+            "day": 7,
+            "month": 1,
+            "year": 2025
+        },
         "image": "https://lemmbox.github.io/theme_resources/LemmBoxLogo.png",
         "website": "https://lemmbox.github.io/",
         "patchNotes": "",

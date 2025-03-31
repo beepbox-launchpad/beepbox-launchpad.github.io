@@ -430,7 +430,7 @@ button.updateText:hover {
     background: linear-gradient(#37364000, #292831);
 }
 
-.searchbar {
+.searchbar, .sort {
     width: 245px;
     height: 32px;
     background: var(--ui-widget-background);

@@ -1,11 +1,14 @@
-import { HTML, SVG } from "./imperative-html/elements-strict.js";
+import { HTML } from "./imperative-html/elements-strict.js";
 
 const { div, a, button, h2 } = HTML;
 
-export async function createMods() {
+export async function createMods(method) {
+    console.log(method);
     const promptContainer = document.getElementById("prompt");
     const modContainer = document.getElementById("modContainer");
-    const Mods = await getMods();
+    let Mods = await getMods();
+    console.log(Mods);
+    Mods = sortMods(Mods, method);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
 
@@ -86,11 +89,30 @@ async function getMods() {
     return await response.json();
 }
 
+function sortMods(Mods, method) { //add reverse button later
+    switch (method) {
+        case "name": {
+            return Mods.sort((modA, modB) => +(modA.name.toLowerCase() > modB.name.toLowerCase()) * 2 - 1);
+        }
+        case "date": {
+            return Mods.sort((modA, modB) => { 
+                return +(modA.date.year + modA.date.month / 12 + modA.date.day / 12 / 31 >
+                    modB.date.year + modB.date.month / 12 + modB.date.day / 12 / 31) * 2 - 1
+            });
+        }
+        case "relevant": {
+            return Mods;
+        }
+    }
+    
+}
+
 function parseForUrls(text) {
-    let urls = (text).match(/< ?a href\=\"(\w|\s|:|\/|\.|\@|\\|\"|\=|\=)+>(\w| )+<\/a>/gi);
+    const regex1 = /< ?a href\=\"[\w\s:\/\.\@\\\+\=\"]+>(\w| )+<\/a>/gi;
+    let urls = (text).match(regex1);
     if (urls == null) return [text];
 
-    let textList = (text).split(/< ?a href\=\"(\w|\s|:|\/|\.|\@|\\|\"|\=|\=)+>(\w| )+<\/a>/gi);
+    let textList = (text).split(regex1);
 
     urls = urls.filter(match => match.length > 2);
     textList = textList.filter(match => (match.length > 2 || match.includes(",")));
