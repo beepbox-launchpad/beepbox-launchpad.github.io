@@ -94,15 +94,18 @@ function sortMods(Mods, method, isReversed) { //add reverse button later
     switch (method) {
         case "name": {
             sortedMods = Mods.sort((modA, modB) => +(modA.name.toLowerCase() > modB.name.toLowerCase()) * 2 - 1);
+            break;
         }
         case "date": {
             sortedMods = Mods.sort((modA, modB) => { 
                 return +(modA.date.year + modA.date.month / 12 + modA.date.day / 12 / 31 >
                     modB.date.year + modB.date.month / 12 + modB.date.day / 12 / 31) * 2 - 1
             });
+            break;
         }
         case "relevant": {
             sortedMods = Mods;
+            break;
         }
     }
     return isReversed ? sortedMods.reverse() : sortedMods;
