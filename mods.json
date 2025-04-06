@@ -219,6 +219,22 @@
         "alternateVersions": []
     },
     {
+        "name": "NerdBox",
+        "date": {
+            "day": 15,
+            "month": 2,
+            "year": 2018
+        },
+        "image": "./placeholder.png",
+        "aa": "true",
+        "website": "https://ultraabox.github.io/archives/nerdbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "NerdBox is a mod of BeepBox by Green Guy. It's notable for adding new waveforms and scales. It was released on February 15, 2018.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
+        "alternateVersions": []
+    },
+    {
         "name": "ZefBox",
         "date": {
             "day": 15,
