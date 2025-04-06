@@ -251,6 +251,31 @@
         "alternateVersions": []
     },
     {
+        "name": "ShitBox",
+        "date": {
+            "day": 16,
+            "month": 2,
+            "year": 2019
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://lihzahrd.github.io/shitbox3.0/",
+        "patchNotes": "",
+        "version": "v3.0",
+        "description": "ShitBox is a joke mod of BeepBox and ModBox by Lihzahrd. It's notable for being the first ever joke mod to be made. It was released on February 16, 2019.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
+        "alternateVersions": [
+            {
+                "link": "https://lihzahrd.github.io/shitbox/",
+                "name": "ShitBox v1.0.1"
+            },
+            {
+                "link": "https://hidden-realm.github.io/shitbox2/",
+                "name": "ShitBox v2.0"
+            }
+        ]
+    },
+    {
         "name": "WideBox",
         "date": {
             "day": 26,
@@ -280,6 +305,38 @@
         "version": "V1.0",
         "description": "BlackBox is a mod of BeepBox by Lihzahrd. It was released on July 1, 2019.",
         "wiki": "https://beepbox.miraheze.org/wiki/BlackBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "BassBox",
+        "date": {
+            "day": 1,
+            "month": 1,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://lihzahrd.github.io/bassbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BassBox is a joke mod of BeepBox by Lihzahrd. It's known for removing all presets except for ones typically used as Bass. It was released on January 1, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BassBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "SliderBox",
+        "date": {
+            "day": 6,
+            "month": 2,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://slidecode.github.io/sliderbox.github.io/website/3_0/",
+        "patchNotes": "",
+        "version": "V3.0.13",
+        "description": "SliderBox is mod of BeepBox by Slidecode, and Azgam4. It was released on February 6, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/SliderBox",
         "alternateVersions": []
     },
     {
