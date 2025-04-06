@@ -481,7 +481,7 @@
             "month": 3,
             "year": 2024
         },
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg",
+        "image": "./placeholder.png",
         "aa": "false",
         "website": "https://andrebariani.github.io/baribox/",
         "patchNotes": "",
