@@ -1,13 +1,13 @@
 export function searchForMod(result) {
     var modList = [
-        "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox",
-        "ZefBox", "WideBox", "BlackBox", "CardboardBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", "Midbox", "Dogebox2",
+        "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
+        "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", "Midbox", "Dogebox2",
         "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox"
     ];
 
     const modTags = {
         "all": ["#active", "#discontinued",
-            "#samples", "#modulation", "#songPlayer",
+            "#samples", "#modulation", "#songPlayer", "#jokeMod",
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025"], //contains any possible tag
 
         "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2023"],
@@ -20,13 +20,17 @@ export function searchForMod(result) {
         "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
         "HaileyBox": ["#discontinued", "#2017"],
         "BruceBox": ["#discontinued", "#2017"],
+        "NerdBox": ["#discontinued", "#2018"],
         "ZefBox": ["#discontinued", "#2018"],
+        "ShitBox": ["#discontinued", "#jokeMod", "#2019"],
         "WideBox": ["#discontinued", "#2019"],
         "BlackBox": ["#discontinued", "#2019"],
+        "BassBox": ["#discontinued", "#jokeMod", "#2020"],
+        "SliderBox": ["#discontinued", "#2020"],
         "BluBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
         "CardboardBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
         // "JummBox 11edo":["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
-        "Wackybox": ["#discontinued", "#2021"], //song player option exists, but takes you to a 404 page
+        "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
         "TodBox": ["#discontinued", "#songPlayer", "#2021"],
         "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
         "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
@@ -36,13 +40,13 @@ export function searchForMod(result) {
         "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
         "Nepbox": ["#active", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
         "Unbox": ["#active", "#songPlayer", "#samples", "#modulation", "#2024"],
-        "shitbox4": ["#active", "#songPlayer", "#2024"],
+        "shitbox4": ["#active", "#songPlayer", "#jokeMod", "#2024"],
         "BariBox": ["#discontinued", "#samples", "#modulation", "#songPlayer", "#2024"],
-        "BoxBeep": ["#discontinued", "#songPlayer", "#2024"],
+        "BoxBeep": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"],
         "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
         "AwesomeBox": ["#active", "#songPlayer", "#modulation", "#2024"],
         "VoxBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2024"],
-        "Box": ["#discontinued", "#2024"],
+        "Box": ["#discontinued", "#jokeMod", "#2024"],
         "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     }
 
