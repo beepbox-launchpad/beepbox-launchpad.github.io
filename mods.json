@@ -364,6 +364,7 @@
         },
         "image": "./placeholder.png",
         "aa": "false",
+        "fontSize": "smaller",
         "website": "https://fillygroove.github.io/jummbox-microtonal/11edo/",
         "patchNotes": "",
         "version": "Release",
@@ -436,7 +437,7 @@
         "alternateVersions": []
     },
     {
-        "name": "PaandorasBox",
+        "name": "Paandora's Box",
         "date": {
             "day": 22,
             "month": 12,
@@ -444,6 +445,7 @@
         },
         "image": "https://paandorasbox.github.io/icon_32.png",
         "aa": "true",
+        "fontSize": "smaller",
         "website": "https://paandorasbox.github.io/",
         "patchNotes": "",
         "version": "V2.3",
