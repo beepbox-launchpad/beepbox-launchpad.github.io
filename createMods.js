@@ -154,7 +154,7 @@ function calculateNewUpdate(mod) {
             return abyssboxPN ? "unset" : "none";
         }
         case "Slarmoo's Box": {
-            var slarmoosBoxPN = (day <= 20 && month <= 2 && year == 2025);
+            var slarmoosBoxPN = (day <= 6 && month <= 4 && year == 2025);
             return slarmoosBoxPN ? "unset" : "none";
         }
         case "UltraBox": {

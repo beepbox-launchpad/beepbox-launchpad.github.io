@@ -1,13 +1,14 @@
 export function searchForMod(result) {
     var modList = [
         "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-        "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", "Midbox", "Dogebox2",
+        "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox 11edo", "BluBox", "Wackybox", "TodBox",
+        "MicroBox", "PaandorasBox", "BlockBox", "TETBox", "Midbox", "Dogebox2",
         "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox"
     ];
 
     const modTags = {
         "all": ["#active", "#discontinued",
-            "#samples", "#modulation", "#songPlayer", "#jokeMod",
+            "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal",
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025"], //contains any possible tag
 
         "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2023"],
@@ -29,13 +30,13 @@ export function searchForMod(result) {
         "SliderBox": ["#discontinued", "#2020"],
         "BluBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
         "CardboardBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
-        // "JummBox 11edo":["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
+        "JummBox 11edo":["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
         "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
         "TodBox": ["#discontinued", "#songPlayer", "#2021"],
         "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
         "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
         "BlockBox": ["#discontinued", "#samples", "#modulation", "#2021"], //song player option exists, but takes you to a 404 page
-        // "TETBox":["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
+        "TETBox":["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
         "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
         "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
         "Nepbox": ["#active", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there

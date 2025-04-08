@@ -110,7 +110,7 @@
         "aa": "false",
         "website": "https://slarmoo.github.io/slarmoosbox/website/",
         "patchNotes": "https://slarmoo.github.io/slarmoosbox/website/patch_notes.html",
-        "version": "V1.3.9",
+        "version": "V1.4.1",
         "description": "Slarmoo's Box is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@Slarmoo\" target=\"_blank\">Slarmoo</a> and was released on May 13th of 2024. Its main appeal is its highly customizable envelopes, which make automation a lot more intuitive. Its current version is V1.3.9.",
         "wiki": "https://beepbox.miraheze.org/wiki/Slarmoo%27s_Box",
         "alternateVersions": [
@@ -120,7 +120,7 @@
             },
             {
                 "link": "https://github.com/slarmoo/slarmoosbox/releases",
-                "name": "Slarmoo's Box Offline - V1.3.9"
+                "name": "Slarmoo's Box Offline - V1.4.1"
             }
         ],
         "hasTestingVersion": true
@@ -241,7 +241,7 @@
             "month": 11,
             "year": 2018
         },
-        "image": "https://static.wikitide.net/beepboxwiki/thumb/8/8d/Zefbox_Logo.webp/500px-Zefbox_Logo.webp.png?20240121020813",
+        "image": "https://static.wikitide.net/beepboxwiki/8/8d/Zefbox_Logo.webp",
         "aa": "false",
         "website": "https://ultraabox.github.io/archives/zefbox/",
         "patchNotes": "",
@@ -356,6 +356,22 @@
         "alternateVersions": []
     },
     {
+        "name": "JummBox 11edo",
+        "date": {
+            "day": 12,
+            "month": 5,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://fillygroove.github.io/jummbox-microtonal/11edo/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "JummBox 11edo is a mod of JummBox by FillyGroove. It changes the amounts of notes per octave to be 11. It was released on May 12, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/JummBox_11edo",
+        "alternateVersions": []
+    },
+    {
         "name": "BluBox",
         "date": {
             "day": 15,
@@ -449,6 +465,22 @@
         "version": "V0.1",
         "description": "BlockBox is a mod of PaandorasBox created by Romadillo. It was released on December 24, 2021.",
         "wiki": "https://beepbox.miraheze.org/wiki/BlockBox",
+        "alternateVersions": []
+    },
+    {
+        "name": "TETBox",
+        "date": {
+            "day": 10,
+            "month": 14,
+            "year": 2023
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://not-without-text.github.io/tetbox/website/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "TETBox is a mod of BeepBox by not without text. It changes the amounts of notes per octave to be 19. It was released on April 10, 2023. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/TETBox",
         "alternateVersions": []
     },
     {
