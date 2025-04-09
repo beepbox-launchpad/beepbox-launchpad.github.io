@@ -11,7 +11,7 @@ export function createMods(ModsList, method, isReversed) {
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
-        const fontSize = modInfo.fontSize == "" ? "inherit" : modInfo.fontSize;
+        const fontSize = modInfo.fontSize == ("" || "undefined") ? "inherit" : modInfo.fontSize;
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
