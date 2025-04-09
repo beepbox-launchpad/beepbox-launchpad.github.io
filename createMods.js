@@ -10,8 +10,9 @@ export function createMods(ModsList, method, isReversed) {
     Mods = sortMods(Mods, method, isReversed);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
+        const modName = modInfo.displayName != ("" || undefined) ? modInfo.displayName : modInfo.name;
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
-        const fontSize = modInfo.fontSize == ("" || "undefined") ? "inherit" : modInfo.fontSize;
+        const fontSize = modInfo.fontSize == ("" || undefined) ? "inherit" : modInfo.fontSize;
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
@@ -26,7 +27,7 @@ export function createMods(ModsList, method, isReversed) {
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },
-                div({ style: "text-align: center;/*! width: 100%; */ font-weight: bold; font-size: " + fontSize + "; flex: 3;" }, modInfo.name),
+                div({ style: "text-align: center;/*! width: 100%; */ font-weight: bold; font-size: " + fontSize + "; flex: 3;" }, modName),
                 button({ class: "playButton", onclick: "goToWebsite('" + modInfo.website + "')" }, "▶"),
                 button({ class: "descButton", onclick: "goToWebsite(`" + modInfo.name + "Prompt`, true)" }, "≡")
             ),
