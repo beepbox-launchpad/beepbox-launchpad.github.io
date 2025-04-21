@@ -437,7 +437,8 @@
         "alternateVersions": []
     },
     {
-        "name": "Paandora's Box",
+        "name": "PaandorasBox",
+        "displayName" : "Paandora's Box",
         "date": {
             "day": 22,
             "month": 12,
@@ -688,7 +689,7 @@
         "aa": "false",
         "website": "https://lemmbox.github.io/",
         "patchNotes": "",
-        "version": "V0.9.1-b",
+        "version": "V0.9.3-b",
         "description": "LemmBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@ARealLemonLime\" target=\"_blank\">HappyLemonLime</a> and was released on January 7th of 2025. Its main appeal is its customization of the max values found in the editor, and extra chip waves.",
         "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
         "alternateVersions": []
