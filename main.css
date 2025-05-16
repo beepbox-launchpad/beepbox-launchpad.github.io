@@ -1,7 +1,7 @@
 :root {
     --button-size: 32px;
     --settings-area-width: 192px;
-    --play-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -5 -8 L -5 8 L 8 0 z" fill="gray"/></svg>');
+    --play-widget-background-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -5 -8 L -5 8 L 8 0 z" fill="gray"/></svg>');
     --pause-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-5" y="-7" width="4" height="14" fill="gray"/><rect x="3" y="-7" width="4" height="14" fill="gray"/></svg>');
     --record-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><circle cx="0" cy="0" r="6" fill="gray"/></svg>');
     --stop-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-6" y="-6" width="12" height="12" fill="gray"/></svg>');
@@ -59,47 +59,32 @@
 
     --page-margin: #101014;
     --editor-background: #23222b;
-    --hover-preview: white;
-    --playhead: white;
     --primary-text: white;
     --secondary-text: #999;
     --inverted-text: black;
     --text-selection: rgba(119, 68, 255, 0.99);
-    --box-selection-fill: rgba(255, 255, 255, 0.2);
-    --loop-accent: #74f;
     --link-accent: #98f;
     --ui-widget-background: #373640;
-    --ui-widget-focus: #777;
-    --pitch-background: #444;
-    --tonic: #864;
-    --fifth-note: #468;
-    --third-note: #486;
-    --white-piano-key: #bbb;
-    --black-piano-key: #444;
-    --white-piano-key-text: #131200;
-    --black-piano-key-text: #fff;
-    --use-color-formula: false;
-    --pitch-channel-limit: 10;
-    --track-editor-bg-pitch: #444;
-    --track-editor-bg-pitch-dim: #333;
-    --track-editor-bg-noise: #444;
-    --track-editor-bg-noise-dim: #333;
-    --track-editor-bg-mod: #234;
-    --track-editor-bg-mod-dim: #123;
+    --ui-widget-focus: #6c6b7c;
+    --play-widget-background: #486;
     --multiplicative-mod-slider: #456;
-    --overwriting-mod-slider: #654;
     --indicator-primary: #74f;
     --indicator-secondary: #444;
-    --select2-opt-group: #585858;
     --input-box-outline: #333;
-    --mute-button-normal: #ffa033;
     --favorited: #74f;
     --favorited-star: #efe8ff;
     --unfavorited: #444444;
     --unfavorited-star: #777777;
-    --mute-button-mod: #9a6bff;
     --update-bubble: #ffa033;
     --mod-title: #9a6bff;
+}
+
+::selection {
+    background: var(--text-selection);
+}
+
+::-moz-selection {
+    background: var(--text-selection);
 }
 
 .copyText {
@@ -107,7 +92,7 @@
     top: 36px;
     height: 24px;
     width: 64px;
-    background: var(--third-note);
+    background: var(--play-widget-background);
     font-size: 14px;
     text-align: center;
     align-content: center;
@@ -329,6 +314,15 @@ h2 {
     font-family: inherit; 
     font-weight: inherit; 
     border: none;
+    transition: 0.2s;
+}
+
+.logoButton:hover {
+    filter:brightness(150%);
+}
+
+.prefButton:hover {
+    filter:brightness(150%);
 }
 
 .prefButton {
@@ -342,6 +336,7 @@ h2 {
     font-weight: inherit; 
     bottom: 16px;
     border: none;
+    transition: 0.2s;
 }
 
 .prefButton::before {
@@ -369,7 +364,7 @@ h2 {
 button.playButton {
     transition: 0.2s;
     height: 100%;
-    background: var(--third-note);
+    background: var(--play-widget-background);
     flex: 1;
     border-radius: 4px;
     text-align: center;
@@ -383,6 +378,8 @@ button.playButton:hover {
 
 .favoriteButton {
     appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     transition: 0.2s;
     background: var(--unfavorited);
     flex: 1;
@@ -461,6 +458,99 @@ button.descButton:hover {
     filter: brightness(150%);
 }
 
+input[type=range] {
+    appearance: none;
+	color: inherit;
+	width: 100%;
+	height: var(--button-size);
+	font-size: inherit;
+	margin: 0;
+	cursor: pointer;
+	background: none;
+	touch-action: pan-y;
+    position: relative;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	height: 16px;
+    width: 16px;
+    border-radius: 5px;
+	background: currentColor;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -10px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: var(--ui-widget-focus);
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+input[type=range]:focus::-moz-range-track {
+	background: var(--ui-widget-focus);
+}
+input[type=range]::-moz-range-thumb {
+	height: 16px;
+    width: 16px;
+    border-radius: 5px;
+	border: none;
+	background: currentColor;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+	border-color: transparent;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+input[type=range]:focus::-ms-track {
+	background: var(--ui-widget-focus);
+}
+input[type=range]::-ms-thumb {
+	height: 16px;
+    width: 16px;
+    border-radius: 5px;
+	background: currentColor;
+	cursor: pointer;
+}
+
+.selectRow {
+    display: block;
+    height: 24px;
+    border: none;
+    border-radius: 5px;
+    background: var(--ui-widget-background);
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+    align-content: center;
+    padding-top: 3px;
+}
+
+.selectRow:focus {
+    background: var(--ui-widget-focus);
+}
+
 .prompt {
     text-align: center;
     background: var(--editor-background);
@@ -492,7 +582,7 @@ button.descButton:hover {
 
 .promptContainerBG:hover {
     backdrop-filter: brightness(50%);
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 button.cancelButton::before {

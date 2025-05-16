@@ -1,6 +1,7 @@
 import { createMods, getMods } from "./createMods.js";
 import { searchForMod } from "./searching.js";
 import { HTML } from "./imperative-html/elements-strict.js";
+import { themes, _themeStyleElement } from "./themes.js"
 const { select, option, div } = HTML;
 
 const sorterValues = ["name", "date", "relevant"];
@@ -107,7 +108,23 @@ export function buildOptions(menu, items) {
     return menu;
 }
 
+function setTheme(name) {
+    let theme = themes[name];
+        if (theme == undefined) theme = themes["dark"];
+        _themeStyleElement.textContent = theme;
+        if (window.localStorage.getItem("colorTheme") != name) {
+            window.localStorage.setItem("colorTheme", name);
+        }
+    }
 
+if (window.localStorage.getItem("colorTheme") != null) {
+    document.getElementById("themeSelect").value = window.localStorage.getItem("colorTheme");
+    setTheme(window.localStorage.getItem("colorTheme"));
+} else {
+    document.getElementById("themeSelect").value = "dark";
+    window.localStorage.setItem("colorTheme", "dark");
+}
+window.setTheme = setTheme;
 
 if (window.localStorage.getItem("setView") != null) {
     if (window.localStorage.getItem("setView") == "previous") {
