@@ -43,6 +43,53 @@ function createSortbar() {
     });
 }
 
+        function switchView(view) {
+            switch(view) {
+                case 1: // default
+                for (i = 0; i < setList.length; i++) {
+                    if (!setList[i].includes("#")) {
+                        document.getElementById(String(setList[i])).style.display = "";
+                    }
+                }
+
+                document.getElementById("modsListButton").style.filter = "brightness(150%)";
+                document.getElementById("favoritesListButton").style.filter = "";
+                document.getElementById("comingSoon").style.display = "";
+                break;
+                case 2: // favorites
+                if (favoritesList.length > 0) {
+                    for (i = 0; i < setList.length; i++) {
+                        if (!setList[i].includes("#")) {
+                            for (var k = 0; k < favoritesList.length; k++) {
+                                if (favoritesList.includes(setList[i])) {
+                                    document.getElementById(String(setList[i])).style.display = "";
+                                    //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Favorited");
+                                } else {
+                                    document.getElementById(String(setList[i])).style.display = "none";
+                                    //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Not Favorited");
+                                }
+
+                            }
+                        }
+                    }
+                    document.getElementById("noFavorites").style.display = "none";
+                } else {
+                    for (i = 0; i < setList.length; i++) {
+                        if (!setList[i].includes("#")) {
+                        document.getElementById(String(setList[i])).style.display = "none";
+                        }
+                    }
+                    document.getElementById("noFavorites").style.display = "";
+                }
+                document.getElementById("modsListButton").style.filter = "";
+                document.getElementById("favoritesListButton").style.filter = "brightness(150%)";
+                document.getElementById("comingSoon").style.display = "none";
+                break;
+            }
+
+            window.localStorage.setItem("previousView", view);
+        }
+
 function recreateMods() {
     document.getElementById("prompt").innerHTML = "";
     document.getElementById("modContainer").innerHTML = "";
@@ -51,9 +98,30 @@ function recreateMods() {
     searchForMod(document.getElementById("searchbar").value);
 }
 
+window.switchView = switchView;
+
 export function buildOptions(menu, items) {
     for (let index = 0; index < items.length; index++) {
         menu.appendChild(option({ value: index }, items[index]));
     }
     return menu;
+}
+
+
+
+if (window.localStorage.getItem("setView") != null) {
+    if (window.localStorage.getItem("setView") == "previous") {
+        if (window.localStorage.getItem("previousView") != null) {
+            switchView(Number(window.localStorage.getItem("previousView")));
+        } else {
+            switchView(1);
+        }
+    } else if (window.localStorage.getItem("setView") == "mods") {
+        switchView(1);
+    } else if (window.localStorage.getItem("setView") == "favs") {
+        switchView(2);
+    }
+} else {
+    window.localStorage.setItem("setView", "previous");
+    switchView(1);
 }

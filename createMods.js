@@ -1,6 +1,6 @@
 import { HTML } from "./imperative-html/elements-strict.js";
 
-const { div, a, button, h2 } = HTML;
+const { div, a, button, h2, input } = HTML;
 
 export function createMods(ModsList, method, isReversed) {
     const promptContainer = document.getElementById("prompt");
@@ -13,6 +13,11 @@ export function createMods(ModsList, method, isReversed) {
         const modName = modInfo.displayName != ("" || undefined) ? modInfo.displayName : modInfo.name;
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
         const fontSize = modInfo.fontSize == ("" || undefined) ? "inherit" : modInfo.fontSize;
+        var modFavoritesList = new Array();
+        var modstoredfavoritesList = localStorage.getItem("favoritesList");
+        if (modstoredfavoritesList != null) {
+            modFavoritesList = JSON.parse(modstoredfavoritesList);
+        }
 
         const updateButton = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.name + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
@@ -21,6 +26,9 @@ export function createMods(ModsList, method, isReversed) {
         if (updateButton) {
             updateButton.style.display = calculateNewUpdate(modInfo.name);
         }
+
+        const favoriteButton = input({type:"checkbox", class: "favoriteButton", onclick: "favoriteBeepmod('" + modInfo.name + "')" });
+        favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.name) != -1);
 
         const mod = div({ class: "modDivider", id: modInfo.name },
             div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
@@ -32,6 +40,7 @@ export function createMods(ModsList, method, isReversed) {
                 button({ class: "descButton", onclick: "goToWebsite(`" + modInfo.name + "Prompt`, true)" }, "≡")
             ),
             updateButton,
+            favoriteButton,
             div({ class: "versionText" },
                 div({ style: "margin-top: 2px;" }, modInfo.version)
             )
@@ -84,6 +93,7 @@ export function createMods(ModsList, method, isReversed) {
     //make special case "mods"
     modContainer.append(div({ id: "comingSoon" }, div({ style: "text-align: center;width: 100%;margin-bottom: 10px;" }, "Coming Soon!")));
     modContainer.append(div({ id: "noResults", style: "display:none; text-align: center;width: 100%; margin-bottom: 10px; font-size: 32px;" }, "No results found"));
+    modContainer.append(div({ id: "noFavorites", style: "display:none; text-align: center;width: 100%; margin-bottom: 10px; font-size: 32px;" }, "You haven't favorited anything!"));
 }
 
 export async function getMods() {
@@ -170,6 +180,10 @@ function calculateNewUpdate(mod) {
         case "JummBox": {
             var jummBoxPN = false;
             return jummBoxPN ? "unset" : "none";
+        }
+        case "LemmBox": {
+            var LemmBoxPN = false;
+            return LemmBoxPN ? "unset" : "none";
         }
     }
     return "none";

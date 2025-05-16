@@ -36,7 +36,7 @@
 
     <div style="width: 100%; height: 64px; background: #23222b; border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row;">
         <div id="header", style="display: flex; flex-direction: row; gap: 5px;">
-            <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
+            <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" onclick="switchView(1)" oninput="searchForMod(document.getElementById('searchbar').value)"/>
             <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)">
                 <div class="copyText" id="copyText"></div>
             </div> 
@@ -48,8 +48,11 @@
     </div>
     <div style="display: grid; grid-template-columns: 64px 1fr;">
         <div style="width: 64px; justify-content: space-between; background: #23222b; display: flex; flex-direction: column; border-top: var(--ui-widget-background) 2px solid;border-right: var(--ui-widget-background) 2px solid; align-items: center; padding-top: 16px; padding-bottom: 16px;">
-            <div class="logoButton" style="height: var(--button-size);width: var(--button-size);background: var(--ui-widget-background);border-radius: 5px; position: relative; font-size: inherit; font-family: inherit; font-weight: inherit; filter: brightness(150%);"></div>
-            <div class="prefButton" style="height: var(--button-size);width: var(--button-size);background: var(--ui-widget-background);border-radius: 5px; position: absolute; font-size: inherit; font-family: inherit; font-weight: inherit; bottom: 16px;"></div>
+            <div style="display:flex; flex-direction: column; gap: 5px;">
+                <button id="modsListButton" class="logoButton" onclick="switchView(1)" >
+                <button id="favoritesListButton" class="logoButton" onclick="switchView(2)">
+            </div>
+            <button id="preferenceButton" class="prefButton">
         </div> 
     <div id="modContainer" style="margin: 32px;display: flex;gap: 10px;flex-wrap: wrap;align-content: baseline;max-height: 100%;overflow-y: scroll;overflow-x: hidden;justify-content: center;/*! margin-top: 32px; */"> 
         <!-- Append Mods here -->
@@ -64,11 +67,18 @@
     <script type="module" src="./main.js"></script>
 
     <script>
+        var favoritesList = new Array();
+        var storedfavoritesList = localStorage.getItem("favoritesList");
+        if (storedfavoritesList != null) {
+            favoritesList = JSON.parse(storedfavoritesList);
+        }
+            console.log(favoritesList);
+            console.log(storedfavoritesList);
 
         const setList = [
-            "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-            "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", "BlockBox", 
-            "Midbox", "Dogebox2", "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "LemmBox", //mods
+            "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
+            "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "MicroBox", "PaandorasBox", 
+            "BlockBox", "TETBox", "Midbox", "Dogebox2", "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox", //mods
             "#active", "#discontinued", "#samples", "#modulation", "#songPlayer", "#jokeMod", //attributes
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025", //dates
             "#before:", "#after:"]; //special cases
@@ -86,6 +96,21 @@
                 displayPrompt(websiteLink)
             }
         }
+
+        document.getElementById("modsListButton").style.filter = "brightness(150%)";
+
+        function favoriteBeepmod(modName) {
+            const index = favoritesList.indexOf(modName);
+            if (index > -1) {
+                favoritesList.splice(index, 1); 
+            } else {
+                favoritesList.push(modName);
+            }
+            window.localStorage.setItem("favoritesList", JSON.stringify(favoritesList));
+            console.log(favoritesList);
+            console.log(window.localStorage.getItem("favoritesList"));
+        }
+
 
         function displayPrompt(promptName) {
             const promptBg = document.getElementById("promptContainerBG");

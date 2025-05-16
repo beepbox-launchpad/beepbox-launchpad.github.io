@@ -100,7 +100,8 @@
         "hasTestingVersion": true
     },
     {
-        "name": "Slarmoo's Box",
+        "name": "SlarmoosBox",
+        "displayName" : "Slarmoo's Box",
         "date": {
             "day": 13,
             "month": 5,
@@ -360,7 +361,8 @@
         "alternateVersions": []
     },
     {
-        "name": "JummBox 11edo",
+        "name": "JummBox11edo",
+        "displayName": "JummBox 11edo",
         "date": {
             "day": 12,
             "month": 5,

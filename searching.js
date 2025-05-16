@@ -1,7 +1,7 @@
 export function searchForMod(result) {
     var modList = [
-        "UltraBox", "Slarmoo's Box", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-        "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox 11edo", "BluBox", "Wackybox", "TodBox",
+        "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
+        "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox",
         "MicroBox", "PaandorasBox", "BlockBox", "TETBox", "Midbox", "Dogebox2",
         "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox"
     ];
@@ -12,7 +12,7 @@ export function searchForMod(result) {
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025"], //contains any possible tag
 
         "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2023"],
-        "Slarmoo's Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
+        "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
         "AbyssBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
         "BeepBox": ["#active", "#songPlayer", "#2012"],
         "JummBox": ["#active", "#modulation", "#songPlayer", "#2019"],
@@ -30,7 +30,7 @@ export function searchForMod(result) {
         "SliderBox": ["#discontinued", "#2020"],
         "BluBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
         "CardboardBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
-        "JummBox 11edo":["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
+        "JummBox11edo":["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
         "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
         "TodBox": ["#discontinued", "#songPlayer", "#2021"],
         "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
