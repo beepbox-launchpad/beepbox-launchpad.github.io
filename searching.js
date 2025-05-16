@@ -107,7 +107,7 @@ export function searchForMod(result) {
         var blank = 0;
 
         const foundMods = [];
-        for (i = 0; i < modTags.all.length; i++) {
+        for (let i = 0; i < modTags.all.length; i++) {
             var thing = modTags.all[i];
             var lowercaseThing = thing.toLowerCase();
             if (lowercaseThing.indexOf(result.toLowerCase()) > -1) {
@@ -134,7 +134,7 @@ export function searchForMod(result) {
     } else if (result != "") { //do regular searching
         var blank = 0;
 
-        for (i = 0; i < modList.length; i++) {
+        for (let i = 0; i < modList.length; i++) {
             var thing = modList[i];
             var lowercaseThing = thing.toLowerCase();
             if (lowercaseThing.indexOf(result.toLowerCase()) > -1) {
@@ -156,7 +156,7 @@ export function searchForMod(result) {
 
     } else {
 
-        for (i = 0; i < modList.length; i++) {
+        for (let i = 0; i < modList.length; i++) {
             document.getElementById(modList[i]).style.display = "flex";
         }
         document.getElementById("comingSoon").style.display = "flex";

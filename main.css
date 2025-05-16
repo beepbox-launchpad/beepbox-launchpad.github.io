@@ -56,27 +56,6 @@
 </svg>*/
 
     --favorite-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,42.04825,40.2" width="16" height="16"><path d="M 41.2 17.8 l -8.2 8 l 1.8 11.3 c 0.2 1 -0.2 2 -1 2.6 c -0.4 0.3 -1 0.5 -1.5 0.5 c -0.4 0 -0.8 -0.1 -1.2 -0.3 l -10.1 -5.3 l -10.2 5.3 c -0.4 0.2 -0.8 0.3 -1.2 0.3 c -0.5 0 -1 -0.2 -1.5 -0.5 c -0.8 -0.6 -1.2 -1.6 -1 -2.6 l 1.9 -11.2 l -8.2 -8 c -0.8 -0.7 -1 -1.7 -0.7 -2.7 c 0.3 -1 1.1 -1.7 2.1 -1.8 l 11.3 -1.6 l 5.1 -10.3 c 0.5 -0.9 1.4 -1.5 2.4 -1.5 c 1 0 2 0.6 2.4 1.5 l 5.1 10.3 l 11.3 1.6 c 1 0.2 1.8 0.8 2.1 1.8 c 0.3 0.9 0 2 -0.7 2.6 z" fill="gray" style="left: 0;position: absolute;top: 0;"></path></svg>');
-
-    --page-margin: #101014;
-    --editor-background: #23222b;
-    --primary-text: white;
-    --secondary-text: #999;
-    --inverted-text: black;
-    --text-selection: rgba(119, 68, 255, 0.99);
-    --link-accent: #98f;
-    --ui-widget-background: #373640;
-    --ui-widget-focus: #6c6b7c;
-    --play-widget-background: #486;
-    --multiplicative-mod-slider: #456;
-    --indicator-primary: #74f;
-    --indicator-secondary: #444;
-    --input-box-outline: #333;
-    --favorited: #74f;
-    --favorited-star: #efe8ff;
-    --unfavorited: #444444;
-    --unfavorited-star: #777777;
-    --update-bubble: #ffa033;
-    --mod-title: #9a6bff;
 }
 
 ::selection {

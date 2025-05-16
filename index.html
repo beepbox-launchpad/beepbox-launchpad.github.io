@@ -30,6 +30,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./beepboxModding.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
+    <!-- <link rel="stylesheet" href="./themes.css" id="stylesheet" /> -->
     <link rel="stylesheet" href="./main.css" />
     </head>
 <body>
@@ -105,29 +106,29 @@
         if (storedfavoritesList != null) {
             favoritesList = JSON.parse(storedfavoritesList);
         }
-            console.log(favoritesList);
-            console.log(storedfavoritesList);
 
-            function setPreferedTab(value) {
-                window.localStorage.setItem("setView", value);
-            }
+        function setPreferedTab(value) {
+            window.localStorage.setItem("setView", value);
+        }
 
-            function setPromptOpacity(value) {
-                window.localStorage.setItem("promptOpacity", value);
-                document.getElementById("promptContainerBG").style.opacity = Number(window.localStorage.getItem("promptOpacity"));
-            }
+        function setPromptOpacity(value) {
+            window.localStorage.setItem("promptOpacity", value);
+            document.getElementById("promptContainerBG").style.opacity = Number(window.localStorage.getItem("promptOpacity"));
+        }
 
-            if (window.localStorage.getItem("promptOpacity") != null) {
-                setPromptOpacity(Number(window.localStorage.getItem("promptOpacity")));
-                document.getElementById("promptOpacitySlider").value = Number(window.localStorage.getItem("promptOpacity"));
-            } 
+        if (window.localStorage.getItem("promptOpacity") != null) {
+            setPromptOpacity(Number(window.localStorage.getItem("promptOpacity")));
+            document.getElementById("promptOpacitySlider").value = Number(window.localStorage.getItem("promptOpacity"));
+        } 
 
-            if (window.localStorage.getItem("setView") != null) {
-                document.getElementById("setViewSelect").value = window.localStorage.getItem("setView");
-            } else {
-                document.getElementById("setViewSelect").value = "previous";
-                window.localStorage.setItem("previous");
-            }
+        if (window.localStorage.getItem("setView") != null) {
+            document.getElementById("setViewSelect").value = window.localStorage.getItem("setView");
+        } else {
+            document.getElementById("setViewSelect").value = "previous";
+            window.localStorage.setItem("setView", "previous");
+        }
+
+
 
 
         const setList = [
@@ -138,7 +139,7 @@
             "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025", //dates
             "#before:", "#after:"]; //special cases
 
-            for (i = 0; i < setList.length; i++) {
+            for (let i = 0; i < setList.length; i++) {
                 var tag = new Option();
                 tag.value = setList[i]
                 document.getElementById("tags").appendChild(tag);
@@ -162,8 +163,6 @@
                 favoritesList.push(modName);
             }
             window.localStorage.setItem("favoritesList", JSON.stringify(favoritesList));
-            console.log(favoritesList);
-            console.log(window.localStorage.getItem("favoritesList"));
         }
 
 

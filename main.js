@@ -47,7 +47,7 @@ function createSortbar() {
         function switchView(view) {
             switch(view) {
                 case 1: // default
-                for (i = 0; i < setList.length; i++) {
+                for (let i = 0; i < setList.length; i++) {
                     if (!setList[i].includes("#")) {
                         document.getElementById(String(setList[i])).style.display = "";
                     }
@@ -59,7 +59,7 @@ function createSortbar() {
                 break;
                 case 2: // favorites
                 if (favoritesList.length > 0) {
-                    for (i = 0; i < setList.length; i++) {
+                    for (let i = 0; i < setList.length; i++) {
                         if (!setList[i].includes("#")) {
                             for (var k = 0; k < favoritesList.length; k++) {
                                 if (favoritesList.includes(setList[i])) {
@@ -75,7 +75,7 @@ function createSortbar() {
                     }
                     document.getElementById("noFavorites").style.display = "none";
                 } else {
-                    for (i = 0; i < setList.length; i++) {
+                    for (let i = 0; i < setList.length; i++) {
                         if (!setList[i].includes("#")) {
                         document.getElementById(String(setList[i])).style.display = "none";
                         }
@@ -110,12 +110,13 @@ export function buildOptions(menu, items) {
 
 function setTheme(name) {
     let theme = themes[name];
-        if (theme == undefined) theme = themes["dark"];
-        _themeStyleElement.textContent = theme;
-        if (window.localStorage.getItem("colorTheme") != name) {
-            window.localStorage.setItem("colorTheme", name);
-        }
+    // const _themeStyleElement = document.getElementById("themes");
+    if (theme == undefined) theme = themes["dark"];
+        _themeStyleElement.textContent = ":root {\n" + theme + "\n}";
+    if (window.localStorage.getItem("colorTheme") != name) {
+        window.localStorage.setItem("colorTheme", name);
     }
+}
 
 if (window.localStorage.getItem("colorTheme") != null) {
     document.getElementById("themeSelect").value = window.localStorage.getItem("colorTheme");
