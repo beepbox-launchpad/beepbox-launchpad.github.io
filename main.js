@@ -1,7 +1,7 @@
 import { createMods, getMods } from "./createMods.js";
 import { searchForMod } from "./searching.js";
 import { HTML } from "./imperative-html/elements-strict.js";
-import { themes, _themeStyleElement } from "./themes.js"
+import { setTheme, _themeStyleElement } from "./themes.js"
 const { select, option, div } = HTML;
 
 const sorterValues = ["name", "date", "relevant"];
@@ -106,16 +106,6 @@ export function buildOptions(menu, items) {
         menu.appendChild(option({ value: index }, items[index]));
     }
     return menu;
-}
-
-function setTheme(name) {
-    let theme = themes[name];
-    // const _themeStyleElement = document.getElementById("themes");
-    if (theme == undefined) theme = themes["dark"];
-        _themeStyleElement.textContent = ":root {\n" + theme + "\n}";
-    if (window.localStorage.getItem("colorTheme") != name) {
-        window.localStorage.setItem("colorTheme", name);
-    }
 }
 
 if (window.localStorage.getItem("colorTheme") != null) {
