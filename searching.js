@@ -1,3 +1,5 @@
+import { currentView, switchView } from "./preferences.js";
+
 export function searchForMod(result) {
     var modList = [
         "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
@@ -167,6 +169,11 @@ export function searchForMod(result) {
 
     if (result.length == 0) {
         window.history.replaceState(null, "", location.pathname);
+
+        if (currentView == 2) {
+                switchView(2);
+                console.log("switching view: "+currentView)
+        }
     }
 
 }

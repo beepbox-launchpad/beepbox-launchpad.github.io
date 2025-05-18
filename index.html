@@ -37,7 +37,7 @@
 
     <div style="width: 100%; height: 64px; background: var(--editor-background); border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row; transition: 0.2s;">
         <div id="header", style="display: flex; flex-direction: row; gap: 5px;">
-            <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" onclick="switchView(1)" oninput="searchForMod(document.getElementById('searchbar').value)"/>
+            <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
             <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)">
                 <div class="copyText" id="copyText"></div>
             </div> 
@@ -63,42 +63,6 @@
 <div class="promptContainerBG" id="promptContainerBG">
     <div class="prompt" id="prompt"> 
         <!-- Append Prompts here -->
-
-        <div class="preferences" id="preferencesPrompt" style="display: none; flex-direction: column;"> 
-            <div class="promptTitle"><h2 class="BeepBoxTitle" style="margin-bottom: 0.5em;">Preferences:</h2>
-                <div style="margin-bottom: 0.5em;display: flex;flex-direction: column;gap: 15px;">
-                    <div style="display: flex;flex-direction: column;">
-                        Starting Tab: 
-                        <div class="selectContainer" style="align-self: center; position: relative;">
-                            <select class="selectRow" id="setViewSelect" style="width: 128px;" value="previous" onchange="setPreferedTab(value)">
-                                <option value="previous">Previous</option>
-                                <option value="mods">Mods</option>
-                                <option value="favs">Favorites</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div style="display: flex;flex-direction: column;">
-                        Unfocused Prompt Opacity: 
-                        <input id="promptOpacitySlider" style="width: 128px;align-self: center;" type="range" min="0" max="1" step="0.1" value=0.2 onchange="setPromptOpacity(value)">
-                    </div>
-                    <div style="display: flex;flex-direction: column;">
-                        Theme: 
-                        <div class="selectContainer" style="align-self: center; position: relative;">
-                            <select class="selectRow" id="themeSelect" style="width: 128px;align-self: center;" onchange="setTheme(value)" value="dark">
-                                <option value="dark">Dark</option>
-                                <option value="light">Light</option>
-                                <option value="midnight">Midnight</option>
-                                <option value="beepbox">BeepBox</option>
-                                <option value="jummbox">JummBox</option>
-                                <option value="abyssbox">AbyssBox</option>
-                                <option value="slarmoosbox">SlarmoosBox</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="cancelButton" onclick="closePrompt(`preferencesPrompt`)"></button>
-        </div>
     </div> 
 </div>
     <script type="module" src="./main.js"></script>
@@ -109,30 +73,6 @@
         if (storedfavoritesList != null) {
             favoritesList = JSON.parse(storedfavoritesList);
         }
-
-        function setPreferedTab(value) {
-            window.localStorage.setItem("setView", value);
-        }
-
-        function setPromptOpacity(value) {
-            window.localStorage.setItem("promptOpacity", value);
-            document.getElementById("promptContainerBG").style.opacity = Number(window.localStorage.getItem("promptOpacity"));
-        }
-
-        if (window.localStorage.getItem("promptOpacity") != null) {
-            setPromptOpacity(Number(window.localStorage.getItem("promptOpacity")));
-            document.getElementById("promptOpacitySlider").value = Number(window.localStorage.getItem("promptOpacity"));
-        } 
-
-        if (window.localStorage.getItem("setView") != null) {
-            document.getElementById("setViewSelect").value = window.localStorage.getItem("setView");
-        } else {
-            document.getElementById("setViewSelect").value = "previous";
-            window.localStorage.setItem("setView", "previous");
-        }
-
-
-
 
         const setList = [
             "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
