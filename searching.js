@@ -52,7 +52,7 @@ const modTags = {
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
 }
 
-export function searchForMod(result) {
+export function searchForMod(result, fromMods = modList) {
     //split on spaces for multiple filters to be allowed
 
     const filterStrings = result.split(/\s/i);
@@ -91,8 +91,7 @@ export function searchForMod(result) {
         }
     }
 
-    let mods = modList.slice();
-    console.log(filters);
+    let mods = fromMods.slice();
     for (let i = 0; i < filters.length; i++) {
         mods = filters[i](mods);
     }
@@ -103,7 +102,7 @@ export function searchForMod(result) {
 
         if (currentView == 2) {
             switchView(2);
-            console.log("switching view: " + currentView)
+            // console.log("switching view: " + currentView)
         }
     }
 }

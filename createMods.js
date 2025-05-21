@@ -5,7 +5,7 @@ const { div, a, button, h2, input } = HTML;
 export function createMods(ModsList, method, isReversed) {
     const promptContainer = document.getElementById("prompt");
     const modContainer = document.getElementById("modContainer");
-    // console.log(Mods);
+
     let Mods = ModsList.slice();
     Mods = sortMods(Mods, method, isReversed);
     for (let modNumber in Mods) {

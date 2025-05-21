@@ -1,4 +1,5 @@
 import { HTML } from "./imperative-html/elements-strict.js";
+import { searchForMod } from "./searching.js";
 const { select, option, div, h2, button, input } = HTML;
 
 export let currentView = 1;
@@ -19,11 +20,12 @@ export function setPromptOpacity(value) {
 export function switchView(view) {
     switch(view) {
         case 1: // default
-        for (let i = 0; i < setList.length; i++) {
-            if (!setList[i].includes("#")) {
-                document.getElementById(String(setList[i])).style.display = "";
-            }
-        }
+        searchForMod(document.getElementById("searchbar").value);
+        // for (let i = 0; i < setList.length; i++) {
+        //     if (!setList[i].includes("#")) {
+        //         document.getElementById(String(setList[i])).style.display = "";
+        //     }
+        // }
 
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
         document.getElementById("favoritesListButton").style.filter = "";
@@ -31,20 +33,22 @@ export function switchView(view) {
         break;
         case 2: // favorites
         if (favoritesList.length > 0) {
-            for (let i = 0; i < setList.length; i++) {
-                if (!setList[i].includes("#")) {
-                    for (var k = 0; k < favoritesList.length; k++) {
-                        if (favoritesList.includes(setList[i])) {
-                            document.getElementById(String(setList[i])).style.display = "";
-                            //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Favorited");
-                        } else {
-                            document.getElementById(String(setList[i])).style.display = "none";
-                            //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Not Favorited");
-                        }
+            searchForMod(document.getElementById("searchbar").value, favoritesList);
+            // for (let i = 0; i < setList.length; i++) {
+            //     if (!setList[i].includes("#")) {
+            //         for (var k = 0; k < favoritesList.length; k++) {
 
-                    }
-                }
-            }
+            //             if (favoritesList.includes(setList[i])) {
+            //                 // document.getElementById(String(setList[i])).style.display = "";
+            //                 //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Favorited");
+            //             } else {
+            //                 // document.getElementById(String(setList[i])).style.display = "none";
+            //                 //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Not Favorited");
+            //             }
+                        
+            //         }
+            //     }
+            // }
             document.getElementById("noFavorites").style.display = "none";
         } else {
             for (let i = 0; i < setList.length; i++) {

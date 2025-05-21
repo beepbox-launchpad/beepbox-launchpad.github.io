@@ -81,7 +81,7 @@ function recreateMods() {
 
     if (currentView == 2) {
         switchView(2);
-        console.log("switching view: "+currentView)
+        // console.log("switching view: "+currentView)
     }
 }
 
