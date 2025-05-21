@@ -33,7 +33,7 @@ export function switchView(view) {
         break;
         case 2: // favorites
         if (favoritesList.length > 0) {
-            searchForMod(document.getElementById("searchbar").value, favoritesList);
+            searchForMod("", favoritesList);
             // for (let i = 0; i < setList.length; i++) {
             //     if (!setList[i].includes("#")) {
             //         for (var k = 0; k < favoritesList.length; k++) {
