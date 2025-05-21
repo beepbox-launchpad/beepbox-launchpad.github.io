@@ -20,12 +20,11 @@ export function setPromptOpacity(value) {
 export function switchView(view) {
     switch(view) {
         case 1: // default
-        searchForMod(document.getElementById("searchbar").value);
-        // for (let i = 0; i < setList.length; i++) {
-        //     if (!setList[i].includes("#")) {
-        //         document.getElementById(String(setList[i])).style.display = "";
-        //     }
-        // }
+        for (let i = 0; i < setList.length; i++) {
+            if (!setList[i].includes("#")) {
+                document.getElementById(String(setList[i])).style.display = "";
+            }
+        }
 
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
         document.getElementById("favoritesListButton").style.filter = "";
@@ -33,7 +32,6 @@ export function switchView(view) {
         break;
         case 2: // favorites
         if (favoritesList.length > 0) {
-            // searchForMod("", favoritesList);
             for (let i = 0; i < setList.length; i++) {
                 if (!setList[i].includes("#")) {
                     for (var k = 0; k < favoritesList.length; k++) {
