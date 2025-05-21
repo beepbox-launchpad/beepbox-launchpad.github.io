@@ -33,22 +33,22 @@ export function switchView(view) {
         break;
         case 2: // favorites
         if (favoritesList.length > 0) {
-            searchForMod("", favoritesList);
-            // for (let i = 0; i < setList.length; i++) {
-            //     if (!setList[i].includes("#")) {
-            //         for (var k = 0; k < favoritesList.length; k++) {
+            // searchForMod("", favoritesList);
+            for (let i = 0; i < setList.length; i++) {
+                if (!setList[i].includes("#")) {
+                    for (var k = 0; k < favoritesList.length; k++) {
 
-            //             if (favoritesList.includes(setList[i])) {
-            //                 // document.getElementById(String(setList[i])).style.display = "";
-            //                 //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Favorited");
-            //             } else {
-            //                 // document.getElementById(String(setList[i])).style.display = "none";
-            //                 //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Not Favorited");
-            //             }
+                        if (favoritesList.includes(setList[i])) {
+                            document.getElementById(String(setList[i])).style.display = "";
+                            //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Favorited");
+                        } else {
+                            document.getElementById(String(setList[i])).style.display = "none";
+                            //console.log("setList["+i+"]: "+ setList[i]+"; setList["+k+"]: "+ favoritesList[k]+"; Not Favorited");
+                        }
                         
-            //         }
-            //     }
-            // }
+                    }
+                }
+            }
             document.getElementById("noFavorites").style.display = "none";
         } else {
             for (let i = 0; i < setList.length; i++) {
