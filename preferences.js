@@ -20,9 +20,14 @@ export function setPromptOpacity(value) {
 export function switchView(view) {
     switch(view) {
         case 1: // default
-        for (let i = 0; i < setList.length; i++) {
-            if (!setList[i].includes("#")) {
-                document.getElementById(String(setList[i])).style.display = "";
+        const search = document.getElementById("searchbar").value;
+        if (search != "") {
+            searchForMod(search);
+        } else {
+            for (let i = 0; i < setList.length; i++) {
+                if (!setList[i].includes("#")) {
+                    document.getElementById(String(setList[i])).style.display = "";
+                }
             }
         }
 
