@@ -10,6 +10,7 @@ const sorterValues = ["name", "date", "relevant"];
 createSortbar();
 
 const Mods = await getMods();
+window.Mods = Mods;
 
 createMods(Mods, "relevant", false);
 document.getElementById("prompt").appendChild(preferencesPrompt);

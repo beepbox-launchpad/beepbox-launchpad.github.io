@@ -84,6 +84,28 @@ export function searchForMod(result, fromMods = modList) {
             }
             filters.push((mods) => filterAfter(mods, date)); //Add the filter function to the list of filters
 
+        } else if (filterStrings[i].toLowerCase().indexOf("#children:") > -1) {
+            let fork = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+            if (fork.length == 0) { //there may have been a space, check if next string is the fork
+                if (i+1 < filterStrings.length && filterStrings[i + 1].indexOf("#") > -1) {
+                    fork = filterStrings[i + 1];
+                    i++
+                } else {
+                    fork = "beepbox";
+                }
+            }
+            filters.push((mods) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
+        } else if (filterStrings[i].toLowerCase().indexOf("#descendants:") > -1) {
+            let fork = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+            if (fork.length == 0) { //there may have been a space, check if next string is the fork
+                if (i + 1 < filterStrings.length && filterStrings[i + 1].indexOf("#") > -1) {
+                    fork = filterStrings[i + 1];
+                    i++
+                } else {
+                    fork = "beepbox";
+                }
+            }
+            filters.push((mods) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
         } else if (filterStrings[i][0] == "#") {
             filters.push((mods) => filterTag(mods, filterStrings[i]));
         } else if (filterStrings[i] != "") {
@@ -134,6 +156,54 @@ function filterAfter(mods, date) {
             if (!Number.isNaN(dateTag) && dateTag >= date) { //check if tag is a date and push mod to found mods if date is greater than the filtered one
                 foundMods.push(mods[i]);
                 break;
+            }
+        }
+    }
+
+    return foundMods;
+}
+
+function filterDescendants(mods, forked) {
+    const foundMods = [];
+
+    for (const index in window.Mods) {
+        const Mod = window.Mods[index];
+        for (let i = 0; i < mods.length; i++) {
+            if (Mod.name == mods[i]) {
+                if (Mod.name.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+                    foundMods.push(mods[i]);
+                    break;
+                }
+                for (let j = 0; j < Mod.tree.length; j++) {
+                    if (Mod.tree[j].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
+                        foundMods.push(mods[i]);
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    return foundMods;
+}
+
+function filterChildren(mods, forked) {
+    const foundMods = [];
+
+    for (const index in window.Mods) {
+        const Mod = window.Mods[index];
+        for (let i = 0; i < mods.length; i++) {
+            if (Mod.name == mods[i]) {
+                if (Mod.name.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+                    foundMods.push(mods[i]);
+                    break;
+                }
+                const lastIndex = Mod.tree.length - 1;
+                if (lastIndex >= 0 && Mod.tree[lastIndex].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
+                    foundMods.push(mods[i]);
+                }
+                break; 
             }
         }
     }
