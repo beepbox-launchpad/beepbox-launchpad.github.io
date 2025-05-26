@@ -1,4 +1,5 @@
 import { HTML } from "./imperative-html/elements-strict.js";
+import { calculateNewUpdate } from "./lastUpdate.js";
 
 const { div, a, button, h2, input } = HTML;
 
@@ -144,47 +145,4 @@ function parseForUrls(text) {
     }
 
     return parsed;
-}
-
-function calculateNewUpdate(mod) {
-    // - Update Times - //
-    var time = new Date();
-    var day = time.getDate();
-    var month = time.getMonth() + 1;
-    var year = time.getYear() + 1900;
-
-    // PN stands for Patch Notes
-
-    // ((month < [NextMonth] ? day <= 31 : day <= [setDay]) && month <= [NextMonth] && year == 2025); Template For when the date crosses months
-    // (day <= [setDay] && month <= [setMonth] && year == 2025); Template for Same Month updates
-
-    // Make sure to set the date to 3 days after the update happens 
-
-    switch (mod) {
-        case "AbyssBox": {
-            var abyssboxPN = false;
-            return abyssboxPN ? "unset" : "none";
-        }
-        case "Slarmoo's Box": {
-            var slarmoosBoxPN = (day <= 8 && month <= 5 && year == 2025);
-            return slarmoosBoxPN ? "unset" : "none";
-        }
-        case "UltraBox": {
-            var ultraboxPN = (day <= 20 && month <= 2 && year == 2025);
-            return ultraboxPN ? "unset" : "none";
-        }
-        case "BeepBox": {
-            var beepBoxPN = false;
-            return beepBoxPN ? "unset" : "none";
-        }
-        case "JummBox": {
-            var jummBoxPN = false;
-            return jummBoxPN ? "unset" : "none";
-        }
-        case "LemmBox": {
-            var LemmBoxPN = false;
-            return LemmBoxPN ? "unset" : "none";
-        }
-    }
-    return "none";
 }
