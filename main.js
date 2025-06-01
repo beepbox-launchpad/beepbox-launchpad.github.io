@@ -40,7 +40,7 @@ window.searchForMod = searchForMod;
 function createSortbar() {
     
     const sorter = select({ class: "sort", id: "sorter" });
-    const header = document.getElementById("header");
+    const header = document.getElementById("ModsHeader");
     header.appendChild(buildOptions(sorter, sorterValues));
     sorter.value = 2;
     sorter.addEventListener("change", () => recreateMods());
@@ -117,6 +117,8 @@ if (window.localStorage.getItem("setView") != null) {
         switchView(1);
     } else if (window.localStorage.getItem("setView") == "favs") {
         switchView(2);
+    } else if (window.localStorage.getItem("setView") == "news") {
+        switchView(3);
     }
 } else {
     window.localStorage.setItem("setView", "previous");

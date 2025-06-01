@@ -36,9 +36,15 @@
 <body>
 
     <div style="width: 100%; height: 64px; background: var(--editor-background); border-bottom: var(--ui-widget-background) 2px solid; display: flex; justify-content: space-between; flex-direction: row; transition: 0.2s;">
-        <div id="header", style="display: flex; flex-direction: row; gap: 5px;">
+        <div id="ModsHeader" class="header" style="display: flex; flex-direction: row; gap: 5px;">
             <input list="tags" class="searchbar" id="searchbar" placeholder="Search For Mods" oninput="searchForMod(document.getElementById('searchbar').value)"/>
             <div class="shareButton" onclick="shareURL(document.getElementById('searchbar').value)">
+                <div class="copyText" id="copyText"></div>
+            </div> 
+        </div>
+        <div id="NewsHeader" class="header" style="display: none; flex-direction: row; gap: 5px;">
+            <input list="tags" class="searchbar" id="NewsSearchbar" placeholder="Search For News" oninput=""/>
+            <div class="shareButton" onclick="">
                 <div class="copyText" id="copyText"></div>
             </div> 
         </div>
@@ -52,11 +58,15 @@
             <div style="display:flex; flex-direction: column; gap: 5px;">
                 <button id="modsListButton" class="logoButton" onclick="switchView(1)" >
                 <button id="favoritesListButton" class="logoButton" onclick="switchView(2)">
+                <button id="newsListButton" class="logoButton" onclick="switchView(3)">
             </div>
             <button id="preferenceButton" class="prefButton" onclick="displayPrompt('preferencesPrompt')">
         </div> 
     <div id="modContainer" style="margin: 32px;display: flex;gap: 10px;flex-wrap: wrap;align-content: baseline;max-height: 100%;overflow-y: scroll;overflow-x: hidden;justify-content: center;/*! margin-top: 32px; */"> 
         <!-- Append Mods here -->
+    </div>
+    <div id="newsContainer" style="margin: 32px;display: none;gap: 10px;flex-wrap: wrap;align-content: baseline;max-height: 100%;overflow-y: scroll;overflow-x: hidden;justify-content: center;/*! margin-top: 32px; */"> 
+        <!-- Append News here -->
     </div>
 </div>
 

@@ -33,6 +33,11 @@ export function switchView(view) {
 
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
         document.getElementById("favoritesListButton").style.filter = "";
+        document.getElementById("newsListButton").style.filter = "";
+        document.getElementById("modContainer").style.display = "flex";
+        document.getElementById("ModsHeader").style.display = "flex";
+        document.getElementById("NewsHeader").style.display = "none";
+        document.getElementById("newsContainer").style.display = "none";
         document.getElementById("comingSoon").style.display = "";
         break;
         case 2: // favorites
@@ -63,7 +68,22 @@ export function switchView(view) {
         }
         document.getElementById("modsListButton").style.filter = "";
         document.getElementById("favoritesListButton").style.filter = "brightness(150%)";
+        document.getElementById("newsListButton").style.filter = "";
+        document.getElementById("modContainer").style.display = "flex";
+        document.getElementById("ModsHeader").style.display = "flex";
+        document.getElementById("NewsHeader").style.display = "none";
+        document.getElementById("newsContainer").style.display = "none";
         document.getElementById("comingSoon").style.display = "none";
+        break;
+        case 3: // news
+            document.getElementById("modContainer").style.display = "none";
+            document.getElementById("newsContainer").style.display = "flex";
+            document.getElementById("ModsHeader").style.display = "none";
+            document.getElementById("NewsHeader").style.display = "flex";
+
+            document.getElementById("modsListButton").style.filter = "";
+            document.getElementById("favoritesListButton").style.filter = "";
+            document.getElementById("newsListButton").style.filter = "brightness(150%)";
         break;
     }
 
