@@ -3,14 +3,14 @@ import { currentView, switchView } from "./preferences.js";
 const modList = [
     "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
     "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox",
-    "MicroBox", "PaandorasBox", "BlockBox", "TETBox", "Midbox", "Dogebox2",
-    "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "LemmBox"
+    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "TETBox", "Midbox", "Dogebox2",
+    "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "EdoBox", "LemmBox"
 ];
 
 const modTags = {
     "all": ["#active", "#discontinued",
         "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal",
-        "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2023", "#2024", "#2025"], //contains any possible tag
+        "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025"], //contains any possible tag
 
     "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2023"],
     "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
@@ -37,6 +37,7 @@ const modTags = {
     "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
     "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
     "BlockBox": ["#discontinued", "#samples", "#modulation", "#2021"], //song player option exists, but takes you to a 404 page
+    "FoxBox": ["#discontinued", "#2022"], //song player option exists, but takes you to a 404 page
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
     "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
@@ -49,6 +50,7 @@ const modTags = {
     "AwesomeBox": ["#active", "#songPlayer", "#modulation", "#2024"],
     "VoxBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2024"],
     "Box": ["#discontinued", "#jokeMod", "#2024"],
+    "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
 }
 
@@ -247,20 +249,17 @@ function filterPhrase(mods, phrase) {
 }
 
 function renderFilters(mods) {
-    var blank = 0;
 
     for (let i = 0; i < modList.length; i++) {
         if (mods.indexOf(modList[i]) > -1) {
             document.getElementById(modList[i]).style.display = "flex";
-            blank = 0;
             document.getElementById("noResults").style.display = "none";
         } else {
             document.getElementById(modList[i]).style.display = "none";
-            blank++;
         }
     }
 
-    if (blank == mods.length) {
+    if (mods.length == 0) {
         document.getElementById("noResults").style.display = "unset";
     } else {
         document.getElementById("noResults").style.display = "none";

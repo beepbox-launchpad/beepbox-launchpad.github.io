@@ -96,7 +96,6 @@ export function createMods(ModsList, method, isReversed) {
 
         if (updateButton != "") { //gets the right spacing between the version text and update button
             updateButton.style.right = versionText.getBoundingClientRect().width + 5 + "px";
-            console.log(versionText, versionText.getBoundingClientRect())
         }
     }
 

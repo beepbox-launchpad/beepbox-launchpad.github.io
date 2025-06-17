@@ -502,6 +502,23 @@
         "tree": ["BeepBox", "JummBox", "Paandora's Box"]
     },
     {
+        "name": "FoxBox",
+        "date": {
+            "day": 2,
+            "month": 5,
+            "year": 2022
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://foxnet.neocities.org/projects/foxbox",
+        "patchNotes": "",
+        "version": "V1.2.51",
+        "description": "FoxBox is a mod of BeepBox created by EliTheFox. It removes the practical limits of tempo and song length. It was released on May 2, 2022.",
+        "wiki": "https://beepbox.miraheze.org/wiki/FoxBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
         "name": "TETBox",
         "date": {
             "day": 10,
@@ -720,6 +737,33 @@
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=vanilla%20for%20showcasing.-,Box,-boxbox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+    },
+    {
+        "name": "EdoBox",
+        "date": {
+            "day": 27,
+            "month": 12,
+            "year": 2024
+        },
+        "image": "https://unbihexiumfan.github.io/edobox/website/favicon.ico",
+        "aa": "true",
+        "website": "https://unbihexiumfan.github.io/edobox/website/",
+        "patchNotes": "",
+        "version": "V2.0",
+        "description": "EdoBox is a mod of JummBox by UnbihexiumFan. It allows support for microtonal tuning systems created by dividing the octave into equal parts. It was released on December 27, 2024. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/EdoBox",
+        "alternateVersions": [
+            {
+                "link": "https://unbihexiumfan.github.io/edobox-2.0-beta/website/",
+                "name": "EdoBox Testing - V2.0"
+            },
+            {
+                "link": "https://unbihexiumfan.github.io/edobox-archives/",
+                "name": "EdoBox archives for 11edo, 14edo, and 17edo. V1.0"
+            }
+        ],
+        "hasTestingVersion": true,
+        "tree": ["BeepBox", "JummBox"]
     },
     {
         "name": "LemmBox",

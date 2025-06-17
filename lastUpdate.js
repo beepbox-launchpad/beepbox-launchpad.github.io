@@ -5,6 +5,8 @@ export function calculateNewUpdate(mod) {
 
     // Make sure to set the date to 7 days after the update happens 
 
+    // If you add a new mod here be sure that there is a valid link to a patch notes in ./mods.json
+
     switch (mod) {
         case "AbyssBox": {
             var abyssboxPN = false;
