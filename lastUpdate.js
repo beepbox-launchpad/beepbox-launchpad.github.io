@@ -27,7 +27,7 @@ export function calculateNewUpdate(mod) {
             return jummBoxPN ? "unset" : "none";
         }
         case "LemmBox": {
-            var LemmBoxPN = false;
+            var LemmBoxPN = compareDates(22, 6, 2025);
             return LemmBoxPN ? "unset" : "none";
         }
     }
