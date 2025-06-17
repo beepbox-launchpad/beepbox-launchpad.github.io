@@ -31,6 +31,10 @@ export function createMods(ModsList, method, isReversed) {
         const favoriteButton = input({type:"checkbox", class: "favoriteButton", onclick: "favoriteBeepmod('" + modInfo.name + "')" });
         favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.name) != -1);
 
+        const versionText = div({ class: "versionText" },
+            div({ style: "margin-top: 2px;" }, modInfo.version)
+        );
+
         const mod = div({ class: "modDivider", id: modInfo.name },
             div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
@@ -42,11 +46,11 @@ export function createMods(ModsList, method, isReversed) {
             ),
             updateButton,
             favoriteButton,
-            div({ class: "versionText" },
-                div({ style: "margin-top: 2px;" }, modInfo.version)
-            )
+            versionText
         );
 
+        
+            
         modContainer.appendChild(mod);
 
         const alternateVersionTitle = modInfo.alternateVersions.length > 0 ?
@@ -89,6 +93,11 @@ export function createMods(ModsList, method, isReversed) {
         );
 
         promptContainer.appendChild(prompt);
+
+        if (updateButton != "") { //gets the right spacing between the version text and update button
+            updateButton.style.right = versionText.getBoundingClientRect().width + 5 + "px";
+            console.log(versionText, versionText.getBoundingClientRect())
+        }
     }
 
     //make special case "mods"
