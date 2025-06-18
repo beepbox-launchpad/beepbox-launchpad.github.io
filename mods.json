@@ -1,6 +1,6 @@
 [
     {
-        "name": "BeepBox",
+        "id": "BeepBox",
         "date": {
             "day": 20, 
             "month": 20,
@@ -30,7 +30,7 @@
         "tree": []
     },
     {
-        "name": "JummBox",
+        "id": "JummBox",
         "date": {
             "day": 30,
             "month": 7,
@@ -47,7 +47,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "UltraBox",
+        "id": "UltraBox",
         "date": {
             "day": 4,
             "month": 6,
@@ -78,7 +78,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox Paandora's Box"]
     },
     {
-        "name": "AbyssBox",
+        "id": "AbyssBox",
         "date": {
             "day": 1,
             "month": 1,
@@ -104,7 +104,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "SlarmoosBox",
+        "id": "SlarmoosBox",
         "displayName" : "Slarmoo's Box",
         "date": {
             "day": 13,
@@ -136,7 +136,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "ModBox",
+        "id": "ModBox",
         "date": {
             "day": 25,
             "month": 5,
@@ -166,7 +166,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "Sandbox",
+        "id": "Sandbox",
         "date": {
             "day": 15,
             "month": 6,
@@ -183,7 +183,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "GoldBox",
+        "id": "GoldBox",
         "date": {
             "day": 16,
             "month": 6,
@@ -200,7 +200,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "HaileyBox",
+        "id": "HaileyBox",
         "date": {
             "day": 10,
             "month": 7,
@@ -217,7 +217,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "BruceBox",
+        "id": "BruceBox",
         "date": {
             "day": 26,
             "month": 8,
@@ -234,7 +234,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "NerdBox",
+        "id": "NerdBox",
         "date": {
             "day": 15,
             "month": 2,
@@ -251,7 +251,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "ZefBox",
+        "id": "ZefBox",
         "date": {
             "day": 15,
             "month": 11,
@@ -268,7 +268,7 @@
         "tree": ["BeepBox", "Sandbox"]
     },
     {
-        "name": "ShitBox",
+        "id": "ShitBox",
         "date": {
             "day": 16,
             "month": 2,
@@ -294,7 +294,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "WideBox",
+        "id": "WideBox",
         "date": {
             "day": 26,
             "month": 6,
@@ -311,7 +311,7 @@
         "tree": ["BeepBox", "ModBox"]
     },
     {
-        "name": "BlackBox",
+        "id": "BlackBox",
         "date": {
             "day": 1,
             "month": 7,
@@ -328,7 +328,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "BassBox",
+        "id": "BassBox",
         "date": {
             "day": 1,
             "month": 1,
@@ -345,7 +345,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "SliderBox",
+        "id": "SliderBox",
         "date": {
             "day": 6,
             "month": 2,
@@ -362,7 +362,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "BeepBox1Bar",
+        "id": "BeepBox1Bar",
         "displayName": "BeepBox 1Bar",
         "date": {
             "day": 19,
@@ -380,7 +380,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "CardboardBox",
+        "id": "CardboardBox",
         "date": {
             "day": 9,
             "month": 3,
@@ -397,7 +397,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "JummBox11edo",
+        "id": "JummBox11edo",
         "displayName": "JummBox 11edo",
         "date": {
             "day": 12,
@@ -416,7 +416,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "BluBox",
+        "id": "BluBox",
         "date": {
             "day": 15,
             "month": 6,
@@ -433,7 +433,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "Wackybox",
+        "id": "Wackybox",
         "date": {
             "day": 2,
             "month": 1,
@@ -450,7 +450,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "TodBox",
+        "id": "TodBox",
         "date": {
             "day": 3,
             "month": 4,
@@ -467,7 +467,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "WeebBox",
+        "id": "WeebBox",
         "date": {
             "day": 12,
             "month": 6,
@@ -484,7 +484,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "MicroBox",
+        "id": "MicroBox",
         "date": {
             "day": 30,
             "month": 7,
@@ -501,7 +501,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "PaandorasBox",
+        "id": "PaandorasBox",
         "displayName" : "Paandora's Box",
         "date": {
             "day": 22,
@@ -520,7 +520,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "BlockBox",
+        "id": "BlockBox",
         "date": {
             "day": 24,
             "month": 12,
@@ -537,7 +537,7 @@
         "tree": ["BeepBox", "JummBox", "Paandora's Box"]
     },
     {
-        "name": "FoxBox",
+        "id": "FoxBox",
         "date": {
             "day": 2,
             "month": 5,
@@ -554,7 +554,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "MarioPaintBox",
+        "id": "MarioPaintBox",
         "date": {
             "day": 23,
             "month": 2,
@@ -571,7 +571,7 @@
         "tree": ["BeepBox", "JummBox", "Paandora's Box"]
     },
     {
-        "name": "TETBox",
+        "id": "TETBox",
         "date": {
             "day": 10,
             "month": 14,
@@ -588,7 +588,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "Midbox",
+        "id": "Midbox",
         "date": {
             "day": 12,
             "month": 8,
@@ -615,7 +615,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "Dogebox2",
+        "id": "Dogebox2",
         "date": {
             "day": 9,
             "month": 9,
@@ -632,7 +632,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "Nepbox",
+        "id": "Nepbox",
         "date": {
             "day": 11,
             "month": 1,
@@ -649,7 +649,7 @@
         "tree": ["BeepBox", "ModBox"]
     },
     {
-        "name": "Unbox",
+        "id": "Unbox",
         "date": {
             "day": 20,
             "month": 1,
@@ -672,7 +672,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "shitbox4",
+        "id": "shitbox4",
         "date": {
             "day": 13,
             "month": 3,
@@ -689,7 +689,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "BariBox",
+        "id": "BariBox",
         "date": {
             "day": 14,
             "month": 3,
@@ -706,7 +706,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "BoxBeep",
+        "id": "BoxBeep",
         "date": {
             "day": 23,
             "month": 3,
@@ -723,7 +723,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "AestheticBox",
+        "id": "AestheticBox",
         "date": {
             "day": 23,
             "month": 3,
@@ -740,7 +740,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "BirdBox",
+        "id": "BirdBox",
         "date": {
             "day": 22,
             "month": 4,
@@ -757,7 +757,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "AwesomeBox",
+        "id": "AwesomeBox",
         "date": {
             "day": 26,
             "month": 4,
@@ -774,7 +774,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "VoxBox",
+        "id": "VoxBox",
         "date": {
             "day": 23,
             "month": 5,
@@ -791,7 +791,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "Box",
+        "id": "Box",
         "date": {
             "day": 22,
             "month": 8,
@@ -808,7 +808,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "DinoBox",
+        "id": "DinoBox",
         "date": {
             "day": 15,
             "month": 9,
@@ -825,7 +825,7 @@
         "tree": ["BeepBox"]
     },
     {
-        "name": "AxoBox",
+        "id": "AxoBox",
         "date": {
             "day": 23,
             "month": 10,
@@ -842,7 +842,7 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
     {
-        "name": "EdoBox",
+        "id": "EdoBox",
         "date": {
             "day": 27,
             "month": 12,
@@ -869,7 +869,7 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
-        "name": "LemmBox",
+        "id": "LemmBox",
         "date": {
             "day": 7,
             "month": 1,
