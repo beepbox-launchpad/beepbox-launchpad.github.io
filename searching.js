@@ -2,9 +2,9 @@ import { currentView, switchView } from "./preferences.js";
 
 const modList = [
     "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-    "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox",
-    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "TETBox", "Midbox", "Dogebox2",
-    "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "AwesomeBox", "VoxBox", "Box", "EdoBox", "LemmBox"
+    "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "BeepBox1Bar", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "WeebBox",
+    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "MarioPaintBox", "TETBox", "Midbox", "Dogebox2",
+    "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "BirdBox", "AwesomeBox", "VoxBox", "Box", "DinoBox", "AxoBox", "EdoBox", "LemmBox"
 ];
 
 const modTags = {
@@ -29,15 +29,18 @@ const modTags = {
     "BlackBox": ["#discontinued", "#2019"],
     "BassBox": ["#discontinued", "#jokeMod", "#2020"],
     "SliderBox": ["#discontinued", "#2020"],
+    "BeepBox1Bar": ["#discontinued", "#2020"],
     "BluBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
     "CardboardBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
     "JummBox11edo": ["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
     "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
     "TodBox": ["#discontinued", "#songPlayer", "#2021"],
+    "WeebBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
     "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
     "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
     "BlockBox": ["#discontinued", "#samples", "#modulation", "#2021"], //song player option exists, but takes you to a 404 page
     "FoxBox": ["#discontinued", "#2022"], //song player option exists, but takes you to a 404 page
+    "MarioPaintBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2023"], 
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
     "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
@@ -47,9 +50,12 @@ const modTags = {
     "BariBox": ["#discontinued", "#samples", "#modulation", "#songPlayer", "#2024"],
     "BoxBeep": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"],
     "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
+    "BirdBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"], //song player option exists, but takes you to a 404 page
     "AwesomeBox": ["#active", "#songPlayer", "#modulation", "#2024"],
     "VoxBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2024"],
     "Box": ["#discontinued", "#jokeMod", "#2024"],
+    "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
+    "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
 }

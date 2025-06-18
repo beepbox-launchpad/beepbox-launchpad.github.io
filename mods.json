@@ -362,6 +362,24 @@
         "tree": ["BeepBox"]
     },
     {
+        "name": "BeepBox1Bar",
+        "displayName": "BeepBox 1Bar",
+        "date": {
+            "day": 19,
+            "month": 2,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://hidden-realm.github.io/beepbox1bar/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BeepBox 1Bar is mod of BeepBox by Lihzahrd. It's known as the first mod to set the minimum number of beats per bars from 3 to 1. It was released on February 19, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_1Bar",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
         "name": "CardboardBox",
         "date": {
             "day": 9,
@@ -449,6 +467,23 @@
         "tree": ["BeepBox"]
     },
     {
+        "name": "WeebBox",
+        "date": {
+            "day": 12,
+            "month": 6,
+            "year": 2021
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://jimothee.bitbucket.io/",
+        "patchNotes": "",
+        "version": "V1.2",
+        "description": "WeebBox is a mod of BeepBox by Jimothee. It's notable for being the first mod to include custom themes. It was released on June 12, 2021. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/WeebBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
         "name": "MicroBox",
         "date": {
             "day": 30,
@@ -517,6 +552,23 @@
         "wiki": "https://beepbox.miraheze.org/wiki/FoxBox",
         "alternateVersions": [],
         "tree": ["BeepBox"]
+    },
+    {
+        "name": "MarioPaintBox",
+        "date": {
+            "day": 23,
+            "month": 2,
+            "year": 2023
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://pmpbox.glitch.me/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "MarioPaintBox is a mod of Paandora's Box created by thesaturnangel with contributions from mintyfresh2490, Jinxamoretto, Main, and nesquix. It removes all instruments except for samples that can be found in the game Mario Paint. It was released on February 23, 2023.",
+        "wiki": "https://beepbox.miraheze.org/wiki/MarioPaintBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "Paandora's Box"]
     },
     {
         "name": "TETBox",
@@ -688,6 +740,23 @@
         "tree": ["BeepBox"]
     },
     {
+        "name": "BirdBox",
+        "date": {
+            "day": 22,
+            "month": 4,
+            "year": 2024
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://choptop84.github.io/birdbox-app/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BirdBox is a joke mod of BeepBox by choptop84. It makes everything dark, as if you were wearing a blindfold. It was released on April 22, 2024.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BirdBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
         "name": "AwesomeBox",
         "date": {
             "day": 26,
@@ -735,6 +804,40 @@
         "version": "Release",
         "description": "Box is a mod of ultrabox by boxbox. It aims to remove everything. It was released on August 22, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=vanilla%20for%20showcasing.-,Box,-boxbox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+    },
+    {
+        "name": "DinoBox",
+        "date": {
+            "day": 15,
+            "month": 9,
+            "year": 2024
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://dinobox.vercel.app/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "DinoBox is a mod of ultrabox by MrIncredibleMaker. It was released on September 15, 2024. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "name": "AxoBox",
+        "date": {
+            "day": 23,
+            "month": 10,
+            "year": 2024
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://dinobox.vercel.app/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "AxoBox is a mod of ultrabox by axo. It was released on October 23, 2024. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
     },
