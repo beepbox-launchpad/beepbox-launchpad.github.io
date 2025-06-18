@@ -75,7 +75,7 @@
             }
         ],
         "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox Paandora's Box"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox"]
     },
     {
         "id": "AbyssBox",
@@ -101,7 +101,7 @@
             }
         ],
         "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "SlarmoosBox",
@@ -133,7 +133,7 @@
             }
         ],
         "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "ModBox",
@@ -534,7 +534,7 @@
         "description": "BlockBox is a mod of PaandorasBox created by Romadillo. It was released on December 24, 2021.",
         "wiki": "https://beepbox.miraheze.org/wiki/BlockBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "Paandora's Box"]
+        "tree": ["BeepBox", "JummBox", "PaandorasBox"]
     },
     {
         "id": "FoxBox",
@@ -568,7 +568,7 @@
         "description": "MarioPaintBox is a mod of Paandora's Box created by thesaturnangel with contributions from mintyfresh2490, Jinxamoretto, Main, and nesquix. It removes all instruments except for samples that can be found in the game Mario Paint. It was released on February 23, 2023.",
         "wiki": "https://beepbox.miraheze.org/wiki/MarioPaintBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "Paandora's Box"]
+        "tree": ["BeepBox", "JummBox", "PaandorasBox"]
     },
     {
         "id": "TETBox",
@@ -669,7 +669,7 @@
             }
         ],
         "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "shitbox4",
@@ -703,7 +703,7 @@
         "description": "BariBox™ is a mod of UltraBox by Bariani. BariBox adds a \"corruption\" feature, which essentially  randomizes the placement of notes, patterns, and the instrument types used. It was released on March 14, 2024.",
         "wiki": "https://beepbox.miraheze.org/wiki/BariBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "BoxBeep",
@@ -788,7 +788,7 @@
         "description": "VoxBox is a mod of UltraBox by Voxel. It adds the pitch envelope and an invert toggle for each envelope. It was released on May 23, 2024.",
         "wiki": "https://beepbox.miraheze.org/wiki/VoxBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "Box",
@@ -805,7 +805,7 @@
         "description": "Box is a mod of ultrabox by boxbox. It aims to remove everything. It was released on August 22, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=vanilla%20for%20showcasing.-,Box,-boxbox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "DinoBox",
@@ -839,7 +839,7 @@
         "description": "AxoBox is a mod of ultrabox by axo. It was released on October 23, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "EdoBox",
@@ -883,6 +883,6 @@
         "description": "LemmBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@ARealLemonLime\" target=\"_blank\">HappyLemonLime</a> and was released on January 7th of 2025. Its main appeal is its customization of the max values found in the editor, and extra chip waves.",
         "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "Paandora's Box", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     }
 ]
