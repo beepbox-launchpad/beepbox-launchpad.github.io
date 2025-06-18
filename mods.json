@@ -884,5 +884,23 @@
         "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "LunariisBox",
+        "displayName": "Lunarii's Box",
+        "date": {
+            "day": 15,
+            "month": 5,
+            "year": 2025
+        },
+        "image": "https://lunarriaa.github.io/lunariibox/website/favicon.ico",
+        "aa": "true",
+        "website": "https://lunarriaa.github.io/lunariibox/website/",
+        "patchNotes": "https://lunarriaa.github.io/lunariibox/website/patch_notes.html",
+        "version": "V1.0.3",
+        "description": "Lunarii's Box is a mod of Slarmoo's Box that was created by Lunarriaa. It adds several ui adjustments. It was released on May 15th of 2025. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/Lunarii%27s_Box",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     }
 ]

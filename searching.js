@@ -1,10 +1,10 @@
 import { currentView, switchView } from "./preferences.js";
 
 const modList = [
-    "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-    "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "BeepBox1Bar", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "WeebBox",
-    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "MarioPaintBox", "TETBox", "Midbox", "Dogebox2",
-    "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "BirdBox", "AwesomeBox", "VoxBox", "Box", "DinoBox", "AxoBox", "EdoBox", "LemmBox"
+    "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox", "ZefBox", 
+    "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "BeepBox1Bar", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "WeebBox",
+    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "MarioPaintBox", "TETBox", "Midbox", "Dogebox2", "Nepbox", "Unbox", "shitbox4", 
+    "BariBox", "BoxBeep", "AestheticBox", "BirdBox", "AwesomeBox", "VoxBox", "Box", "DinoBox", "AxoBox", "EdoBox", "LemmBox", "LunariisBox"
 ];
 
 const modTags = {
@@ -58,6 +58,7 @@ const modTags = {
     "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "LunariisBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
 }
 
 export function searchForMod(result, fromMods = modList) {
@@ -177,8 +178,8 @@ function filterDescendants(mods, forked) {
     for (const index in window.Mods) {
         const Mod = window.Mods[index];
         for (let i = 0; i < mods.length; i++) {
-            if (Mod.name == mods[i]) {
-                if (Mod.name.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+            if (Mod.id == mods[i]) {
+                if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
                     foundMods.push(mods[i]);
                     break;
                 }
@@ -202,8 +203,8 @@ function filterChildren(mods, forked) {
     for (const index in window.Mods) {
         const Mod = window.Mods[index];
         for (let i = 0; i < mods.length; i++) {
-            if (Mod.name == mods[i]) {
-                if (Mod.name.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+            if (Mod.id == mods[i]) {
+                if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
                     foundMods.push(mods[i]);
                     break;
                 }
