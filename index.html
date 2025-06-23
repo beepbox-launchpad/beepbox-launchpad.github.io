@@ -28,7 +28,6 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="apple-touch-icon" sizes="180x180" href="./beepboxModding.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./beepboxModding.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
     <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
     <!-- <link rel="stylesheet" href="./themes.css" id="stylesheet" /> -->
     <link rel="stylesheet" href="./main.css" />
@@ -72,22 +71,7 @@
         var storedfavoritesList = localStorage.getItem("favoritesList");
         if (storedfavoritesList != null) {
             favoritesList = JSON.parse(storedfavoritesList);
-        }
-
-        const setList = [
-            "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox",
-            "ZefBox", "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "BeepBox1Bar", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "WeebBox",
-            "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "MarioPaintBox", "TETBox", "Midbox", "Dogebox2",
-            "Nepbox", "Unbox", "shitbox4", "BariBox", "BoxBeep", "AestheticBox", "BirdBox", "AwesomeBox", "VoxBox", "Box", "DinoBox", "AxoBox", "EdoBox", "LemmBox", "LunariisBox", //mods
-            "#active", "#discontinued", "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal", //attributes
-            "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025", //dates
-            "#before:", "#after:", "#children:", "#descendants:" ]; //special cases
-
-            for (let i = 0; i < setList.length; i++) {
-                var tag = new Option();
-                tag.value = setList[i]
-                document.getElementById("tags").appendChild(tag);
-            }        
+        }    
 
         function goToWebsite(websiteLink, hasUniqueVers = false) {
             if (hasUniqueVers == false) {

@@ -1,14 +1,9 @@
 import { currentView, switchView } from "./preferences.js";
 
-const modList = [
-    "UltraBox", "SlarmoosBox", "AbyssBox", "BeepBox", "JummBox", "ModBox", "Sandbox", "GoldBox", "HaileyBox", "BruceBox", "NerdBox", "ZefBox", 
-    "ShitBox", "WideBox", "BlackBox", "BassBox", "SliderBox", "BeepBox1Bar", "CardboardBox", "JummBox11edo", "BluBox", "Wackybox", "TodBox", "WeebBox",
-    "MicroBox", "PaandorasBox", "BlockBox", "FoxBox", "MarioPaintBox", "TETBox", "Midbox", "Dogebox2", "Nepbox", "Unbox", "shitbox4", 
-    "BariBox", "BoxBeep", "AestheticBox", "BirdBox", "AwesomeBox", "VoxBox", "Box", "DinoBox", "AxoBox", "EdoBox", "LemmBox", "LunariisBox"
-];
+const modList = [];
 
 const modTags = {
-    "all": ["#active", "#discontinued",
+    "all": ["#active", "#discontinued", "#hiatus",
         "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal",
         "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025"], //contains any possible tag
 
@@ -31,6 +26,7 @@ const modTags = {
     "SliderBox": ["#discontinued", "#2020"],
     "BeepBox1Bar": ["#discontinued", "#2020"],
     "BluBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
+    "SynthBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a black page
     "CardboardBox": ["#discontinued", "#modulation", "#2020"], //song player option exists, but takes you to a 404 page
     "JummBox11edo": ["#discontinued", "#modulation", "#microtonal", "#2020"], //song player option exists, but takes you to a 404 page
     "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
@@ -44,21 +40,37 @@ const modTags = {
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
     "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
-    "Nepbox": ["#active", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
+    "Nepbox": ["#hiatus", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
     "Unbox": ["#active", "#songPlayer", "#samples", "#modulation", "#2024"],
     "shitbox4": ["#active", "#songPlayer", "#jokeMod", "#2024"],
     "BariBox": ["#discontinued", "#samples", "#modulation", "#songPlayer", "#2024"],
     "BoxBeep": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"],
     "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
     "BirdBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"], //song player option exists, but takes you to a 404 page
-    "AwesomeBox": ["#active", "#songPlayer", "#modulation", "#2024"],
-    "VoxBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2024"],
+    "AwesomeBox": ["#hiatus", "#songPlayer", "#modulation", "#2024"],
+    "VoxBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2024"],
     "Box": ["#discontinued", "#jokeMod", "#2024"],
     "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
     "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "LunariisBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+}
+
+export function setAndReturnTagsList() {
+    for (const mod in window.Mods) {
+        modList.push(window.Mods[mod].id);
+    }
+
+    const setList = modList.concat(modTags.all).concat(["#before:", "#after:", "#children:", "#descendants:"]);
+
+    for (let i = 0; i < setList.length; i++) {
+        var tag = new Option();
+        tag.value = setList[i]
+        document.getElementById("tags").appendChild(tag);
+    }
+
+    return setList;
 }
 
 export function searchForMod(result, fromMods = modList) {

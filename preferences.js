@@ -18,6 +18,7 @@ export function setPromptOpacity(value) {
 }
 
 export function switchView(view) {
+    const setList = window.setList;
     switch(view) {
         case 1: // default
         const search = document.getElementById("searchbar").value;

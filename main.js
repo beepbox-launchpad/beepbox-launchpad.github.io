@@ -1,5 +1,5 @@
 import { createMods, getMods } from "./createMods.js";
-import { searchForMod } from "./searching.js";
+import { searchForMod, setAndReturnTagsList } from "./searching.js";
 import { HTML } from "./imperative-html/elements-strict.js";
 import { setTheme, _themeStyleElement } from "./themes.js"
 import { preferencesPrompt, setPreferedTab, setPromptOpacity, currentView, switchView } from "./preferences.js";
@@ -11,6 +11,8 @@ createSortbar();
 
 const Mods = await getMods();
 window.Mods = Mods;
+
+window.setList = setAndReturnTagsList();
 
 createMods(Mods, "relevant", false);
 document.getElementById("prompt").appendChild(preferencesPrompt);

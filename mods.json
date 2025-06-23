@@ -121,7 +121,7 @@
         "alternateVersions": [
             {
                 "link": "https://slarmoo.github.io/slarmoosboxtesting/website/",
-                "name": "Slarmoo's Box Testing - V1.4.3"
+                "name": "Slarmoo's Box Testing - V1.5"
             },
             {
                 "link": "https://github.com/slarmoo/slarmoosbox/releases",
@@ -278,7 +278,7 @@
         "aa": "false",
         "website": "https://lihzahrd.github.io/shitbox3.0/",
         "patchNotes": "",
-        "version": "v3.0",
+        "version": "V3.0",
         "description": "ShitBox is a joke mod of BeepBox and ModBox by Lihzahrd. It's notable for being the first ever joke mod to be made. It was released on February 16, 2019.",
         "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
         "alternateVersions": [
@@ -443,7 +443,7 @@
         "website": "https://synthbox.co/",
         "aa": "true",
         "patchNotes": "",
-        "version": "2.0",
+        "version": "V2.0",
         "description": "SynthBox was a mod of JummBox by Chopy61. It was the first mod to add 6 operator FM. It was released on June 17, 2020. ",
         "wiki": "https://beepbox.miraheze.org/wiki/SynthBox",
         "alternateVersions": [],
