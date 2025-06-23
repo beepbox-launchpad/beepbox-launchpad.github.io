@@ -433,6 +433,23 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
+        "id": "SynthBox",
+        "date": {
+            "day": 17,
+            "month": 6,
+            "year": 2020
+        },
+        "image": "https://synthbox.co/favicon.ico",
+        "website": "https://synthbox.co/",
+        "aa": "true",
+        "patchNotes": "",
+        "version": "2.0",
+        "description": "SynthBox was a mod of JummBox by Chopy61. It was the first mod to add 6 operator FM. It was released on June 17, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/SynthBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
         "id": "Wackybox",
         "date": {
             "day": 2,
