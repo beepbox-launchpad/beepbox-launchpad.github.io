@@ -9,7 +9,7 @@ export function calculateNewUpdate(mod) {
 
     switch (mod) {
         case "AbyssBox": {
-            var abyssboxPN = compareDates(2, 7, 2025);
+            var abyssboxPN = compareDates(3, 7, 2025);
             return abyssboxPN ? "unset" : "none";
         }
         case "SlarmoosBox": {
