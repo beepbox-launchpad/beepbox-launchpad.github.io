@@ -9,15 +9,15 @@ export function calculateNewUpdate(mod) {
 
     switch (mod) {
         case "AbyssBox": {
-            var abyssboxPN = false;
+            var abyssboxPN = compareDates(2, 7, 2025);
             return abyssboxPN ? "unset" : "none";
         }
         case "SlarmoosBox": {
-            var slarmoosBoxPN = compareDates(18, 6, 2025)
+            var slarmoosBoxPN = compareDates(2, 7, 2025);
             return slarmoosBoxPN ? "unset" : "none";
         }
         case "UltraBox": {
-            var ultraboxPN = compareDates(20, 2, 2025);
+            var ultraboxPN = compareDates(2, 7, 2025);
             return ultraboxPN ? "unset" : "none";
         }
         case "BeepBox": {
