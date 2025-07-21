@@ -856,9 +856,9 @@
             "month": 10,
             "year": 2024
         },
-        "image": "./placeholder.png",
+        "image": "https://sxomus.neocities.org/axobox/favicon.ico",
         "aa": "false",
-        "website": "https://dinobox.vercel.app/",
+        "website": "https://sxomus.neocities.org/axobox/",
         "patchNotes": "",
         "version": "Release",
         "description": "AxoBox is a mod of ultrabox by axo. It was released on October 23, 2024. ",
