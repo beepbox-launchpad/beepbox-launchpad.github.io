@@ -927,5 +927,23 @@
         "wiki": "https://beepbox.miraheze.org/wiki/Lunarii%27s_Box",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
+    },
+    {
+        "id": "JukeBox",
+        "displayName": "JukeBox",
+        "date": {
+            "day": 7,
+            "month": 21,
+            "year": 2025
+        },
+        "image": "https://jukeebox.github.io/web-app-manifest-512x512.png",
+        "aa": "true",
+        "website": "https://jukeebox.github.io/",
+        "patchNotes": "https://jukeebox.github.io/patch_notes.html",
+        "version": "V0.0.1",
+        "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds several presets.",
+        "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     }
 ]

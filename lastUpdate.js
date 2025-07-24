@@ -24,14 +24,19 @@ export function calculateNewUpdate(mod) {
             var beepBoxPN = false;
             return beepBoxPN ? "unset" : "none";
         }
-        case "JummBox": {
-            var jummBoxPN = false;
-            return jummBoxPN ? "unset" : "none";
-        }
         case "LemmBox": {
             var LemmBoxPN = compareDates(22, 6, 2025);
             return LemmBoxPN ? "unset" : "none";
         }
+        case "JummBox": {
+            var jummBoxPN = false;
+            return jummBoxPN ? "unset" : "none";
+        }
+        case "JukeBox": {
+            var jukeBoxPN = compareDates(14, 28, 2025);
+            return jukeBoxPN ? "unset" : "none";
+        }
+        
     }
     return "none";
 }
