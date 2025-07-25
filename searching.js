@@ -55,6 +55,7 @@ const modTags = {
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "LunariisBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "JukeBox" : ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2025"]
 }
 
 export function setAndReturnTagsList() {
