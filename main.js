@@ -33,7 +33,7 @@ var urlThing = String(window.location.hash);
 var urlThing2 = urlThing.substring(3);
 
 if (window.location != (location.pathname + "/#s=" || location.pathname)) {
-    document.getElementById("searchbar").value = urlThing2;
+    document.getElementById("searchbar").value = decodeURIComponent(urlThing2);
     searchForMod(urlThing2);
 }
 
