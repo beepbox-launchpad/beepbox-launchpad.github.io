@@ -25,7 +25,7 @@ export function calculateNewUpdate(mod) {
             return beepBoxPN ? "unset" : "none";
         }
         case "LemmBox": {
-            var LemmBoxPN = compareDates(22, 6, 2025);
+            var LemmBoxPN = compareDates(7, 10, 2025);
             return LemmBoxPN ? "unset" : "none";
         }
         case "JummBox": {
