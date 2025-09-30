@@ -13,7 +13,7 @@ export function calculateNewUpdate(mod) {
             return abyssboxPN ? "unset" : "none";
         }
         case "SlarmoosBox": {
-            var slarmoosBoxPN = compareDates(4, 7, 2025);
+            var slarmoosBoxPN = compareDates(25, 7, 2025);
             return slarmoosBoxPN ? "unset" : "none";
         }
         case "UltraBox": {
