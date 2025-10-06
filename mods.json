@@ -944,8 +944,8 @@
         "aa": "true",
         "website": "https://jukeebox.github.io/",
         "patchNotes": "https://jukeebox.github.io/patch_notes.html",
-        "version": "V0.0.1",
-        "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds several presets.",
+        "version": "V0.1.6",
+        "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets.",
         "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
