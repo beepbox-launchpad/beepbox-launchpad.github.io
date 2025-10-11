@@ -32,6 +32,7 @@ const modTags = {
     "Wackybox": ["#discontinued", "#jokeMod", "#2021"], //song player option exists, but takes you to a 404 page
     "TodBox": ["#discontinued", "#songPlayer", "#2021"],
     "WeebBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
+    "NintariBox": ["#discontinued", "#samples", "#modulation", "#2021"],
     "MicroBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
     "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
     "BlockBox": ["#discontinued", "#samples", "#modulation", "#2021"], //song player option exists, but takes you to a 404 page
@@ -55,7 +56,8 @@ const modTags = {
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "LunariisBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
-    "JukeBox" : ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2025"]
+    "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"]
 }
 
 export function setAndReturnTagsList() {

@@ -513,6 +513,23 @@
         "tree": ["BeepBox", "JummBox"]
     },
     {
+        "id": "NintariBox",
+        "date": {
+            "day": 12,
+            "month": 6,
+            "year": 2021
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://nintarigenesis.bitbucket.io/",
+        "patchNotes": "",
+        "version": "V3.3",
+        "description": "NintariBox is a mod of BeepBox by NintariGenesis. It was originally a joke mod of WeebBox, but later moved to Paandora's Box and added the NintariBox samples. It was released on June 12, 2021.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NintariBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "WeebBox", "PaandorasBox"]
+    },
+    {
         "id": "MicroBox",
         "date": {
             "day": 30,
@@ -542,7 +559,7 @@
         "fontSize": "smaller",
         "website": "https://paandorasbox.github.io/",
         "patchNotes": "",
-        "version": "V2.3",
+        "version": "V3.4",
         "description": "PaandorasBox is a mod of JummBox by Main and Jinxamoretto. It is notable for being the first mod to support sampling. It was released on December 22, 2021. ",
         "wiki": "https://beepbox.miraheze.org/wiki/PaandorasBox",
         "alternateVersions": [],
@@ -945,9 +962,27 @@
         "website": "https://jukeebox.github.io/",
         "patchNotes": "https://jukeebox.github.io/patch_notes.html",
         "version": "V0.1.6",
-        "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets.",
+        "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets. It was released on June 21st, 2025. ",
         "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
+    },
+    {
+        "id": "DsQuickBoxMod",
+        "displayName": "D's Quick Box Mod",
+        "date": {
+            "day": 9,
+            "month": 19,
+            "year": 2025
+        },
+        "image": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/favicon.ico",
+        "aa": "true",
+        "website": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/",
+        "patchNotes": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/patch_notes.html",
+        "version": "V231",
+        "description": "D's Quick Box Mod is a mod of UltraBox that was created by deathmodereal. It adds many UI additions, such as loop bar buttons. It released on September 19th, 2025. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/D%27s_Quick_Box_Mod",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     }
 ]
