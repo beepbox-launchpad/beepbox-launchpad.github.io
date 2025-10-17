@@ -82,8 +82,15 @@ export function searchForMod(result, fromMods = modList) {
     const filterStrings = result.split(/\s/i);
     const filters = [];
     for (let i = 0; i < filterStrings.length; i++) {
-        if (filterStrings[i].toLowerCase().indexOf("#before:") > -1) {
-            let date = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
+        let notFlag = false;
+        let filterString = filterStrings[i];
+        if (filterString[0] == "!" || filterString[0] == "-") {
+            notFlag = true;
+            filterString = filterString.replace(/\!|\-/, "");
+        }
+        console.log(filterString)
+        if (filterString.toLowerCase().indexOf("#before:") > -1) {
+            let date = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
             if (date.length == 0) { //there may have been a space, check if next string is the date
                 date = parseInt(filterStrings[i + 1]);
                 if (Number.isNaN(date)) {
@@ -95,8 +102,8 @@ export function searchForMod(result, fromMods = modList) {
             }
             filters.push((mods) => filterBefore(mods, date)); //Add the filter function to the list of filters
 
-        } else if (filterStrings[i].toLowerCase().indexOf("#after:") > -1) {
-            let date = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
+        } else if (filterString.toLowerCase().indexOf("#after:") > -1) {
+            let date = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
             if (date.length == 0) { //there may have been a space, check if next string is the date
                 date = parseInt(filterStrings[i + 1]);
                 if (Number.isNaN(date)) {
@@ -108,8 +115,8 @@ export function searchForMod(result, fromMods = modList) {
             }
             filters.push((mods) => filterAfter(mods, date)); //Add the filter function to the list of filters
 
-        } else if (filterStrings[i].toLowerCase().indexOf("#children:") > -1) {
-            let fork = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+        } else if (filterString.toLowerCase().indexOf("#children:") > -1) {
+            let fork = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
             if (fork.length == 0) { //there may have been a space, check if next string is the fork
                 if (i+1 < filterStrings.length && filterStrings[i + 1].indexOf("#") > -1) {
                     fork = filterStrings[i + 1];
@@ -119,8 +126,8 @@ export function searchForMod(result, fromMods = modList) {
                 }
             }
             filters.push((mods) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
-        } else if (filterStrings[i].toLowerCase().indexOf("#descendants:") > -1) {
-            let fork = filterStrings[i].toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+        } else if (filterString.toLowerCase().indexOf("#descendants:") > -1) {
+            let fork = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
             if (fork.length == 0) { //there may have been a space, check if next string is the fork
                 if (i + 1 < filterStrings.length && filterStrings[i + 1].indexOf("#") > -1) {
                     fork = filterStrings[i + 1];
@@ -130,17 +137,26 @@ export function searchForMod(result, fromMods = modList) {
                 }
             }
             filters.push((mods) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
-        } else if (filterStrings[i][0] == "#") {
-            filters.push((mods) => filterTag(mods, filterStrings[i]));
-        } else if (filterStrings[i] != "") {
-            filters.push((mods) => filterPhrase(mods, filterStrings[i]))
+        } else if (filterString[0] == "#") {
+            filters.push((mods) => filterTag(mods, filterString));
+        } else if (filterString != "") {
+            filters.push((mods) => filterPhrase(mods, filterString));
+        }
+        if (notFlag) {
+            filters.push((mods, oldMods) => filterNot(mods, oldMods));
         }
     }
 
     let mods = fromMods.slice();
+    let oldMods = [];
+    console.log("filtering:")
     for (let i = 0; i < filters.length; i++) {
-        mods = filters[i](mods);
+        oldMods.push(mods.slice());
+        mods = filters[i](mods, oldMods[oldMods.length - 2]);
+        console.log(mods)
     }
+    console.log(oldMods)
+    console.log(mods)
     renderFilters(mods);
 
     if (result.length == 0) {
@@ -151,6 +167,18 @@ export function searchForMod(result, fromMods = modList) {
             // console.log("switching view: " + currentView)
         }
     }
+}
+
+function filterNot(mods, prevMods = modList) {
+    const foundMods = [];
+
+    for (const mod of prevMods) {
+        if (mods.indexOf(mod) <= -1) {
+            foundMods.push(mod)
+        }
+    }
+
+    return foundMods;
 }
 
 function filterBefore(mods, date) {
