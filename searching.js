@@ -49,13 +49,13 @@ const modTags = {
     "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
     "BirdBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"], //song player option exists, but takes you to a 404 page
     "AwesomeBox": ["#hiatus", "#songPlayer", "#modulation", "#2024"],
-    "VoxBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2024"],
+    "VoxBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "Box": ["#discontinued", "#jokeMod", "#2024"],
     "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
     "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
-    "LunariisBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "LunariisBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
     "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"]
 }
@@ -88,7 +88,6 @@ export function searchForMod(result, fromMods = modList) {
             notFlag = true;
             filterString = filterString.replace(/\!|\-/, "");
         }
-        console.log(filterString)
         if (filterString.toLowerCase().indexOf("#before:") > -1) {
             let date = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
             if (date.length == 0) { //there may have been a space, check if next string is the date
@@ -149,14 +148,10 @@ export function searchForMod(result, fromMods = modList) {
 
     let mods = fromMods.slice();
     let oldMods = [];
-    console.log("filtering:")
     for (let i = 0; i < filters.length; i++) {
         oldMods.push(mods.slice());
         mods = filters[i](mods, oldMods[oldMods.length - 2]);
-        console.log(mods)
     }
-    console.log(oldMods)
-    console.log(mods)
     renderFilters(mods);
 
     if (result.length == 0) {
