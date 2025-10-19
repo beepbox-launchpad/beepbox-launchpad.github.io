@@ -25,6 +25,10 @@
             {
                 "link": "https://beepbox.co/competition/",
                 "name": "BeepBox Competition - V4.2"
+            },
+            {
+                "link": "https://www.beepbox.co/beepbox_offline.html",
+                "name": "BeepBox Offline"
             }
         ],
         "tree": []
@@ -43,7 +47,16 @@
         "version": "V2.6",
         "description": "JummBox is a mod of BeepBox made by <a href=\"https://github.com/jummbus\" target=\"_blank\">Jummbus</a> and it was released on July 30th of 2019. Its main appeal is its Modulation and limiter settings. Its current version is V2.6.",
         "wiki": "https://beepbox.miraheze.org/wiki/JummBox",
-        "alternateVersions": [],
+        "alternateVersions": [
+            {
+                "link": "https://jummb.us/2_4/",
+                "name": "JummBox 2.4"
+            },
+            {
+                "link": "https://jummb.us/jummbox_offline",
+                "name": "JummBox Offline"
+            }
+        ],
         "tree": ["BeepBox"]
     },
     {
@@ -897,8 +910,8 @@
         "image": "https://unbihexiumfan.github.io/edobox/website/favicon.ico",
         "aa": "true",
         "website": "https://unbihexiumfan.github.io/edobox/website/",
-        "patchNotes": "",
-        "version": "V2.0",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/EdoBox#:~:text=of%20EdoBox%201.0.-,Version%20History,-%5Bedit%5D",
+        "version": "V2.0.1",
         "description": "EdoBox is a mod of JummBox by UnbihexiumFan. It allows support for microtonal tuning systems created by dividing the octave into equal parts. It was released on December 27, 2024. ",
         "wiki": "https://beepbox.miraheze.org/wiki/EdoBox",
         "alternateVersions": [
@@ -909,6 +922,10 @@
             {
                 "link": "https://unbihexiumfan.github.io/edobox-archives/",
                 "name": "EdoBox archives for 11edo, 14edo, and 17edo. V1.0"
+            },
+            {
+                "link": "https://unbihexiumfan.github.io/edobox/website/jummbox_offline.html",
+                "name": "EdoBox Offline"
             }
         ],
         "hasTestingVersion": true,
@@ -977,12 +994,19 @@
         },
         "image": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/favicon.ico",
         "aa": "true",
+        "fontSize": "13px",
         "website": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/",
         "patchNotes": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/patch_notes.html",
         "version": "V231",
         "description": "D's Quick Box Mod is a mod of UltraBox that was created by deathmodereal. It adds many UI additions, such as loop bar buttons. It released on September 19th, 2025. ",
         "wiki": "https://beepbox.miraheze.org/wiki/D%27s_Quick_Box_Mod",
-        "alternateVersions": [],
+        "alternateVersions": [
+            {
+                "link": "https://me-rn-rbh.github.io/Ds-Quick-Test/",
+                "name": "D's Quick Test"
+            }
+        ],
+        "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     }
 ]

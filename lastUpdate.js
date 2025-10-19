@@ -36,6 +36,10 @@ export function calculateNewUpdate(mod) {
             var jukeBoxPN = compareDates(7, 10, 2025);
             return jukeBoxPN ? "unset" : "none";
         }
+        case "EdoBox": {
+            var EdoBoxPN = compareDates(25, 10, 2025);
+            return EdoBoxPN ? "unset" : "none";
+        }
         
     }
     return "none";

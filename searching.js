@@ -4,14 +4,14 @@ const modList = [];
 
 const modTags = {
     "all": ["#active", "#discontinued", "#hiatus",
-        "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal",
+        "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal", "#offline",
         "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025"], //contains any possible tag
 
-    "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2023"],
-    "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
+    "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2023"],
+    "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2024"],
     "AbyssBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
-    "BeepBox": ["#active", "#songPlayer", "#2012"],
-    "JummBox": ["#active", "#modulation", "#songPlayer", "#2019"],
+    "BeepBox": ["#active", "#songPlayer", "#offline", "#2012"],
+    "JummBox": ["#active", "#modulation", "#offline", "#songPlayer", "#2019"],
     "ModBox": ["#discontinued", "#2017"],
     "Sandbox": ["#discontinued", "#2017"],
     "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
@@ -53,7 +53,7 @@ const modTags = {
     "Box": ["#discontinued", "#jokeMod", "#2024"],
     "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
     "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
-    "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#2024"],
+    "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#offline", "#2024"],
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "LunariisBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
     "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
@@ -65,7 +65,7 @@ export function setAndReturnTagsList() {
         modList.push(window.Mods[mod].id);
     }
 
-    const setList = modList.concat(modTags.all).concat(["#before:", "#after:", "#children:", "#descendants:"]);
+    const setList = modTags.all.concat(["#before:", "#after:", "#children:", "#descendants:"]).concat(modList);
 
     for (let i = 0; i < setList.length; i++) {
         var tag = new Option();
