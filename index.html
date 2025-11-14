@@ -66,17 +66,28 @@
     <script type="module" src="./main.js"></script>
 
     <script>
+
+        var frequentMods = {};
+        var storedFrequentMods = localStorage.getItem("frequentMods");
+        if (storedFrequentMods != null) {
+            frequentMods = JSON.parse(storedFrequentMods);
+        } 
+
         var favoritesList = new Array();
         var storedfavoritesList = localStorage.getItem("favoritesList");
         if (storedfavoritesList != null) {
             favoritesList = JSON.parse(storedfavoritesList);
         }    
 
-        function goToWebsite(websiteLink, hasUniqueVers = false) {
+        function goToWebsite(websiteLink, modName = 0, hasUniqueVers = false) {
             if (hasUniqueVers == false) {
                 window.open(websiteLink, '_blank');
             } else {
                 displayPrompt(websiteLink)
+            }
+            if (modName != 0) {
+                frequentMods[modName] = frequentMods[modName] != null ? frequentMods[modName] + 1 : 1;
+                window.localStorage.setItem("frequentMods", JSON.stringify(frequentMods));
             }
         }
 

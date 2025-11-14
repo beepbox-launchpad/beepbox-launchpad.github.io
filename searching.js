@@ -62,7 +62,7 @@ const modTags = {
 
 export function setAndReturnTagsList() {
     for (const mod in window.Mods) {
-        modList.push(window.Mods[mod].id);
+        modList.push(window.Mods[mod].modId);
     }
 
     const setList = modTags.all.concat(["#before:", "#after:", "#children:", "#descendants:"]).concat(modList);
@@ -216,8 +216,8 @@ function filterDescendants(mods, forked) {
     for (const index in window.Mods) {
         const Mod = window.Mods[index];
         for (let i = 0; i < mods.length; i++) {
-            if (Mod.id == mods[i]) {
-                if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+            if (Mod.modId == mods[i]) {
+                if (Mod.modId.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
                     foundMods.push(mods[i]);
                     break;
                 }
@@ -241,8 +241,8 @@ function filterChildren(mods, forked) {
     for (const index in window.Mods) {
         const Mod = window.Mods[index];
         for (let i = 0; i < mods.length; i++) {
-            if (Mod.id == mods[i]) {
-                if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
+            if (Mod.modId == mods[i]) {
+                if (Mod.modId.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
                     foundMods.push(mods[i]);
                     break;
                 }

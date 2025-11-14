@@ -11,7 +11,7 @@ export function createMods(ModsList, method, isReversed) {
     Mods = sortMods(Mods, method, isReversed);
     for (let modNumber in Mods) {
         const modInfo = Mods[modNumber];
-        const modName = modInfo.displayName != ("" || undefined) ? modInfo.displayName : modInfo.id;
+        const modName = modInfo.displayName != ("" || undefined) ? modInfo.displayName : modInfo.modId;
         const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
         const fontSize = modInfo.fontSize == ("" || undefined) ? "inherit" : modInfo.fontSize;
         var modFavoritesList = new Array();
@@ -21,28 +21,28 @@ export function createMods(ModsList, method, isReversed) {
         }
 
         const updateButton = modInfo.patchNotes == "" ? "" :
-            button({ class: "updateText", id: modInfo.id + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
+            button({ class: "updateText", id: modInfo.modId + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
                 div({ style: "pointer-events: none;" }, "New Update")
             );
         if (updateButton) {
-            updateButton.style.display = calculateNewUpdate(modInfo.id);
+            updateButton.style.display = calculateNewUpdate(modInfo.modId);
         }
 
-        const favoriteButton = input({type:"checkbox", class: "favoriteButton", onclick: "favoriteBeepmod('" + modInfo.id + "')" });
-        favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.id) != -1);
+        const favoriteButton = input({type:"checkbox", class: "favoriteButton", onclick: "favoriteBeepmod('" + modInfo.modId + "')" });
+        favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.modId) != -1);
 
         const versionText = div({ class: "versionText" },
             div({ style: "margin-top: 2px;" }, modInfo.version)
         );
 
-        const mod = div({ class: "modDivider", id: modInfo.id },
+        const mod = div({ class: "modDivider", id: modInfo.modId },
             div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
             div({ style: "display: flex;flex-direction: row;/*! width: 100%; */margin-right: 16px;margin-right: 16px;gap: 5px;" },
                 div({ style: "text-align: center;/*! width: 100%; */ font-weight: bold; font-size: " + fontSize + "; flex: 3;" }, modName),
-                button({ class: "playButton", onclick: "goToWebsite('" + modInfo.website + "')" }, "▶"),
-                button({ class: "descButton", onclick: "goToWebsite(`" + modInfo.id + "Prompt`, true)" }, "≡")
+                button({ class: "playButton", onclick: "goToWebsite('" + modInfo.website + " ', '"+modInfo.modId+"')" }, "▶"),
+                button({ class: "descButton", onclick: "goToWebsite(`" + modInfo.modId + "Prompt`, 0, true)" }, "≡")
             ),
             updateButton,
             favoriteButton,
@@ -55,7 +55,7 @@ export function createMods(ModsList, method, isReversed) {
 
         const alternateVersionTitle = modInfo.alternateVersions.length > 0 ?
             div({ class: "promptTitle" },
-                h2({ class: modInfo.id + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.id + " Versions:")
+                h2({ class: modInfo.modId + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.modId + " Versions:")
             )
             : "";
         let alternateVersions = "";
@@ -74,22 +74,22 @@ export function createMods(ModsList, method, isReversed) {
         }
         const testingWarning = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes and issues, so use with caution.") : "";
 
-        const prompt = div({id: modInfo.id + "Prompt", style: "flex-direction: column;  display: none;" },
+        const prompt = div({id: modInfo.modId + "Prompt", style: "flex-direction: column;  display: none;" },
             div({ class: "promptTitle" },
-                h2({ class: modInfo.id + "Title", style: "margin-bottom: 0.5em;" }, modInfo.id + ":")
+                h2({ class: modInfo.modId + "Title", style: "margin-bottom: 0.5em;" }, modInfo.modId + ":")
             ),
             div({ style: "margin-bottom: 0.5em;" },
                 ...parseForUrls(modInfo.description + "")
             ),
             div({style:"margin-bottom: 0.5em;"},
-                "You can find " + modInfo.id + "'s ",
+                "You can find " + modInfo.modId + "'s ",
                 a({href: modInfo.wiki, target: "_blank"}, "Wiki Page"),
                 " here. Which contains extensive information about the website."
             ),
             alternateVersionTitle,
             alternateVersions,
             testingWarning,
-            button({class:"cancelButton", onclick:"closePrompt(`" + modInfo.id + "Prompt`)"})
+            button({class:"cancelButton", onclick:"closePrompt(`" + modInfo.modId + "Prompt`)"})
         );
 
         promptContainer.appendChild(prompt);
@@ -114,7 +114,7 @@ function sortMods(Mods, method, isReversed) { //add reverse button later
     let sortedMods = [];
     switch (method) {
         case "name": {
-            sortedMods = Mods.sort((modA, modB) => +(modA.id.toLowerCase() > modB.id.toLowerCase()) * 2 - 1);
+            sortedMods = Mods.sort((modA, modB) => +(modA.modId.toLowerCase() > modB.modId.toLowerCase()) * 2 - 1);
             break;
         }
         case "date": {
