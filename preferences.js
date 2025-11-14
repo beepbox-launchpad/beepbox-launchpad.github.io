@@ -35,6 +35,7 @@ export function switchView(view) {
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
         document.getElementById("favoritesListButton").style.filter = "";
         document.getElementById("comingSoon").style.display = "";
+        document.getElementById("noFavorites").style.display = "none";
         break;
         case 2: // favorites
         if (favoritesList.length > 0) {
