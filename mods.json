@@ -970,8 +970,8 @@
         "id": "JukeBox",
         "displayName": "JukeBox",
         "date": {
-            "day": 7,
-            "month": 21,
+            "day": 21,
+            "month": 7,
             "year": 2025
         },
         "image": "https://jukeebox.github.io/web-app-manifest-512x512.png",
@@ -988,8 +988,8 @@
         "id": "DsQuickBoxMod",
         "displayName": "D's Quick Box Mod",
         "date": {
-            "day": 9,
-            "month": 19,
+            "day": 19,
+            "month": 9,
             "year": 2025
         },
         "image": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/favicon.ico",
