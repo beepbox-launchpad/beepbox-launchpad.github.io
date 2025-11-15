@@ -108,8 +108,14 @@
         }
 
         function closePromptOnEscape (promptName) {
+            const promptBg = document.getElementById("promptContainerBG");
+            const prompt = document.getElementById("prompt");
+            let children = prompt.children;
             if(promptName.key === "Escape") {
-            closePrompt("promptContainerBG")
+                promptBg.style.display = "none";
+                for (var i = 0; i < children.length; i++) {
+                children[i].style.display = "none";
+                } 
             }
         }
         document.addEventListener("keydown", closePromptOnEscape)
