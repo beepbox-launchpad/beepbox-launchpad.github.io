@@ -1,5 +1,5 @@
 import { HTML } from "./imperative-html/elements-strict.js";
-import { searchForMod } from "./searching.js";
+import { searchForMods } from "./searching.js";
 const { select, option, div, h2, button, input } = HTML;
 
 export let currentView = 1;
@@ -23,7 +23,7 @@ export function switchView(view) {
         case 1: // default
         const search = document.getElementById("searchbar").value;
         if (search != "") {
-            searchForMod(search);
+            searchForMods(search);
         } else {
             for (let i = 0; i < setList.length; i++) {
                 if (!setList[i].includes("#")) {
@@ -34,7 +34,7 @@ export function switchView(view) {
 
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
         document.getElementById("favoritesListButton").style.filter = "";
-        document.getElementById("comingSoon").style.display = "";
+        document.getElementById("comingSoon").style.display = "flex";
         document.getElementById("noFavorites").style.display = "none";
         break;
         case 2: // favorites

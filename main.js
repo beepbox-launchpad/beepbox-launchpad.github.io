@@ -1,5 +1,5 @@
 import { createMods, getMods } from "./createMods.js";
-import { searchForMod, setAndReturnTagsList } from "./searching.js";
+import { searchForMods, setAndReturnTagsList } from "./searching.js";
 import { HTML } from "./imperative-html/elements-strict.js";
 import { setTheme, _themeStyleElement } from "./themes.js"
 import { preferencesPrompt, setPreferedTab, setPromptOpacity, currentView, switchView } from "./preferences.js";
@@ -34,10 +34,10 @@ var urlThing2 = urlThing.substring(3);
 
 if (window.location != (location.pathname + "/#s=" || location.pathname)) {
     document.getElementById("searchbar").value = decodeURIComponent(urlThing2);
-    searchForMod(urlThing2);
+    searchForMods(urlThing2);
 }
 
-window.searchForMod = searchForMod;
+window.searchForMod = searchForMods;
 
 function createSortbar() {
     
@@ -80,7 +80,7 @@ function recreateMods() {
         window.localStorage.setItem("setView", "previous");
     }
 
-    searchForMod(document.getElementById("searchbar").value);
+    searchForMods(document.getElementById("searchbar").value);
 
     if (currentView == 2) {
         switchView(2);

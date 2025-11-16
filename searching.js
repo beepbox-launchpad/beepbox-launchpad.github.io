@@ -78,7 +78,7 @@ export function setAndReturnTagsList() {
     return setList;
 }
 
-export function searchForMod(result, fromMods = modList) {
+export function searchForMods(result, fromMods = modList) {
     //split on spaces for multiple filters to be allowed
 
     const filterStrings = result.split(/\s/i);
@@ -311,7 +311,7 @@ function renderFilters(mods) {
     } else {
         document.getElementById("noResults").style.display = "none";
     }
-    if (mods == modList.length) {
+    if (mods.length == modList.length) {
         document.getElementById("comingSoon").style.display = "flex";
     } else {
         document.getElementById("comingSoon").style.display = "none";
