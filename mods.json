@@ -1008,5 +1008,39 @@
         ],
         "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "BloxBox",
+        "date": {
+            "day": 6, 
+            "month": 9,
+            "year": 2025
+        }, 
+        "image": "https://static.wikitide.net/beepboxwiki/d/d7/BloxBox_HQ.png",
+        "aa": "true",
+        "website": "https://jicekonemo.github.io/BloxBox/",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/BloxBox#Editions",
+        "version": "V0.1",
+        "description": "BloxBox is a mod of BeepBox that was created by thebloxer231. It adds four new presets, eight new chip waves and two new unison types. It released on September 6th, 2025.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BloxBox",
+                "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "BulbBox",
+        "date": {
+            "day": 7, 
+            "month": 9,
+            "year": 2025
+        }, 
+        "image": "https://thereallogg123.github.io/bulbbox-app/favicon.ico",
+        "aa": "true",
+        "website": "https://thereallogg123.github.io/bulbbox-app/",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/BulbBox#Editions",
+        "version": "V0.1",
+        "description": "BulbBox is a mod of BeepBox that was created by thereallogg123. BulbBox is notable for scrapping every instrument preset and replacing them with its own presets. It released on September 7th, 2025.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BulbBox",
+                "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "AbyssBox"]
     }
 ]

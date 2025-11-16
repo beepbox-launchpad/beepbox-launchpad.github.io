@@ -31,6 +31,8 @@
     <link href="https://fonts.googleapis.com/css?family=B612" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
     <!-- <link rel="stylesheet" href="./themes.css" id="stylesheet" /> -->
     <link rel="stylesheet" href="./main.css" />
+    
+
     </head>
 <body>
 
@@ -105,6 +107,19 @@
             document.getElementById(promptName).style.display = "none"; 
         }
 
+        function closePromptOnEscape (promptName) {
+            const promptBg = document.getElementById("promptContainerBG");
+            const prompt = document.getElementById("prompt");
+            let children = prompt.children;
+            if(promptName.key === "Escape") {
+                promptBg.style.display = "none";
+                for (var i = 0; i < children.length; i++) {
+                children[i].style.display = "none";
+                } 
+            }
+        }
+        document.addEventListener("keydown", closePromptOnEscape)
+        
         const copyText = document.getElementById("copyText");
 
         const fade = [
@@ -123,6 +138,7 @@
             navigator.clipboard.writeText(window.location);
             copyText.animate(fade, fadeTiming);
         }
+
 
     </script>
 

@@ -57,7 +57,9 @@ const modTags = {
     "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "LunariisBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
     "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
-    "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"]
+    "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "BloxBox": ["#active", "#songPlayer", "#2025"],
+    "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"]
 }
 
 export function setAndReturnTagsList() {
