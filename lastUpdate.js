@@ -21,7 +21,7 @@ export function calculateNewUpdate(mod) {
             return ultraboxPN ? "unset" : "none";
         }
         case "BeepBox": {
-            var beepBoxPN = false;
+            var beepBoxPN = compareDates(3, 12, 2025);
             return beepBoxPN ? "unset" : "none";
         }
         case "LemmBox": {
@@ -45,6 +45,15 @@ export function calculateNewUpdate(mod) {
     return "none";
 }
 
+/**
+ * DAY - MONTH - YEAR
+ * 
+ * Please set to a week after the update releases 
+ * @param {The day of the month to display the button until} updateDay 
+ * @param {The month to display the button until. This is 1 indexed} updateMonth 
+ * @param {The year to display the update until} updateYear 
+ * @returns void
+ */
 function compareDates(updateDay, updateMonth, updateYear) {
     var time = new Date();
     var day = time.getDate();

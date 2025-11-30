@@ -10,8 +10,8 @@
         "aa": "false",
         "website": "https://beepbox.co",
         "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
-        "version": "V4.2",
-        "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.",
+        "version": "V4.2.1",
+        "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.1.",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox",
         "alternateVersions": [
             {
@@ -981,7 +981,17 @@
         "version": "V0.2.2",
         "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets. It was released on June 21st, 2025. ",
         "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
-        "alternateVersions": [],
+        "alternateVersions": [
+            {
+                "link": "https://jukeebox.netlify.app/",
+                "name": "Jukebox Netlify Port - V0.2.2"
+            },
+            {
+                "link": "https://jukeebox.github.io/microtonal-testing/",
+                "name": "Jukebox Microtonal Testing - V0.3.0"
+            }
+        ],
+        "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     },
     {
