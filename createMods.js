@@ -72,7 +72,7 @@ export function createMods(ModsList, method, isReversed) {
                 div( ...altVersionList)
             )
         }
-        const testingWarning = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes and issues, so use with caution.") : "";
+        const testingWarning = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes, issues, and song corruptions, so use with caution.") : "";
 
         const prompt = div({id: modInfo.id + "Prompt", style: "flex-direction: column;  display: none;" },
             div({ class: "promptTitle" },
