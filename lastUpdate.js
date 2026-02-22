@@ -33,7 +33,7 @@ export function calculateNewUpdate(mod) {
             return jummBoxPN ? "unset" : "none";
         }
         case "JukeBox": {
-            var jukeBoxPN = compareDates(2, 12, 2025);
+            var jukeBoxPN = compareDates(28, 2, 2026);
             return jukeBoxPN ? "unset" : "none";
         }
         case "EdoBox": {
