@@ -136,17 +136,17 @@
         "aa": "false",
         "website": "https://slarmoo.github.io/slarmoosbox/website/",
         "patchNotes": "https://slarmoo.github.io/slarmoosbox/website/patch_notes.html",
-        "version": "V1.4.10",
-        "description": "Slarmoo's Box is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@Slarmoo\" target=\"_blank\">Slarmoo</a> and was released on May 13th of 2024. Its main appeal is its highly customizable envelopes, which make automation a lot more intuitive. Its current version is V1.4.3.",
+        "version": "V1.4.11",
+        "description": "Slarmoo's Box is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@Slarmoo\" target=\"_blank\">Slarmoo</a> and was released on May 13th of 2024. Its main appeal is its highly customizable envelopes, which make automation a lot more intuitive.",
         "wiki": "https://beepbox.miraheze.org/wiki/Slarmoo%27s_Box",
         "alternateVersions": [
             {
                 "link": "https://slarmoo.github.io/slarmoosboxtesting/website/",
-                "name": "Slarmoo's Box Testing - V1.5"
+                "name": "Slarmoo's Box Testing - V2.0"
             },
             {
                 "link": "https://github.com/slarmoo/slarmoosbox/releases",
-                "name": "Slarmoo's Box Offline - V1.4.10"
+                "name": "Slarmoo's Box Offline - V1.4.11"
             },
             {
                 "link": "https://slarmoo.github.io/slarmoosbox/archive/",
@@ -154,7 +154,7 @@
             },
             {
                 "link": "https://box.slarmoo.com/",
-                "name": "Slarmoo's Box Unblocked - V1.4.10"
+                "name": "Slarmoo's Box Unblocked - V1.4.11"
             }
         ],
         "hasTestingVersion": true,
