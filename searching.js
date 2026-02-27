@@ -41,7 +41,7 @@ const modTags = {
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
     "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
-    "Nepbox": ["#hiatus", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
+    "Nepbox": ["#discontinued", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
     "Unbox": ["#active", "#songPlayer", "#samples", "#modulation", "#2024"],
     "shitbox4": ["#active", "#songPlayer", "#jokeMod", "#2024"],
     "BariBox": ["#discontinued", "#samples", "#modulation", "#songPlayer", "#2024"],
@@ -54,8 +54,10 @@ const modTags = {
     "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
     "AxoBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "EdoBox": ["#active", "#songPlayer", "#modulation", "#microtonal", "#offline", "#2024"],
-    "LemmBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "LemmBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "BonBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2025"],
     "LunariisBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "RolyBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "BloxBox": ["#active", "#songPlayer", "#2025"],

@@ -949,6 +949,23 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
+        "id": "BonBox",
+        "date": {
+            "day": 12,
+            "month": 3,
+            "year": 2025
+        },
+        "image": "https://chaoticbon.com/files/bonbox%20logo.png",
+        "aa": "false",
+        "website": "https://chaoticbon.com/bonbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BonBox is a joke mod of BeepBox that was created by ChaoticBun and released on March 12th, 2025. It renames several things in the editor and changes the fonts of the site.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BonBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
         "id": "LunariisBox",
         "displayName": "Lunarii's Box",
         "date": {
@@ -965,6 +982,23 @@
         "wiki": "https://beepbox.miraheze.org/wiki/Lunarii%27s_Box",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
+    },
+    {
+        "id": "RolyBox",
+        "date": {
+            "day": 21,
+            "month": 7,
+            "year": 2025
+        },
+        "image": "https://static.wikitide.net/beepboxwiki/5/53/RolyBox_icon.webp",
+        "aa": "true",
+        "website": "https://thinkandwander.github.io/Rolybox/",
+        "patchNotes": "https://thinkandwander.github.io/Rolybox/patch_notes.html",
+        "version": "NIGHTLY_DEV",
+        "description": "RolyBox is a mod of UltraBox that was created by ThinkAndWander (Eve). It adds a sophisticated \"selection\" menu that makes complicated note patterns easier to make. It was released on July 21st, 2025.",
+        "wiki": "https://beepbox.miraheze.org/wiki/RolyBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "JukeBox",
