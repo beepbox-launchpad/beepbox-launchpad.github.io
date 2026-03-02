@@ -254,6 +254,12 @@ function filterChildren(mods, forked) {
                 if (lastIndex >= 0 && Mod.tree[lastIndex].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
                     foundMods.push(mods[i]);
                 }
+                if (Mod.lookBack2) {
+                    const twoAgo = Mod.tree.length - 2;
+                    if (twoAgo >= 0 && Mod.tree[twoAgo].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
+                        foundMods.push(mods[i]);
+                    }
+                }
                 break; 
             }
         }

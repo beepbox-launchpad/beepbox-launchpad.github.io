@@ -88,7 +88,8 @@
             }
         ],
         "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox"],
+        "lookBack2": true
     },
     {
         "id": "AbyssBox",
