@@ -107,11 +107,11 @@
         "alternateVersions": [
             {
                 "link": "https://choptop84.github.io/abyssbox-testing/",
-                "name": "AbyssBox Testing - V1.6"
+                "name": "AbyssBox Testing - V1.7"
             },
             {
                 "link": "https://choptop84.github.io/abyssbox-experimental/",
-                "name": "AbyssBox Experimental - V1.6"
+                "name": "AbyssBox Experimental - V1.7"
             },
             {
                 "link": "https://choptop84.github.io/abyssbox-archives/1.5.1/",
@@ -120,6 +120,10 @@
             {
                 "link": "https://choptop84.github.io/abyssbox-archives/sb-envelopes/",
                 "name": "AbyssBox Archives (Slarmoo's Box Envelopes) - V1.6"
+            },
+            {
+                "link": "https://choptop84.github.io/abyssbox-alt/",
+                "name": "AbyssBox Alternative - V1.7b"
             }
         ],
         "hasTestingVersion": true,
