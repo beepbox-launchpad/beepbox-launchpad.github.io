@@ -1060,7 +1060,7 @@
         "version": "V0.1",
         "description": "BulbBox is a mod of BeepBox that was created by thereallogg123. BulbBox is notable for scrapping every instrument preset and replacing them with its own presets. It released on September 7th, 2025.",
         "wiki": "https://beepbox.miraheze.org/wiki/BulbBox",
-                "alternateVersions": [],
+        "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "AbyssBox"]
     },
     {
@@ -1087,5 +1087,40 @@
         ],
         "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "Studio Box",
+        "date": {
+            "day": 2,
+            "month": 2,
+            "year": 2026
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://kashumy.github.io/Studio-Box/",
+        "patchNotes": "https://kashumy.github.io/Studio-Box/patch_notes.html",
+        "version": "V1.0.6",
+        "description": "Studio Box is a mod of Slarmoo's Box by Kashumy that adds several experimental features, such as 8-op FM, the octave shift effect, and more reverb options. It was released on February 2nd, 2026. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/Studio_Box",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox", "AbyssBox"],
+        "lookBack2": true
+    },
+    {
+        "id": "41Box",
+        "date": {
+            "day": 27,
+            "month": 3,
+            "year": 2026
+        },
+        "image": "https://41popzic.github.io/41box-app/favicon.ico",
+        "aa": "true",
+        "website": "https://41popzic.github.io/41box-app/",
+        "patchNotes": "https://41popzic.github.io/41box-app/patch_notes.html",
+        "version": "V0.6",
+        "description": "41Box is a mod of Slarmoo's Box by 41popzic that adds quintuplets as a rhythm option. It was released on March 27th, 2026. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/41Box",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     }
 ]
