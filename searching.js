@@ -5,7 +5,7 @@ const modList = [];
 const modTags = {
     "all": ["#active", "#discontinued", "#hiatus",
         "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal", "#offline",
-        "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025"], //contains any possible tag
+        "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025", "#2026"], //contains any possible tag
 
     "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2023"],
     "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2024"],
@@ -61,7 +61,9 @@ const modTags = {
     "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "BloxBox": ["#active", "#songPlayer", "#2025"],
-    "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"]
+    "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"],
+    "StudioBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
+    "41Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"]
 }
 
 export function setAndReturnTagsList() {

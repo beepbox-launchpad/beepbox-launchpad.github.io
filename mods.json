@@ -1093,7 +1093,8 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
-        "id": "Studio Box",
+        "id": "StudioBox",
+        "displayName": "Studio Box",
         "date": {
             "day": 2,
             "month": 2,
