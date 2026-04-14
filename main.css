@@ -90,6 +90,77 @@
     background: var(--text-selection);
 }
 
+.headerBorder {
+    width: 100%; 
+    height: 64px; 
+    background: var(--editor-background); 
+    border-bottom: var(--ui-widget-background) 2px solid; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-direction: row; 
+    transition: 0.2s;
+}
+
+#header {
+    display: flex; 
+    flex-direction: row; 
+    gap: 5px;
+}
+
+#searchbarContainer {
+    display: flex;
+    gap: 5px;
+}
+
+#sortContainer {
+    display: flex;
+    gap: 5px;
+}
+
+.websiteTitle {
+    align-self: center; 
+    margin-right: 16px; 
+    color: var(--mod-title); 
+    text-align: center;
+}
+
+.mainContent {
+    display: grid; 
+    grid-template-columns: 64px 1fr;
+}
+
+.contentBorder {
+    width: 64px; 
+    justify-content: space-between; 
+    background: var(--editor-background); 
+    display: flex; 
+    flex-direction: column; 
+    border-top: var(--ui-widget-background) 2px solid;
+    border-right: var(--ui-widget-background) 2px solid; 
+    align-items: center; 
+    padding-top: 16px; 
+    padding-bottom: 16px; 
+    transition: 0.2s;
+}
+
+.buttonContainer {
+    display:flex; 
+    flex-direction: column; 
+    gap: 5px;
+}
+
+#modContainer {
+    margin: 32px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: baseline;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
 .copyText {
     position: absolute;
     top: 36px;

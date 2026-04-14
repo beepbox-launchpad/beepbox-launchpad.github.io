@@ -42,7 +42,7 @@ window.searchForMod = searchForMods;
 function createSortbar() {
     
     const sorter = select({ class: "sort", id: "sorter" });
-    const header = document.getElementById("header");
+    const header = document.getElementById("sortContainer");
     header.appendChild(buildOptions(sorter, sorterValues));
     sorter.value = 2;
     sorter.addEventListener("change", () => recreateMods());
