@@ -124,7 +124,7 @@ function sortMods(Mods, method, isReversed) { //add reverse button later
             });
             break;
         }
-        case "relevant": {
+        case "order added": {
             sortedMods = Mods;
             break;
         }

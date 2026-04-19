@@ -1,65 +1,5 @@
 [
     {
-        "id": "BeepBox",
-        "date": {
-            "day": 20, 
-            "month": 20,
-            "year": 2012
-        }, 
-        "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
-        "aa": "false",
-        "website": "https://beepbox.co",
-        "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
-        "version": "V4.2.1",
-        "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.1.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox",
-        "alternateVersions": [
-            {
-                "link": "https://beepbox.co/2_3/",
-                "name": "BeepBox 2.3"
-            },
-            {
-                "link": "https://beepbox.co/3_0/",
-                "name": "BeepBox 3.0"
-            },
-            {
-                "link": "https://beepbox.co/competition/",
-                "name": "BeepBox Competition - V4.2"
-            },
-            {
-                "link": "https://www.beepbox.co/beepbox_offline.html",
-                "name": "BeepBox Offline"
-            }
-        ],
-        "tree": []
-    },
-    {
-        "id": "JummBox",
-        "date": {
-            "day": 30,
-            "month": 7,
-            "year": 2019
-        },
-        "image": "https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true",
-        "aa": "false",
-        "website": "https://jummb.us",
-        "patchNotes": "https://jummb.us/patch_notes/",
-        "version": "V2.6",
-        "description": "JummBox is a mod of BeepBox made by <a href=\"https://github.com/jummbus\" target=\"_blank\">Jummbus</a> and it was released on July 30th of 2019. Its main appeal is its Modulation and limiter settings. Its current version is V2.6.",
-        "wiki": "https://beepbox.miraheze.org/wiki/JummBox",
-        "alternateVersions": [
-            {
-                "link": "https://jummb.us/2_4/",
-                "name": "JummBox 2.4"
-            },
-            {
-                "link": "https://jummb.us/jummbox_offline",
-                "name": "JummBox Offline"
-            }
-        ],
-        "tree": ["BeepBox"]
-    },
-    {
         "id": "UltraBox",
         "date": {
             "day": 4,
@@ -165,6 +105,66 @@
         "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
+        {
+        "id": "BeepBox",
+        "date": {
+            "day": 20, 
+            "month": 20,
+            "year": 2012
+        }, 
+        "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "aa": "false",
+        "website": "https://beepbox.co",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
+        "version": "V4.2.1",
+        "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.1.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox",
+        "alternateVersions": [
+            {
+                "link": "https://beepbox.co/2_3/",
+                "name": "BeepBox 2.3"
+            },
+            {
+                "link": "https://beepbox.co/3_0/",
+                "name": "BeepBox 3.0"
+            },
+            {
+                "link": "https://beepbox.co/competition/",
+                "name": "BeepBox Competition - V4.2"
+            },
+            {
+                "link": "https://www.beepbox.co/beepbox_offline.html",
+                "name": "BeepBox Offline"
+            }
+        ],
+        "tree": []
+    },
+    {
+        "id": "JummBox",
+        "date": {
+            "day": 30,
+            "month": 7,
+            "year": 2019
+        },
+        "image": "https://github.com/jummbus/jummbox/blob/main/website/icon_maskable_192.png?raw=true",
+        "aa": "false",
+        "website": "https://jummb.us",
+        "patchNotes": "https://jummb.us/patch_notes/",
+        "version": "V2.6",
+        "description": "JummBox is a mod of BeepBox made by <a href=\"https://github.com/jummbus\" target=\"_blank\">Jummbus</a> and it was released on July 30th of 2019. Its main appeal is its Modulation and limiter settings. Its current version is V2.6.",
+        "wiki": "https://beepbox.miraheze.org/wiki/JummBox",
+        "alternateVersions": [
+            {
+                "link": "https://jummb.us/2_4/",
+                "name": "JummBox 2.4"
+            },
+            {
+                "link": "https://jummb.us/jummbox_offline",
+                "name": "JummBox Offline"
+            }
+        ],
+        "tree": ["BeepBox"]
+    },
     {
         "id": "ModBox",
         "date": {
@@ -264,23 +264,6 @@
         "tree": ["BeepBox"]
     },
     {
-        "id": "NerdBox",
-        "date": {
-            "day": 15,
-            "month": 2,
-            "year": 2018
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://ultraabox.github.io/archives/nerdbox/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "NerdBox is a mod of BeepBox by Green Guy. It's notable for adding new waveforms and scales. It was released on February 15, 2018.",
-        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
         "id": "ZefBox",
         "date": {
             "day": 15,
@@ -296,32 +279,6 @@
         "wiki": "https://beepbox.miraheze.org/wiki/ZefBox",
         "alternateVersions": [],
         "tree": ["BeepBox", "Sandbox"]
-    },
-    {
-        "id": "ShitBox",
-        "date": {
-            "day": 16,
-            "month": 2,
-            "year": 2019
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://lihzahrd.github.io/shitbox3.0/",
-        "patchNotes": "",
-        "version": "V3.0",
-        "description": "ShitBox is a joke mod of BeepBox and ModBox by Lihzahrd. It's notable for being the first ever joke mod to be made. It was released on February 16, 2019.",
-        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
-        "alternateVersions": [
-            {
-                "link": "https://lihzahrd.github.io/shitbox/",
-                "name": "ShitBox v1.0.1"
-            },
-            {
-                "link": "https://hidden-realm.github.io/shitbox2/",
-                "name": "ShitBox v2.0"
-            }
-        ],
-        "tree": ["BeepBox"]
     },
     {
         "id": "WideBox",
@@ -358,128 +315,6 @@
         "tree": ["BeepBox"]
     },
     {
-        "id": "BassBox",
-        "date": {
-            "day": 1,
-            "month": 1,
-            "year": 2020
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://lihzahrd.github.io/bassbox/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "BassBox is a joke mod of BeepBox by Lihzahrd. It's known for removing all presets except for ones typically used as Bass. It was released on January 1, 2020.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BassBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
-        "id": "SliderBox",
-        "date": {
-            "day": 6,
-            "month": 2,
-            "year": 2020
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://slidecode.github.io/sliderbox.github.io/website/3_0/",
-        "patchNotes": "",
-        "version": "V3.0.13",
-        "description": "SliderBox is mod of BeepBox by Slidecode, and Azgam4. It was released on February 6, 2020.",
-        "wiki": "https://beepbox.miraheze.org/wiki/SliderBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
-        "id": "BeepBox1Bar",
-        "displayName": "BeepBox 1Bar",
-        "date": {
-            "day": 19,
-            "month": 2,
-            "year": 2020
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://hidden-realm.github.io/beepbox1bar/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "BeepBox 1Bar is mod of BeepBox by Lihzahrd. It's known as the first mod to set the minimum number of beats per bars from 3 to 1. It was released on February 19, 2020.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_1Bar",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
-        "id": "CardboardBox",
-        "date": {
-            "day": 9,
-            "month": 3,
-            "year": 2020
-        },
-        "image": "https://hidden-realm.github.io/cardboardbox/favicon.ico",
-        "aa": "true",
-        "website": "https://hidden-realm.github.io/cardboardbox",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "CardboardBox is a mod of JummBox by Lihzahrd. CardboardBox increases the maximum chord size to 16. It was released on March 9, 2020. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/CardboardBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
-        "id": "JummBox11edo",
-        "displayName": "JummBox 11edo",
-        "date": {
-            "day": 12,
-            "month": 5,
-            "year": 2020
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "fontSize": "smaller",
-        "website": "https://fillygroove.github.io/jummbox-microtonal/11edo/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "JummBox 11edo is a mod of JummBox by FillyGroove. It changes the amounts of notes per octave to be 11. It was released on May 12, 2020. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/JummBox_11edo",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
-        "id": "BluBox",
-        "date": {
-            "day": 15,
-            "month": 6,
-            "year": 2020
-        },
-        "image": "https://i.imgur.com/sm62GJe.png",
-        "website": "https://ultraabox.github.io/archives/blubox/",
-        "aa": "true",
-        "patchNotes": "",
-        "version": "BETA",
-        "description": "BluBox was a mod of JummBox by Bluto. It was released on June 15, 2020. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/BluBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
-        "id": "SynthBox",
-        "date": {
-            "day": 17,
-            "month": 6,
-            "year": 2020
-        },
-        "image": "https://synthbox.co/favicon.ico",
-        "website": "https://synthbox.co/",
-        "aa": "true",
-        "patchNotes": "",
-        "version": "V2.0",
-        "description": "SynthBox was a mod of JummBox by Chopy61. It was the first mod to add 6 operator FM. It was released on June 17, 2020. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/SynthBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
         "id": "Wackybox",
         "date": {
             "day": 2,
@@ -513,41 +348,7 @@
         "alternateVersions": [],
         "tree": ["BeepBox"]
     },
-    {
-        "id": "WeebBox",
-        "date": {
-            "day": 12,
-            "month": 6,
-            "year": 2021
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://jimothee.bitbucket.io/",
-        "patchNotes": "",
-        "version": "V1.2",
-        "description": "WeebBox is a mod of BeepBox by Jimothee. It's notable for being the first mod to include custom themes. It was released on June 12, 2021. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/WeebBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
-        "id": "NintariBox",
-        "date": {
-            "day": 12,
-            "month": 6,
-            "year": 2021
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://nintarigenesis.bitbucket.io/",
-        "patchNotes": "",
-        "version": "V3.3",
-        "description": "NintariBox is a mod of BeepBox by NintariGenesis. It was originally a joke mod of WeebBox, but later moved to Paandora's Box and added the NintariBox samples. It was released on June 12, 2021.",
-        "wiki": "https://beepbox.miraheze.org/wiki/NintariBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "WeebBox", "PaandorasBox"]
-    },
-    {
+        {
         "id": "MicroBox",
         "date": {
             "day": 30,
@@ -599,57 +400,6 @@
         "wiki": "https://beepbox.miraheze.org/wiki/BlockBox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "PaandorasBox"]
-    },
-    {
-        "id": "FoxBox",
-        "date": {
-            "day": 2,
-            "month": 5,
-            "year": 2022
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://foxnet.neocities.org/projects/foxbox",
-        "patchNotes": "",
-        "version": "V1.2.51",
-        "description": "FoxBox is a mod of BeepBox created by EliTheFox. It removes the practical limits of tempo and song length. It was released on May 2, 2022.",
-        "wiki": "https://beepbox.miraheze.org/wiki/FoxBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
-        "id": "MarioPaintBox",
-        "date": {
-            "day": 23,
-            "month": 2,
-            "year": 2023
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://pmpbox.glitch.me/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "MarioPaintBox is a mod of Paandora's Box created by thesaturnangel with contributions from mintyfresh2490, Jinxamoretto, Main, and nesquix. It removes all instruments except for samples that can be found in the game Mario Paint. It was released on February 23, 2023.",
-        "wiki": "https://beepbox.miraheze.org/wiki/MarioPaintBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "PaandorasBox"]
-    },
-    {
-        "id": "TETBox",
-        "date": {
-            "day": 10,
-            "month": 14,
-            "year": 2023
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://not-without-text.github.io/tetbox/website/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "TETBox is a mod of BeepBox by not without text. It changes the amounts of notes per octave to be 19. It was released on April 10, 2023. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/TETBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
     },
     {
         "id": "Midbox",
@@ -753,23 +503,6 @@
         "tree": ["BeepBox"]
     },
     {
-        "id": "BariBox",
-        "date": {
-            "day": 14,
-            "month": 3,
-            "year": 2024
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://andrebariani.github.io/baribox/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "BariBox™ is a mod of UltraBox by Bariani. BariBox adds a \"corruption\" feature, which essentially  randomizes the placement of notes, patterns, and the instrument types used. It was released on March 14, 2024.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BariBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
-    },
-    {
         "id": "BoxBeep",
         "date": {
             "day": 23,
@@ -800,23 +533,6 @@
         "version": "Release",
         "description": "AestheticBox is a mod of BeepBox by CNWMakesCode. It changes the default font to \"Quicksand\". It was released on March 23, 2024.",
         "wiki": "https://beepbox.miraheze.org/wiki/AestheticBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
-        "id": "BirdBox",
-        "date": {
-            "day": 22,
-            "month": 4,
-            "year": 2024
-        },
-        "image": "./placeholder.png",
-        "aa": "false",
-        "website": "https://choptop84.github.io/birdbox-app/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "BirdBox is a joke mod of BeepBox by choptop84. It makes everything dark, as if you were wearing a blindfold. It was released on April 22, 2024.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BirdBox",
         "alternateVersions": [],
         "tree": ["BeepBox"]
     },
@@ -855,6 +571,74 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
+        "id": "LemmBox",
+        "date": {
+            "day": 7,
+            "month": 1,
+            "year": 2025
+        },
+        "image": "https://lemmbox.github.io/theme_resources/LemmBoxLogo.png",
+        "aa": "false",
+        "website": "https://lemmbox.github.io/",
+        "patchNotes": "https://lemmbox.github.io/patch_notes.html",
+        "version": "V0.1.2-b",
+        "description": "LemmBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@HappyLemonLime\" target=\"_blank\">HappyLemonLime</a> and was released on January 7th of 2025. Its main appeal is its customization of the max values found in the editor, and extra chip waves.",
+        "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "CardboardBox",
+        "date": {
+            "day": 9,
+            "month": 3,
+            "year": 2020
+        },
+        "image": "https://hidden-realm.github.io/cardboardbox/favicon.ico",
+        "aa": "true",
+        "website": "https://hidden-realm.github.io/cardboardbox",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "CardboardBox is a mod of JummBox by Lihzahrd. CardboardBox increases the maximum chord size to 16. It was released on March 9, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/CardboardBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
+        "id": "BariBox",
+        "date": {
+            "day": 14,
+            "month": 3,
+            "year": 2024
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://andrebariani.github.io/baribox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BariBox™ is a mod of UltraBox by Bariani. BariBox adds a \"corruption\" feature, which essentially  randomizes the placement of notes, patterns, and the instrument types used. It was released on March 14, 2024.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BariBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "BluBox",
+        "date": {
+            "day": 15,
+            "month": 6,
+            "year": 2020
+        },
+        "image": "https://i.imgur.com/sm62GJe.png",
+        "website": "https://ultraabox.github.io/archives/blubox/",
+        "aa": "true",
+        "patchNotes": "",
+        "version": "BETA",
+        "description": "BluBox was a mod of JummBox by Bluto. It was released on June 15, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BluBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
         "id": "Box",
         "date": {
             "day": 22,
@@ -870,6 +654,236 @@
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=vanilla%20for%20showcasing.-,Box,-boxbox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "NerdBox",
+        "date": {
+            "day": 15,
+            "month": 2,
+            "year": 2018
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://ultraabox.github.io/archives/nerdbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "NerdBox is a mod of BeepBox by Green Guy. It's notable for adding new waveforms and scales. It was released on February 15, 2018.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "ShitBox",
+        "date": {
+            "day": 16,
+            "month": 2,
+            "year": 2019
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://lihzahrd.github.io/shitbox3.0/",
+        "patchNotes": "",
+        "version": "V3.0",
+        "description": "ShitBox is a joke mod of BeepBox and ModBox by Lihzahrd. It's notable for being the first ever joke mod to be made. It was released on February 16, 2019.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NerdBox",
+        "alternateVersions": [
+            {
+                "link": "https://lihzahrd.github.io/shitbox/",
+                "name": "ShitBox v1.0.1"
+            },
+            {
+                "link": "https://hidden-realm.github.io/shitbox2/",
+                "name": "ShitBox v2.0"
+            }
+        ],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "BassBox",
+        "date": {
+            "day": 1,
+            "month": 1,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://lihzahrd.github.io/bassbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BassBox is a joke mod of BeepBox by Lihzahrd. It's known for removing all presets except for ones typically used as Bass. It was released on January 1, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BassBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "SliderBox",
+        "date": {
+            "day": 6,
+            "month": 2,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://slidecode.github.io/sliderbox.github.io/website/3_0/",
+        "patchNotes": "",
+        "version": "V3.0.13",
+        "description": "SliderBox is mod of BeepBox by Slidecode, and Azgam4. It was released on February 6, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/SliderBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "JummBox11edo",
+        "displayName": "JummBox 11edo",
+        "date": {
+            "day": 12,
+            "month": 5,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "fontSize": "smaller",
+        "website": "https://fillygroove.github.io/jummbox-microtonal/11edo/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "JummBox 11edo is a mod of JummBox by FillyGroove. It changes the amounts of notes per octave to be 11. It was released on May 12, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/JummBox_11edo",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
+        "id": "TETBox",
+        "date": {
+            "day": 10,
+            "month": 14,
+            "year": 2023
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://not-without-text.github.io/tetbox/website/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "TETBox is a mod of BeepBox by not without text. It changes the amounts of notes per octave to be 19. It was released on April 10, 2023. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/TETBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "EdoBox",
+        "date": {
+            "day": 27,
+            "month": 12,
+            "year": 2024
+        },
+        "image": "https://unbihexiumfan.github.io/edobox/website/favicon.ico",
+        "aa": "true",
+        "website": "https://unbihexiumfan.github.io/edobox/website/",
+        "patchNotes": "https://beepbox.miraheze.org/wiki/EdoBox#:~:text=of%20EdoBox%201.0.-,Version%20History,-%5Bedit%5D",
+        "version": "V2.0.1",
+        "description": "EdoBox is a mod of JummBox by UnbihexiumFan. It allows support for microtonal tuning systems created by dividing the octave into equal parts. It was released on December 27, 2024. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/EdoBox",
+        "alternateVersions": [
+            {
+                "link": "https://unbihexiumfan.github.io/edobox-2.0-beta/website/",
+                "name": "EdoBox Testing - V2.0"
+            },
+            {
+                "link": "https://unbihexiumfan.github.io/edobox-archives/",
+                "name": "EdoBox archives for 11edo, 14edo, and 17edo. V1.0"
+            },
+            {
+                "link": "https://unbihexiumfan.github.io/edobox/website/jummbox_offline.html",
+                "name": "EdoBox Offline"
+            }
+        ],
+        "hasTestingVersion": true,
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
+        "id": "FoxBox",
+        "date": {
+            "day": 2,
+            "month": 5,
+            "year": 2022
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://foxnet.neocities.org/projects/foxbox",
+        "patchNotes": "",
+        "version": "V1.2.51",
+        "description": "FoxBox is a mod of BeepBox created by EliTheFox. It removes the practical limits of tempo and song length. It was released on May 2, 2022.",
+        "wiki": "https://beepbox.miraheze.org/wiki/FoxBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "BeepBox1Bar",
+        "displayName": "BeepBox 1Bar",
+        "date": {
+            "day": 19,
+            "month": 2,
+            "year": 2020
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://hidden-realm.github.io/beepbox1bar/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BeepBox 1Bar is mod of BeepBox by Lihzahrd. It's known as the first mod to set the minimum number of beats per bars from 3 to 1. It was released on February 19, 2020.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_1Bar",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "WeebBox",
+        "date": {
+            "day": 12,
+            "month": 6,
+            "year": 2021
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://jimothee.bitbucket.io/",
+        "patchNotes": "",
+        "version": "V1.2",
+        "description": "WeebBox is a mod of BeepBox by Jimothee. It's notable for being the first mod to include custom themes. It was released on June 12, 2021. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/WeebBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox"]
+    },
+    {
+        "id": "MarioPaintBox",
+        "date": {
+            "day": 23,
+            "month": 2,
+            "year": 2023
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://pmpbox.glitch.me/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "MarioPaintBox is a mod of Paandora's Box created by thesaturnangel with contributions from mintyfresh2490, Jinxamoretto, Main, and nesquix. It removes all instruments except for samples that can be found in the game Mario Paint. It was released on February 23, 2023.",
+        "wiki": "https://beepbox.miraheze.org/wiki/MarioPaintBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "PaandorasBox"]
+    },
+    {
+        "id": "BirdBox",
+        "date": {
+            "day": 22,
+            "month": 4,
+            "year": 2024
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://choptop84.github.io/birdbox-app/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BirdBox is a joke mod of BeepBox by choptop84. It makes everything dark, as if you were wearing a blindfold. It was released on April 22, 2024.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BirdBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
     },
     {
         "id": "DinoBox",
@@ -906,71 +920,6 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
-        "id": "EdoBox",
-        "date": {
-            "day": 27,
-            "month": 12,
-            "year": 2024
-        },
-        "image": "https://unbihexiumfan.github.io/edobox/website/favicon.ico",
-        "aa": "true",
-        "website": "https://unbihexiumfan.github.io/edobox/website/",
-        "patchNotes": "https://beepbox.miraheze.org/wiki/EdoBox#:~:text=of%20EdoBox%201.0.-,Version%20History,-%5Bedit%5D",
-        "version": "V2.0.1",
-        "description": "EdoBox is a mod of JummBox by UnbihexiumFan. It allows support for microtonal tuning systems created by dividing the octave into equal parts. It was released on December 27, 2024. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/EdoBox",
-        "alternateVersions": [
-            {
-                "link": "https://unbihexiumfan.github.io/edobox-2.0-beta/website/",
-                "name": "EdoBox Testing - V2.0"
-            },
-            {
-                "link": "https://unbihexiumfan.github.io/edobox-archives/",
-                "name": "EdoBox archives for 11edo, 14edo, and 17edo. V1.0"
-            },
-            {
-                "link": "https://unbihexiumfan.github.io/edobox/website/jummbox_offline.html",
-                "name": "EdoBox Offline"
-            }
-        ],
-        "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox"]
-    },
-    {
-        "id": "LemmBox",
-        "date": {
-            "day": 7,
-            "month": 1,
-            "year": 2025
-        },
-        "image": "https://lemmbox.github.io/theme_resources/LemmBoxLogo.png",
-        "aa": "false",
-        "website": "https://lemmbox.github.io/",
-        "patchNotes": "https://lemmbox.github.io/patch_notes.html",
-        "version": "V0.1.2-b",
-        "description": "LemmBox is a mod of UltraBox that was created by <a href=\"https://www.youtube.com/@HappyLemonLime\" target=\"_blank\">HappyLemonLime</a> and was released on January 7th of 2025. Its main appeal is its customization of the max values found in the editor, and extra chip waves.",
-        "wiki": "https://beepbox.miraheze.org/wiki/LemmBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
-    },
-    {
-        "id": "BonBox",
-        "date": {
-            "day": 12,
-            "month": 3,
-            "year": 2025
-        },
-        "image": "https://chaoticbon.com/files/bonbox%20logo.png",
-        "aa": "false",
-        "website": "https://chaoticbon.com/bonbox/",
-        "patchNotes": "",
-        "version": "Release",
-        "description": "BonBox is a joke mod of BeepBox that was created by ChaoticBun and released on March 12th, 2025. It renames several things in the editor and changes the fonts of the site.",
-        "wiki": "https://beepbox.miraheze.org/wiki/BonBox",
-        "alternateVersions": [],
-        "tree": ["BeepBox"]
-    },
-    {
         "id": "LunariisBox",
         "displayName": "Lunarii's Box",
         "date": {
@@ -989,21 +938,21 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     },
     {
-        "id": "RolyBox",
+        "id": "SynthBox",
         "date": {
-            "day": 21,
-            "month": 7,
-            "year": 2025
+            "day": 17,
+            "month": 6,
+            "year": 2020
         },
-        "image": "https://static.wikitide.net/beepboxwiki/5/53/RolyBox_icon.webp",
+        "image": "https://synthbox.co/favicon.ico",
+        "website": "https://synthbox.co/",
         "aa": "true",
-        "website": "https://thinkandwander.github.io/Rolybox/",
-        "patchNotes": "https://thinkandwander.github.io/Rolybox/patch_notes.html",
-        "version": "NIGHTLY_DEV",
-        "description": "RolyBox is a mod of UltraBox that was created by ThinkAndWander (Eve). It adds a sophisticated \"selection\" menu that makes complicated note patterns easier to make. It was released on July 21st, 2025.",
-        "wiki": "https://beepbox.miraheze.org/wiki/RolyBox",
+        "patchNotes": "",
+        "version": "V2.0",
+        "description": "SynthBox was a mod of JummBox by Chopy61. It was the first mod to add 6 operator FM. It was released on June 17, 2020. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/SynthBox",
         "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+        "tree": ["BeepBox", "JummBox"]
     },
     {
         "id": "JukeBox",
@@ -1017,7 +966,7 @@
         "aa": "true",
         "website": "https://jukeebox.github.io/",
         "patchNotes": "https://jukeebox.github.io/manual/patch_notes.html",
-        "version": "V0.2.4",
+        "version": "V0.3.0",
         "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets. It was released on June 21st, 2025. ",
         "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
         "alternateVersions": [
@@ -1032,6 +981,48 @@
         ],
         "hasTestingVersion": true,
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
+    },
+    {
+        "id": "NintariBox",
+        "date": {
+            "day": 12,
+            "month": 6,
+            "year": 2021
+        },
+        "image": "./placeholder.png",
+        "aa": "false",
+        "website": "https://nintarigenesis.bitbucket.io/",
+        "patchNotes": "",
+        "version": "V3.3",
+        "description": "NintariBox is a mod of BeepBox by NintariGenesis. It was originally a joke mod of WeebBox, but later moved to Paandora's Box and added the NintariBox samples. It was released on June 12, 2021.",
+        "wiki": "https://beepbox.miraheze.org/wiki/NintariBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "WeebBox", "PaandorasBox"]
+    },
+    {
+        "id": "DsQuickBoxMod",
+        "displayName": "D's Quick Box Mod",
+        "date": {
+            "day": 19,
+            "month": 9,
+            "year": 2025
+        },
+        "image": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/favicon.ico",
+        "aa": "true",
+        "fontSize": "13px",
+        "website": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/",
+        "patchNotes": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/patch_notes.html",
+        "version": "V693",
+        "description": "D's Quick Box Mod is a mod of UltraBox that was created by deathmodereal. It adds many UI additions, such as loop bar buttons. It released on September 19th, 2025. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/D%27s_Quick_Box_Mod",
+        "alternateVersions": [
+            {
+                "link": "https://me-rn-rbh.github.io/Ds-Quick-Test/",
+                "name": "D's Quick Test"
+            }
+        ],
+        "hasTestingVersion": true,
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
     },
     {
         "id": "BloxBox",
@@ -1068,29 +1059,60 @@
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "AbyssBox"]
     },
     {
-        "id": "DsQuickBoxMod",
-        "displayName": "D's Quick Box Mod",
+        "id": "RolyBox",
         "date": {
-            "day": 19,
-            "month": 9,
+            "day": 21,
+            "month": 7,
             "year": 2025
         },
-        "image": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/favicon.ico",
+        "image": "https://static.wikitide.net/beepboxwiki/5/53/RolyBox_icon.webp",
         "aa": "true",
-        "fontSize": "13px",
-        "website": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/",
-        "patchNotes": "https://me-rn-rbh.github.io/Deathmodereals-Quick-Box-Mod/patch_notes.html",
-        "version": "V231",
-        "description": "D's Quick Box Mod is a mod of UltraBox that was created by deathmodereal. It adds many UI additions, such as loop bar buttons. It released on September 19th, 2025. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/D%27s_Quick_Box_Mod",
+        "website": "https://thinkandwander.github.io/Rolybox/",
+        "patchNotes": "https://thinkandwander.github.io/Rolybox/patch_notes.html",
+        "version": "NIGHTLY_DEV",
+        "description": "RolyBox is a mod of UltraBox that was created by ThinkAndWander (Eve). It adds a sophisticated \"selection\" menu that makes complicated note patterns easier to make. It was released on July 21st, 2025.",
+        "wiki": "https://beepbox.miraheze.org/wiki/RolyBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+    },
+    {
+        "id": "BonBox",
+        "date": {
+            "day": 12,
+            "month": 3,
+            "year": 2025
+        },
+        "image": "https://chaoticbon.com/files/bonbox%20logo.png",
+        "aa": "false",
+        "website": "https://chaoticbon.com/bonbox/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "BonBox is a joke mod of BeepBox that was created by ChaoticBun and released on March 12th, 2025. It renames several things in the editor and changes the fonts of the site.",
+        "wiki": "https://beepbox.miraheze.org/wiki/BonBox",
+        "alternateVersions": [],
+        "tree": ["BeepBox"]
+    },
+    {
+        "id": "41Box",
+        "date": {
+            "day": 27,
+            "month": 3,
+            "year": 2026
+        },
+        "image": "https://41popzic.github.io/41box-app/favicon.ico",
+        "aa": "true",
+        "website": "https://41popzic.github.io/41box-app/",
+        "patchNotes": "https://41popzic.github.io/41box-app/patch_notes.html",
+        "version": "V1.0.1",
+        "description": "41Box is a mod of Slarmoo's Box by 41popzic that adds quintuplets as a rhythm option. It was released on March 27th, 2026. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/41Box",
         "alternateVersions": [
             {
-                "link": "https://me-rn-rbh.github.io/Ds-Quick-Test/",
-                "name": "D's Quick Test"
+                "link": "https://41popzic.github.io/41box-testing/",
+                "name": "41Box Testing"
             }
         ],
-        "hasTestingVersion": true,
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox"]
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     },
     {
         "id": "StudioBox",
@@ -1110,22 +1132,5 @@
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox", "AbyssBox"],
         "lookBack2": true
-    },
-    {
-        "id": "41Box",
-        "date": {
-            "day": 27,
-            "month": 3,
-            "year": 2026
-        },
-        "image": "https://41popzic.github.io/41box-app/favicon.ico",
-        "aa": "true",
-        "website": "https://41popzic.github.io/41box-app/",
-        "patchNotes": "https://41popzic.github.io/41box-app/patch_notes.html",
-        "version": "V0.6",
-        "description": "41Box is a mod of Slarmoo's Box by 41popzic that adds quintuplets as a rhythm option. It was released on March 27th, 2026. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/41Box",
-        "alternateVersions": [],
-        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"]
     }
 ]

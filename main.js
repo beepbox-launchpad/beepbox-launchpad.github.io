@@ -5,7 +5,7 @@ import { setTheme, _themeStyleElement } from "./themes.js"
 import { preferencesPrompt, setPreferedTab, setPromptOpacity, currentView, switchView } from "./preferences.js";
 const { select, option, div } = HTML;
 
-const sorterValues = ["name", "date", "relevant"];
+const sorterValues = ["name", "date", "order added"];
 
 createSortbar();
 
@@ -14,7 +14,7 @@ window.Mods = Mods;
 
 window.setList = setAndReturnTagsList();
 
-createMods(Mods, "relevant", false);
+createMods(Mods, "date", false);
 document.getElementById("prompt").appendChild(preferencesPrompt);
 
 if (window.localStorage.getItem("promptOpacity") != null) {
@@ -44,7 +44,7 @@ function createSortbar() {
     const sorter = select({ class: "sort", id: "sorter" });
     const header = document.getElementById("sortContainer");
     header.appendChild(buildOptions(sorter, sorterValues));
-    sorter.value = 2;
+    sorter.value = 1;
     sorter.addEventListener("change", () => recreateMods());
 
     const reverseButton = div({ class: "reverseButton down", id: "reverseButton" });
