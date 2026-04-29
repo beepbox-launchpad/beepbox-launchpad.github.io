@@ -14,7 +14,7 @@ const modTags = {
     "JummBox": ["#active", "#modulation", "#offline", "#songPlayer", "#2019"],
     "ModBox": ["#discontinued", "#2017"],
     "Sandbox": ["#discontinued", "#2017"],
-    "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
+    "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#offline", "#2021"],
     "HaileyBox": ["#discontinued", "#2017"],
     "BruceBox": ["#discontinued", "#2017"],
     "NerdBox": ["#discontinued", "#2018"],

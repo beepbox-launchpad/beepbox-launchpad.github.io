@@ -226,7 +226,12 @@
         "version": "V2.5",
         "description": "GoldBox is a mod of JummBox by Aury System. It was released on June 16, 2021. It is most known for its Advanced FM-O6 and other small, but notable changes. Its current version is 2.5",
         "wiki": "https://beepbox.miraheze.org/wiki/GoldBox",
-        "alternateVersions": [],
+        "alternateVersions": [
+            {
+                "link": "https://aurysystem.github.io/goldbox/jummbox_offline.html",
+                "name": "GoldBox Offline"
+            }
+        ],
         "tree": ["BeepBox", "JummBox"]
     },
     {
