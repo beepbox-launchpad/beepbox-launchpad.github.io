@@ -63,7 +63,8 @@ const modTags = {
     "BloxBox": ["#active", "#songPlayer", "#2025"],
     "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"],
     "StudioBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
-    "41Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"]
+    "41Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
+    "StarBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"]
 }
 
 export function setAndReturnTagsList() {

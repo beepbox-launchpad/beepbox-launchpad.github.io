@@ -44,7 +44,11 @@ export function calculateNewUpdate(mod) {
             var FOBoxPN = compareDates(14, 4, 2026);
             return FOBoxPN ? "unset" : "none";
         }
-        
+        case "StarBox": {
+            var FOBoxPN = compareDates(12, 5, 2026);
+            return FOBoxPN ? "unset" : "none";
+        }
+
     }
     return "none";
 }
