@@ -1151,7 +1151,7 @@
         "website": "https://starbox-meow.github.io/",
         "patchNotes": "https://starbox-meow.github.io/patch_notes",
         "version": "0.2.1-a",
-        "description": "StarBox is a mod of Slarmoo's Box by HappyLemonLime,cyexclam and glydedagamer that adds some experimental features along side features from other mods. It was released on April 29th, 2026. ",
+        "description": "Studio Box is a mod of Slarmoo's Box by HappyLemonLime,cyexclam and glydedagamer that adds some experimental features along side features from other mods. It was released on April 29th, 2026. ",
         "wiki": "https://beepbox.miraheze.org/wiki/Starbox",
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"],
