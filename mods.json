@@ -971,13 +971,17 @@
         "aa": "true",
         "website": "https://jukeebox.github.io/",
         "patchNotes": "https://jukeebox.github.io/manual/patch_notes.html",
-        "version": "V0.3.0",
+        "version": "V0.3.0b",
         "description": "JukeBox is a mod of Slamoo's Box that was created by CoolTasDude. It adds hundreds of community made presets. It was released on June 21st, 2025. ",
         "wiki": "https://beepbox.miraheze.org/wiki/JukeBox",
         "alternateVersions": [
             {
                 "link": "https://jukeebox.netlify.app/",
-                "name": "Jukebox Netlify Port - V0.2.2"
+                "name": "Jukebox Netlify Port - V0.3.0"
+            },
+            {
+                "link": "https://jukeebox.github.io/testing/",
+                "name": "Jukebox Testing - 1.0.0 Beta 2"
             },
             {
                 "link": "https://jukeebox.github.io/microtonal-testing/",
@@ -1137,5 +1141,22 @@
         "alternateVersions": [],
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox", "AbyssBox"],
         "lookBack2": true
+    },
+    {
+        "id": "ModBox+",
+        "date": {
+            "day": 4,
+            "month": 18,
+            "year": 2026
+        },
+        "image": "https://modboxplus.lognes.net/favicon.ico",
+        "aa": "true",
+        "website": "https://modboxplus.lognes.net/",
+        "patchNotes": "https://modboxplus.lognes.net/changelog.html",
+        "version": "Beta 0.2",
+        "description": "ModBox+ is a mod of ModBox by Lognes that aims to modernize ModBox. It released on April 18th, 2026. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/ModBox%2B", 
+        "alternateVersions": [],
+        "tree": ["BeepBox", "ModBox"]
     }
 ]
