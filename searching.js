@@ -14,7 +14,7 @@ const modTags = {
     "JummBox": ["#active", "#modulation", "#offline", "#songPlayer", "#2019"],
     "ModBox": ["#discontinued", "#2017"],
     "Sandbox": ["#discontinued", "#2017"],
-    "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#2021"],
+    "GoldBox": ["#discontinued", "#songPlayer", "#modulation", "#offline", "#2021"],
     "HaileyBox": ["#discontinued", "#2017"],
     "BruceBox": ["#discontinued", "#2017"],
     "NerdBox": ["#discontinued", "#2018"],
@@ -63,7 +63,8 @@ const modTags = {
     "BloxBox": ["#active", "#songPlayer", "#2025"],
     "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"],
     "StudioBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
-    "41Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"]
+    "41Box": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
+    "ModBox+": ["#active", "#2026"]
 }
 
 export function setAndReturnTagsList() {
