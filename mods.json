@@ -116,7 +116,7 @@
         "aa": "false",
         "website": "https://beepbox.co",
         "patchNotes": "https://beepbox.miraheze.org/wiki/BeepBox#Version_History",
-        "version": "V4.2.1",
+        "version": "V4.2.2",
         "description": "BeepBox is a music program made by <a href=\"https://johnnesky.com/\" target=\"_blank\">John Nesky</a> and it was released on February 20th of 2012. It's known for being the First version of BeepBox and the originator of all other mods. Its current version is V4.2.1.",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox",
         "alternateVersions": [
@@ -1112,7 +1112,7 @@
         "aa": "true",
         "website": "https://41popzic.github.io/41box-app/",
         "patchNotes": "https://41popzic.github.io/41box-app/patch_notes.html",
-        "version": "V1.0.1",
+        "version": "V1.1",
         "description": "41Box is a mod of Slarmoo's Box by 41popzic that adds quintuplets as a rhythm option. It was released on March 27th, 2026. ",
         "wiki": "https://beepbox.miraheze.org/wiki/41Box",
         "alternateVersions": [
