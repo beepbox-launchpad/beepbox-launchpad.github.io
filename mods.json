@@ -112,7 +112,7 @@
         "id": "BeepBox",
         "date": {
             "day": 20, 
-            "month": 20,
+            "month": 2,
             "year": 2012
         }, 
         "image": "https://github.com/johnnesky/beepbox/blob/main/website/icon_maskable_192.png?raw=true",
@@ -1228,8 +1228,8 @@
     {
         "id": "ModernBox",
         "date": {
-            "day": 17,
-            "month": 7,
+            "day": 25,
+            "month": 5,
             "year": 2026
         },
         "image": "https://static.wikitide.net/beepboxwiki/f/f9/Modernbox.webp",
@@ -1237,7 +1237,7 @@
         "website": "https://file.garden/aKvDahW1zTw7wwmp/ModernBox",
         "patchNotes": "",
         "version": "Release",
-        "description": "ModernBox is a mod of ModBox by thebloxer231 that adds drum samples to noise channels. It released on July 17th, 2026. ",
+        "description": "ModernBox is a mod of ModBox by thebloxer231 that adds drum samples to noise channels. It released on May 25th, 2026. ",
         "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=cy!box.-,ModernBox,-thebloxer231", 
         "alternateVersions": [
             {
@@ -1245,7 +1245,7 @@
                 "name": "ModernBox Neocities"
             }
         ],
-        "tree": ["BeepBox", "ModBox"],
+        "tree": ["BeepBox"],
         "modder": "thebloxer231"
     }
 ]
