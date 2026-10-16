@@ -1221,12 +1221,12 @@
         "patchNotes": "https://froupbox.github.io/patch_notes.html",
         "version": "V1.0",
         "description": "froupbox is a mod of Slarmoo's Box by Pastenkopie and cyexclam that adds several new effects and allows for microtonal tunings. It was released on May 28th, 2026",
-        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=been%20taken%20down.-,froupbox,-Pastenkopie%2C%20cyexclam",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#List_of_BeepBox_Mods:~:text=noise%20instrument%20type.-,froupbox,-Pastenkopie%2C%20cyexclam",
         "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"],
         "modder": ["Pastenkopie", "cyexclam"]
     },
     {
-        "id": "ModernBox",
+        "id": "Modorox",
         "date": {
             "day": 25,
             "month": 5,
@@ -1237,8 +1237,8 @@
         "website": "https://file.garden/aKvDahW1zTw7wwmp/ModernBox",
         "patchNotes": "",
         "version": "Release",
-        "description": "ModernBox is a mod of ModBox by thebloxer231 that adds drum samples to noise channels. It released on May 25th, 2026. ",
-        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#:~:text=cy!box.-,ModernBox,-thebloxer231", 
+        "description": "Modorox is a mod of BeepBox by thebloxer231 that adds drum samples to noise channels. It released on May 25th, 2026. ",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#List_of_BeepBox_Mods:~:text=been%20taken%20down.-,Modorox,-thebloxer231", 
         "alternateVersions": [
             {
                 "link": "https://modernbox.neocities.org/",
@@ -1247,5 +1247,56 @@
         ],
         "tree": ["BeepBox"],
         "modder": "thebloxer231"
+    },
+    {
+        "id": "MidiBox",
+        "date": {
+            "day": 4,
+            "month": 12,
+            "year": 2025
+        },
+        "image": "https://voxeldeev.github.io/midibox/website/icon_32.png",
+        "aa": "true",
+        "website": "https://voxeldeev.github.io/midibox/website//",
+        "patchNotes": "",
+        "version": "V1.0",
+        "description": "MidiBox is a mod of Slarmoo's Box by Voxel that several features improving midi exports. It was released on December 4th, 2025",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#List_of_BeepBox_Mods:~:text=boring%20as%20possible.-,MidiBox,-Voxel",
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"],
+        "modder": "Voxel"
+    },
+    {
+        "id": "trixieBox",
+        "date": {
+            "day": 4,
+            "month": 8,
+            "year": 2026
+        },
+        "image": "https://wackybox.org/box/icon_32.png",
+        "aa": "true",
+        "website": "https://wackybox.org/box/",
+        "patchNotes": "",
+        "version": "Release",
+        "description": "trixieBox is a mod of Slarmoo's Box by hacktrixapii that adds ADSR, much more reverb customization, and a dedicated url shortener. It was released on August 4th, 2026",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#List_of_BeepBox_Mods:~:text=new%20effect%20settings.-,trixieBox,-HacktrixApii",
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"],
+        "modder": ["hacktrixapii", "trixie"]
+    },
+    {
+        "id": "theepbox",
+        "date": {
+            "day": 16,
+            "month": 8,
+            "year": 2026
+        },
+        "image": "https://theepicosity.github.io/theepbox/website/icon_32.png",
+        "aa": "true",
+        "website": "https://theepicosity.github.io/theepbox/website/",
+        "patchNotes": "https://theepicosity.github.io/theepbox/website/patch_notes.html",
+        "version": "version 2",
+        "description": "theepbox is a mod of Slarmoo's Box by Theepicosity that adds stereo samples, channel folders, and effect reordering. It was released on August 16th, 2026",
+        "wiki": "https://beepbox.miraheze.org/wiki/BeepBox_Mods#List_of_BeepBox_Mods:~:text=dedicated%20url%20shortener.-,theepbox,-Theepicosity",
+        "tree": ["BeepBox", "JummBox", "GoldBox", "PaandorasBox", "UltraBox", "Slarmoosbox"],
+        "modder": "Theepicosity"
     }
 ]

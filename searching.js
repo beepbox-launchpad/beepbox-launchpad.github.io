@@ -40,7 +40,7 @@ const modTags = {
     "MarioPaintBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2023"], 
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
-    "Dogebox2": ["#active", "#songPlayer", "#modulation", "#2023"],
+    "Dogebox2": ["#hiatus", "#songPlayer", "#modulation", "#2023"],
     "Nepbox": ["#discontinued", "#songPlayer", "#2024"], //I can't find a button to go to the song player, but if you change the url you can get there
     "Unbox": ["#active", "#songPlayer", "#samples", "#modulation", "#2024"],
     "shitbox4": ["#active", "#songPlayer", "#jokeMod", "#2024"],
@@ -48,7 +48,7 @@ const modTags = {
     "BoxBeep": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"],
     "AestheticBox": ["#discontinued", "#2024"], //song player option exists, but takes you to a 404 page
     "BirdBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2024"], //song player option exists, but takes you to a 404 page
-    "AwesomeBox": ["#hiatus", "#songPlayer", "#modulation", "#2024"],
+    "AwesomeBox": ["#discontinued", "#songPlayer", "#modulation", "#2024"],
     "VoxBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2024"],
     "Box": ["#discontinued", "#jokeMod", "#2024"],
     "DinoBox": ["#discontinued", "#songPlayer", "#2024"],
@@ -58,7 +58,7 @@ const modTags = {
     "BonBox": ["#discontinued", "#songPlayer", "#jokeMod", "#2025"],
     "LunariisBox": ["#hiatus", "#samples", "#songPlayer", "#modulation", "#2025"],
     "RolyBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
-    "JukeBox": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
+    "JukeBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2025"],
     "DsQuickBoxMod": ["#active", "#samples", "#songPlayer", "#modulation", "#2025"],
     "BloxBox": ["#hiatus", "#songPlayer", "#2025"],
     "BulbBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2025"],
@@ -68,7 +68,10 @@ const modTags = {
     "Tesseract": ["#discontinued", "#samples", "#modulation", "#songPlayer", "#2025"],
     "XenBox": ["#hiatus", "#modulation", "#microtonal", "#songPlayer", "#2026"],
     "froupbox": ["#active", "#samples", "#modulation", "#songPlayer", "#microtonal", "#2026"],
-    "ModernBox": ["#active", "#samples", "#2026"]
+    "Modorox": ["#active", "#samples", "#2026"],
+    "MidiBox": ["#hiatus", "#samples", "#modulation", "#songPlayer", "#2025"],
+    "trixieBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
+    "theepbox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
 }
 
 export function setAndReturnTagsList() {
