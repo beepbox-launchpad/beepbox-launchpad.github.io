@@ -8,7 +8,7 @@ export function calculateNewUpdate(mod) {
     // If you add a new mod here be sure that there is a valid link to a patch notes in ./mods.json
     const knownModUpdateTimes = {
         AbyssBox: [7, 11, 2025],
-        SlarmoosBox: [8, 7, 2026],
+        SlarmoosBox: [10, 22, 2026],
         UltraBox: [7, 7, 2026],
         BeepBox: [3, 12, 2025],
         LemmBox: [7, 10, 2025],
