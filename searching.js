@@ -90,96 +90,202 @@ export function setAndReturnTagsList() {
     return setList;
 }
 
+function parseTokenForFilter(token) {
+    if (token.indexOf("#surprise") > -1) {
+        return (mods) => filterSurprise(mods);
+    } else if (token.indexOf("#before:") > -1) {
+        let date = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
+        if (date.length == 0) { //no date given; use default
+            date = "9999";
+        }
+        return (mods) => filterBefore(mods, date); //Add the filter function to the list of filters
+
+    } else if (token.indexOf("#after:") > -1) {
+        let date = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
+        if (date.length == 0) { //no date given; use default
+            date = "0000";
+        }
+        return (mods) => filterAfter(mods, date); //Add the filter function to the list of filters
+
+    } else if (token.indexOf("#children:") > -1) {
+        let fork = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+        if (fork.length == 0) { //no fork given; use default
+            fork = "beepbox";
+        }
+        return (mods) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+    } else if (token.indexOf("#descendants:") > -1) {
+        let fork = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
+        if (fork.length == 0) { //no fork given; use default
+            fork = "beepbox";
+        }
+        return (mods) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+    } else if (token.indexOf("#modder:") > -1) {
+        let modder = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a modder
+        if (modder.length == 0) { //no modder given; use default
+            modder = "johnnesky";
+        }
+        return (mods) => filterModder(mods, modder.toLowerCase().replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+    } else if (token[0] == "#") {
+        return (mods) => filterTag(mods, token);
+    } else if (token.indexOf("*") > -1) { 
+        return (mods) => filterPhraseWildcard(mods, token);
+    } else if (token != "") {
+        return (mods) => filterPhrase(mods, token);
+    }
+    return (mods) => mods;
+}
+
+class Or {
+    constructor(left, right = null) {
+        this.left = left;
+        this.right = right;
+    }
+
+    append(right) {
+        this.right = right;
+        return true;
+    }
+
+    merge(fromModsStack) {
+        let fromLeft = [];
+        if (this.left) {
+            if (typeof this.left == 'string') {
+                fromLeft = parseTokenForFilter(this.left)(fromModsStack[fromModsStack.length - 1]);
+            } else {
+                this.left.merge(fromModsStack);
+                fromLeft = fromModsStack.pop();
+            }
+        }
+        let fromRight = [];
+        if (this.right) {
+            if (typeof this.right == 'string') {
+                fromRight = parseTokenForFilter(this.right)(fromModsStack[fromModsStack.length - 1]);
+            } else {
+                this.right.merge(fromModsStack);
+                fromRight = fromModsStack.pop();
+            }
+        }
+
+        fromModsStack.push(new Array(...new Set(fromLeft).union(new Set(fromRight))));
+    }
+}
+
+class Not {
+    append(token) {
+        this.token = token;
+        return true;
+    }
+
+    merge(fromModsStack) {
+        if (!this.token) return;
+        if (typeof this.token == 'string') {
+            fromModsStack.push(parseTokenForFilter(this.token)(fromModsStack[fromModsStack.length - 1]));
+        } else {
+            this.token.merge(fromModsStack);
+        }
+        const fromMods = filterNot(fromModsStack[fromModsStack.length - 1], fromModsStack[fromModsStack.length - 2]);
+        fromModsStack.pop();
+        fromModsStack.push(fromMods);
+    }
+}
+
+class TokenList {
+    tokens = [];
+    
+    append(token) {
+        this.tokens.push(token);
+        return false;
+    }
+
+    pop() {
+        return this.tokens.pop();
+    }
+
+    merge(fromModsStack) {
+        let mergeIndex = 0;
+        for (; mergeIndex < this.tokens.length; mergeIndex++) {
+            if (!this.tokens[mergeIndex]) continue;
+            if (typeof this.tokens[mergeIndex] == 'string') {
+                fromModsStack.push(parseTokenForFilter(this.tokens[mergeIndex])(fromModsStack[fromModsStack.length - 1]));
+            } else {
+                this.tokens[mergeIndex].merge(fromModsStack);
+            }
+        }
+        const last = fromModsStack.pop();
+        for (; mergeIndex > 1; mergeIndex--) {
+            fromModsStack.pop();
+        }
+        fromModsStack.push(last);
+    }
+}
+
 export function searchForMods(result, fromMods = modList) {
-    //split on spaces for multiple filters to be allowed
+    const tokenListStack = [new TokenList()];
+    const tokenList = tokenListStack[0];
+    let lastIndex = -1;
 
-    const filterStrings = result.split(/\s/i);
-    const filters = [];
-    for (let i = 0; i < filterStrings.length; i++) {
-        let notFlag = false;
-        let filterString = filterStrings[i];
-        if (filterString[0] == "!" || filterString[0] == "-") {
-            notFlag = true;
-            filterString = filterString.replace(/\!|\-/, "");
+    function appendThenPopIfFull(token) {
+        const isFull = tokenListStack[tokenListStack.length - 1].append(token);
+        if (isFull) {
+            tokenListStack.pop();
         }
-        if (filterString.toLowerCase().indexOf("#surprise") > -1) { 
-            filters.push((mods) => filterSurprise(mods));
-        } else if (filterString.toLowerCase().indexOf("#before:") > -1) {
-            let date = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
-            if (date.length == 0) { //there may have been a space, check if next string is the date
-                date = parseInt(filterStrings[i + 1]);
-                if (Number.isNaN(date)) {
-                    date = "9999";
-                } else {
-                    date += "";
-                    i++; //increment past the used date
-                }
-            }
-            filters.push((mods) => filterBefore(mods, date)); //Add the filter function to the list of filters
+    }
 
-        } else if (filterString.toLowerCase().indexOf("#after:") > -1) {
-            let date = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
-            if (date.length == 0) { //there may have been a space, check if next string is the date
-                date = parseInt(filterStrings[i + 1]);
-                if (Number.isNaN(date)) {
-                    date = "0000";
-                } else {
-                    date += "";
-                    i++; //increment past the used date
-                }
+    for (let i = 0; i < result.length; i++) {
+        const char = result[i];
+        const nextChar = result[i + 1] || " ";
+        if (char == "(") {
+            if (lastIndex != i - 1) {
+                appendThenPopIfFull(result.slice(lastIndex + 1, i));
             }
-            filters.push((mods) => filterAfter(mods, date)); //Add the filter function to the list of filters
+            lastIndex = i;
+            const newTokenList = new TokenList();
+            appendThenPopIfFull(newTokenList);
+            tokenListStack.push(newTokenList);
+        } else if (char == ")") {
+            if (lastIndex != i - 1) {
+                appendThenPopIfFull(result.slice(lastIndex + 1, i));
+            }
+            lastIndex = i;
+            tokenListStack.pop();
+        } else if ((char.toLowerCase() == "o" && (nextChar || " ").toLowerCase() == "r") || char == "|") {
+            if (lastIndex != i - 1) {
+                appendThenPopIfFull(result.slice(lastIndex + 1, i));
+            }
+            lastIndex = i;
+            if (char.toLowerCase() == "o") { //skip r
+                i++;
+                lastIndex++;
+            }
+            const or = new Or(tokenListStack[tokenListStack.length - 1].pop());
+            appendThenPopIfFull(or);
+            tokenListStack.push(or);
+        } else if (char == "!" || char == "-") {
+            if (lastIndex != i - 1) {
+                appendThenPopIfFull(result.slice(lastIndex + 1, i));
+            }
+            lastIndex = i;
+            const not = new Not();
+            appendThenPopIfFull(not);
+            tokenListStack.push(not);
+        } else if (char == ":") {
+            if (nextChar == " ") i++; //don't split on this space
+        } else if (char == " ") {
+            if (lastIndex != i - 1) {
+                appendThenPopIfFull(result.slice(lastIndex + 1, i));
+            }
+            lastIndex = i;
+        }
+    }
 
-        } else if (filterString.toLowerCase().indexOf("#children:") > -1) {
-            let fork = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
-            if (fork.length == 0) { //there may have been a space, check if next string is the fork
-                if (i+1 < filterStrings.length && filterStrings[i + 1].indexOf("#") == -1) {
-                    fork = filterStrings[i + 1];
-                    i++
-                } else {
-                    fork = "beepbox";
-                }
-            }
-            filters.push((mods) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
-        } else if (filterString.toLowerCase().indexOf("#descendants:") > -1) {
-            let fork = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
-            if (fork.length == 0) { //there may have been a space, check if next string is the fork
-                if (i + 1 < filterStrings.length && filterStrings[i + 1].indexOf("#") == -1) {
-                    fork = filterStrings[i + 1];
-                    i++
-                } else {
-                    fork = "beepbox";
-                }
-            }
-            filters.push((mods) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
-        } else if (filterString.toLowerCase().indexOf("#modder:") > -1) {
-            let modder = filterString.toLowerCase().split(":")[1].replace(" ", "").replace("#", ""); //get it into just a modder
-            if (modder.length == 0) { //there may have been a space, check if next string is the modder
-                if (i + 1 < filterStrings.length && filterStrings[i + 1].indexOf("#") == -1) {
-                    modder = filterStrings[i + 1];
-                    i++
-                } else {
-                    modder = "johnnesky";
-                }
-            }
-            filters.push((mods) => filterModder(mods, modder.toLowerCase().replace(" ", "").replaceAll("'", ""))); //Add the filter function to the list of filters
-        } else if (filterString[0] == "#") {
-            filters.push((mods) => filterTag(mods, filterString));
-        } else if (filterString != "") {
-            filters.push((mods) => filterPhrase(mods, filterString));
-        }
-        if (notFlag) {
-            filters.push((mods, oldMods) => filterNot(mods, oldMods));
-        }
+    if (lastIndex != result.length - 1) {
+        appendThenPopIfFull(result.slice(lastIndex + 1, result.length));
     }
 
     let mods = fromMods.slice();
-    let oldMods = [];
-    for (let i = 0; i < filters.length; i++) {
-        oldMods.push(mods.slice());
-        mods = filters[i](mods, oldMods[oldMods.length - 2]);
-    }
-    renderFilters(mods);
+    const modsStack = [mods, mods];
+    tokenList.merge(modsStack);
+    renderFilters(modsStack[modsStack.length - 1]);
 
     if (result.length == 0) {
         window.history.replaceState(null, "", location.pathname);
@@ -307,7 +413,6 @@ function filterModder(mods, modder) {
         const Mod = refMap.get(mods[i]);
         const modderList = typeof Mod.modder == "string" ? [Mod.modder] : Mod.modder
         for (const m of modderList) {
-            // console.log(m.toLowerCase().replaceAll(" ", "").replaceAll("'", ""), modder)
             if (m.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(modder) > -1) {
                 foundMods.push(mods[i]);
                 break;
@@ -352,6 +457,32 @@ function filterPhrase(mods, phrase) {
         if (lowercaseThing.indexOf(phrase.toLowerCase()) > -1) {
             foundMods.push(mods[i]);
         } 
+    }
+
+    return foundMods;
+}
+
+function filterPhraseWildcard(mods, phrase) {
+    const foundMods = [];
+
+    for (let i = 0; i < mods.length; i++) {
+        var thing = mods[i];
+        var lowercaseThing = thing.toLowerCase();
+        console.log(lowercaseThing);
+        for (let thingIndex = 0; thingIndex < lowercaseThing.length - phrase.length; thingIndex++) {
+            let matches = true;
+            for (let charIndex = 0; charIndex < phrase.length; charIndex++) {
+                if (lowercaseThing.includes("paandora")) console.log(charIndex, charIndex + thingIndex, phrase[charIndex], lowercaseThing[charIndex + thingIndex])
+                if (phrase[charIndex] != "*" && phrase[charIndex] != lowercaseThing[charIndex+thingIndex]) {
+                    matches = false;
+                    break;
+                }
+            }
+            if (matches) {
+                foundMods.push(mods[i]);
+                break;
+            }
+        }
     }
 
     return foundMods;
