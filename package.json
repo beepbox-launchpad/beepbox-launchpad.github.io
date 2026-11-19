@@ -7,7 +7,7 @@
     "Slarmoo"
   ],
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx esbuild main.ts --bundle --outfile=main.js --platform=browser"
   },
   "devDependencies": {
     "typescript": "^7.0.2"

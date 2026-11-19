@@ -1,41 +1,50 @@
-import { HTML } from "./imperative-html/elements-strict.js";
-import { calculateNewUpdate } from "./lastUpdate.js";
+import { HTML } from "./imperative-html/elements-strict";
+import { calculateNewUpdate } from "./lastUpdate";
+import { Mod, Mods as ModsList, altVersion, mods } from "./mods";
 
 const { div, a, button, h2, input } = HTML;
 
-export function createMods(ModsList, method, isReversed) {
-    const promptContainer = document.getElementById("prompt");
-    const modContainer = document.getElementById("modContainer");
+export let favoritesList = new Array();
+var storedfavoritesList = localStorage.getItem("favoritesList");
+if (storedfavoritesList != null) {
+    favoritesList = JSON.parse(storedfavoritesList);
+}
 
-    let Mods = ModsList.slice();
+export function createMods(method: method, isReversed: boolean) {
+    const promptContainer: HTMLDivElement = document.getElementById("prompt") as HTMLDivElement;
+    const modContainer: HTMLDivElement = document.getElementById("modContainer") as HTMLDivElement;
+
+    let Mods: Mod[] = ModsList.slice();
     Mods = sortMods(Mods, method, isReversed);
     for (let modNumber in Mods) {
-        const modInfo = Mods[modNumber];
-        const modName = modInfo.displayName != ("" || undefined) ? modInfo.displayName : modInfo.id;
-        const modDividerImage = modInfo.aa == "true" ? "modDividerImage AA" : "modDividerImage";
-        const fontSize = modInfo.fontSize == ("" || undefined) ? "inherit" : modInfo.fontSize;
-        var modFavoritesList = new Array();
-        var modstoredfavoritesList = localStorage.getItem("favoritesList");
+        const modInfo: Mod = Mods[modNumber];
+        const modName: string = modInfo.displayName != undefined ? modInfo.displayName : modInfo.id;
+        const modDividerImage: string = modInfo.aa == true ? "modDividerImage AA" : "modDividerImage";
+        const fontSize: string = modInfo.fontSize == undefined ? "inherit" : modInfo.fontSize;
+
+        let modFavoritesList: mods[] = new Array();
+        let modstoredfavoritesList = localStorage.getItem("favoritesList");
         if (modstoredfavoritesList != null) {
             modFavoritesList = JSON.parse(modstoredfavoritesList);
         }
 
-        const updateButton = modInfo.patchNotes == "" ? "" :
+        const updateButton: HTMLButtonElement | "" = modInfo.patchNotes == "" ? "" :
             button({ class: "updateText", id: modInfo.id + "Update", onclick: "goToWebsite('" + modInfo.patchNotes + "')" },
                 div({ style: "pointer-events: none;" }, "New Update")
             );
         if (updateButton) {
-            updateButton.style.display = calculateNewUpdate(modInfo.id);
+            updateButton.style.display = calculateNewUpdate(modInfo.id as mods);
         }
 
-        const favoriteButton = input({type:"checkbox", class: "favoriteButton", onclick: "favoriteBeepmod('" + modInfo.id + "')" });
-        favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.id) != -1);
+        const favoriteButton: HTMLInputElement = input({type:"checkbox", class: "favoriteButton" });
+        favoriteButton.checked = Boolean(modFavoritesList.indexOf(modInfo.id as mods) != -1);
+        favoriteButton.onclick = () => favoriteBeepmod(modInfo.id as mods)
 
-        const versionText = div({ class: "versionText" },
+        const versionText: HTMLDivElement = div({ class: "versionText" },
             div({ style: "margin-top: 2px;" }, modInfo.version)
         );
 
-        const mod = div({ class: "modDivider", id: modInfo.id },
+        const mod: HTMLDivElement = div({ class: "modDivider", id: modInfo.id },
             div({ class: modDividerImage, style: "background-image: url(" + modInfo.image + ") !important;" },
                 div({ class: "modDividerGradient" })
             ),
@@ -53,16 +62,16 @@ export function createMods(ModsList, method, isReversed) {
             
         modContainer.appendChild(mod);
 
-        const altVersions = modInfo.alternateVersions || [];
+        const altVersions: altVersion[] = modInfo.alternateVersions || [];
 
-        const alternateVersionTitle = altVersions.length > 0 ?
+        const alternateVersionTitle: HTMLDivElement | "" = altVersions.length > 0 ?
             div({ class: "promptTitle" },
                 h2({ class: modInfo.id + "Title", style: "margin-bottom: 0.5em;" }, "Alternate " + modInfo.id + " Versions:")
             )
             : "";
-        let alternateVersions = "";
+        let alternateVersions: HTMLDivElement | "" = "";
         if (altVersions.length > 0) {
-            const altVersionList = [];
+            const altVersionList: HTMLDivElement[] = [];
             for (let i = 0; i < altVersions.length; i++) {
                 altVersionList.push(
                     div({ style: "margin-bottom: 0.5em;" },
@@ -74,9 +83,9 @@ export function createMods(ModsList, method, isReversed) {
                 div( ...altVersionList)
             )
         }
-        const testingWarning = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes, issues, and song corruptions, so use with caution.") : "";
+        const testingWarning: HTMLDivElement | "" = modInfo.hasTestingVersion ? div({style: "margin-bottom: 0.5em; font-size: 10px;"}, "Experimental and Testing sites are more likely prone to crashes, issues, and song corruptions, so use with caution.") : "";
 
-        const prompt = div({id: modInfo.id + "Prompt", style: "flex-direction: column;  display: none;" },
+        const prompt: HTMLDivElement = div({id: modInfo.id + "Prompt", style: "flex-direction: column;  display: none;" },
             div({ class: "promptTitle" },
                 h2({ class: modInfo.id + "Title", style: "margin-bottom: 0.5em;" }, modInfo.id + ":")
             ),
@@ -107,13 +116,11 @@ export function createMods(ModsList, method, isReversed) {
     modContainer.append(div({ id: "noFavorites", style: "display:none; text-align: center;width: 100%; margin-bottom: 10px; font-size: 32px;" }, "You haven't favorited anything!"));
 }
 
-export async function getMods() {
-    let response = await fetch("./mods.json");
-    return await response.json();
-}
+export const sorterValues = ["name", "date", "order added"] as const;
+export type method = typeof sorterValues[number];
 
-function sortMods(Mods, method, isReversed) {
-    let sortedMods = [];
+function sortMods(Mods: Mod[], method: method, isReversed: boolean): Mod[] {
+    let sortedMods: Mod[] = [];
     switch (method) {
         case "name": {
             sortedMods = Mods.sort((modA, modB) => +(modA.id.toLowerCase() > modB.id.toLowerCase()) * 2 - 1);
@@ -134,25 +141,35 @@ function sortMods(Mods, method, isReversed) {
     return isReversed ? sortedMods.reverse() : sortedMods;
 }
 
-function parseForUrls(text) {
+function parseForUrls(text: string): (string | HTMLAnchorElement)[] {
     const regex1 = /< ?a href\=\"[\w\s:\/\.\@\\\+\=\"]+>(\w| )+<\/a>/gi;
-    let urls = (text).match(regex1);
+    let urls: string[]  | null = text.match(regex1);
     if (urls == null) return [text];
 
-    let textList = (text).split(regex1);
+    let textList: string[] = text.split(regex1);
 
     urls = urls.filter(match => match.length > 2);
     textList = textList.filter(match => (match.length > 2 || match.includes(",")));
 
-    let parsed = [];
+    let parsed: (string | HTMLAnchorElement)[] = [];
     for (let i = 0; i < textList.length; i++) {
         parsed.push(textList[i]);
         if (urls[i]) {
-            let url = urls[i].match(/https?:\/\/(\w|\.|\/|\@)+/i)[0];
-            let link = urls[i].match(/>(\w| )+</i)[0].replace(">", "").replace("<", "");
+            let url: string = urls[i].match(/https?:\/\/(\w|\.|\/|\@)+/i)![0];
+            let link: string = urls[i].match(/>(\w| )+</i)![0].replace(">", "").replace("<", "");
             parsed.push(a({ href: url, target: "_blank" }, link));
         }
     }
 
     return parsed;
+}
+
+function favoriteBeepmod(modName: mods) {
+    const index: number = favoritesList.indexOf(modName);
+    if (index > -1) {
+        favoritesList.splice(index, 1);
+    } else {
+        favoritesList.push(modName);
+    }
+    window.localStorage.setItem("favoritesList", JSON.stringify(favoritesList));
 }

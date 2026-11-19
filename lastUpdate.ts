@@ -1,12 +1,12 @@
-export function calculateNewUpdate(mod) {
-    // - Update Times - //
+import { mods } from "./mods";
 
-    // PN stands for Patch Notes
+export function calculateNewUpdate(mod: mods): "unset" | "none" {
+    // - Update Times - //
 
     // Make sure to set the date to 7 days after the update happens 
 
     // If you add a new mod here be sure that there is a valid link to a patch notes in ./mods.json
-    const knownModUpdateTimes = {
+    const knownModUpdateTimes: Partial<Record<mods, [number, number, number]>> = {
         AbyssBox: [7, 11, 2025],
         SlarmoosBox: [10, 22, 2026],
         UltraBox: [7, 7, 2026],
@@ -34,11 +34,11 @@ export function calculateNewUpdate(mod) {
  * @param {number} updateYear - The year to display the update until
  * @returns {boolean}
  */
-function compareDates(updateDay, updateMonth, updateYear) {
-    var time = new Date();
-    var day = time.getDate();
-    var month = time.getMonth() + 1;
-    var year = time.getYear() + 1900;
+function compareDates(updateDay: number, updateMonth: number, updateYear: number) {
+    const time = new Date();
+    const day = time.getDate();
+    const month = time.getMonth() + 1;
+    const year = time.getFullYear();
     return (updateYear + updateMonth / 12 + updateDay / 12 / 31 >
         year + month / 12 + day / 12 / 31) 
 }

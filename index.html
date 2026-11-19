@@ -77,12 +77,6 @@
             head.appendChild(link);
         }
 
-        var favoritesList = new Array();
-        var storedfavoritesList = localStorage.getItem("favoritesList");
-        if (storedfavoritesList != null) {
-            favoritesList = JSON.parse(storedfavoritesList);
-        }    
-
         function goToWebsite(websiteLink, hasUniqueVers = false) {
             if (hasUniqueVers == false) {
                 window.open(websiteLink, '_blank');
@@ -92,17 +86,6 @@
         }
 
         document.getElementById("modsListButton").style.filter = "brightness(150%)";
-
-        function favoriteBeepmod(modName) {
-            const index = favoritesList.indexOf(modName);
-            if (index > -1) {
-                favoritesList.splice(index, 1); 
-            } else {
-                favoritesList.push(modName);
-            }
-            window.localStorage.setItem("favoritesList", JSON.stringify(favoritesList));
-        }
-
 
         function displayPrompt(promptName) {
             const promptBg = document.getElementById("promptContainerBG");
@@ -142,7 +125,7 @@
         };
 
         function shareURL(result) {
-            result = result.replace(" ", "%20");
+            result = encodeURIComponent(result);
             window.history.replaceState(null, "", location.pathname + "#s=" + result);
             navigator.clipboard.writeText(window.location);
             copyText.animate(fade, fadeTiming);

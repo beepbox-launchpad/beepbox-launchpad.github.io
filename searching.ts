@@ -1,12 +1,13 @@
-import { currentView, switchView } from "./preferences.js";
+import { Mods, Mod, mods } from "./mods";
 
-const modList = [];
 
-const modTags = {
-    "all": ["#active", "#discontinued", "#hiatus",
-        "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal", "#offline",
-        "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025", "#2026"], //contains any possible tag
+const tags = ["#active", "#discontinued", "#hiatus",
+    "#samples", "#modulation", "#songPlayer", "#jokeMod", "#microtonal", "#offline",
+    "#2012", "#2017", "#2018", "#2019", "#2020", "#2021", "#2022", "#2023", "#2024", "#2025", "#2026"] as const; //contains every possible tag
+type Tag = typeof tags[number];
+const modList: mods[] = Mods.map((mod) => mod.id);
 
+const modTags: Record<string, Tag[]> = {
     "UltraBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2023"],
     "SlarmoosBox": ["#active", "#samples", "#modulation", "#songPlayer", "#offline", "#2024"],
     "AbyssBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2024"],
@@ -37,7 +38,7 @@ const modTags = {
     "PaandorasBox": ["#discontinued", "#samples", "#modulation", "#2021"],
     "BlockBox": ["#discontinued", "#samples", "#modulation", "#2021"], //song player option exists, but takes you to a 404 page
     "FoxBox": ["#discontinued", "#2022"], //song player option exists, but takes you to a 404 page
-    "MarioPaintBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2023"], 
+    "MarioPaintBox": ["#discontinued", "#samples", "#songPlayer", "#modulation", "#2023"],
     "TETBox": ["#discontinued", "#microtonal", "#2023"], //song player option exists, but takes you to a black page
     "Midbox": ["#active", "#songPlayer", "#modulation", "#2023"],
     "Dogebox2": ["#hiatus", "#songPlayer", "#modulation", "#2023"],
@@ -72,97 +73,99 @@ const modTags = {
     "MidiBox": ["#hiatus", "#samples", "#modulation", "#songPlayer", "#2025"],
     "trixieBox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
     "theepbox": ["#active", "#samples", "#modulation", "#songPlayer", "#2026"],
-}
+};
 
 export function setAndReturnTagsList() {
-    for (const mod in window.Mods) {
-        modList.push(window.Mods[mod].id);
-    }
 
-    const setList = modTags.all.concat(["#before:", "#after:", "#children:", "#descendants:", "#modder:"]).concat(modList);
+    let setList: string[] = tags.slice();
+    setList = setList.concat(["#before:", "#after:", "#children:", "#descendants:", "#modder:"]).concat(modList);
 
     for (let i = 0; i < setList.length; i++) {
-        var tag = new Option();
-        tag.value = setList[i]
-        document.getElementById("tags").appendChild(tag);
+        let tag = new Option();
+        tag.value = setList[i];
+        document.getElementById("tags")!.appendChild(tag);
     }
 
     return setList;
 }
 
-function parseTokenForFilter(token) {
+function parseTokenForFilter(token: string) {
     if (token.indexOf("#surprise") > -1) {
-        return (mods) => filterSurprise(mods);
+        return (mods: mods[]) => filterSurprise(mods);
     } else if (token.indexOf("#before:") > -1) {
         let date = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
         if (date.length == 0) { //no date given; use default
             date = "9999";
         }
-        return (mods) => filterBefore(mods, date); //Add the filter function to the list of filters
+        return (mods: mods[]) => filterBefore(mods, parseInt(date)); //Add the filter function to the list of filters
 
     } else if (token.indexOf("#after:") > -1) {
         let date = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a date
         if (date.length == 0) { //no date given; use default
             date = "0000";
         }
-        return (mods) => filterAfter(mods, date); //Add the filter function to the list of filters
+        return (mods: mods[]) => filterAfter(mods, parseInt(date)); //Add the filter function to the list of filters
 
     } else if (token.indexOf("#children:") > -1) {
         let fork = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
         if (fork.length == 0) { //no fork given; use default
             fork = "beepbox";
         }
-        return (mods) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+        return (mods: mods[]) => filterChildren(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
     } else if (token.indexOf("#descendants:") > -1) {
         let fork = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a fork
         if (fork.length == 0) { //no fork given; use default
             fork = "beepbox";
         }
-        return (mods) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+        return (mods: mods[]) => filterDescendants(mods, fork.replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
     } else if (token.indexOf("#modder:") > -1) {
         let modder = token.split(":")[1].replace(" ", "").replace("#", ""); //get it into just a modder
         if (modder.length == 0) { //no modder given; use default
             modder = "johnnesky";
         }
-        return (mods) => filterModder(mods, modder.toLowerCase().replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
+        return (mods: mods[]) => filterModder(mods, modder.toLowerCase().replace(" ", "").replaceAll("'", "")); //Add the filter function to the list of filters
     } else if (token[0] == "#") {
-        return (mods) => filterTag(mods, token);
+        return (mods: mods[]) => filterTag(mods, token);
     } else if (token.indexOf("*") > -1) { 
-        return (mods) => filterPhraseWildcard(mods, token);
+        return (mods: mods[]) => filterPhraseWildcard(mods, token.toLowerCase());
     } else if (token != "") {
-        return (mods) => filterPhrase(mods, token);
+        return (mods: mods[]) => filterPhrase(mods, token);
     }
-    return (mods) => mods;
+    return (mods: mods[]) => mods;
 }
 
-class Or {
-    constructor(left, right = null) {
-        this.left = left;
-        this.right = right;
-    }
+abstract class TokenWrap {
+    abstract append(token: Token): boolean;
+    abstract merge(fromModsStack: mods[][]): void;
+}
 
-    append(right) {
-        this.right = right;
+type Token = TokenWrap | string;
+
+class Or implements TokenWrap {
+    constructor(private left: Token, private right: Token | null = null) { }
+
+    append(token: Token) {
+        this.right = token;
         return true;
     }
 
-    merge(fromModsStack) {
-        let fromLeft = [];
+    merge(fromModsStack: mods[][]) {
+        let fromLeft: mods[] = [];
         if (this.left) {
             if (typeof this.left == 'string') {
                 fromLeft = parseTokenForFilter(this.left)(fromModsStack[fromModsStack.length - 1]);
             } else {
                 this.left.merge(fromModsStack);
-                fromLeft = fromModsStack.pop();
+                fromLeft = fromModsStack.pop()!;
             }
         }
-        let fromRight = [];
+        let fromRight: mods[] = [];
         if (this.right) {
             if (typeof this.right == 'string') {
                 fromRight = parseTokenForFilter(this.right)(fromModsStack[fromModsStack.length - 1]);
             } else {
                 this.right.merge(fromModsStack);
-                fromRight = fromModsStack.pop();
+                fromRight = fromModsStack.pop()!;
             }
         }
 
@@ -170,13 +173,15 @@ class Or {
     }
 }
 
-class Not {
-    append(token) {
+class Not implements TokenWrap {
+    private token: Token | null = null;
+
+    append(token: Token) {
         this.token = token;
         return true;
     }
 
-    merge(fromModsStack) {
+    merge(fromModsStack: mods[][]) {
         if (!this.token) return;
         if (typeof this.token == 'string') {
             fromModsStack.push(parseTokenForFilter(this.token)(fromModsStack[fromModsStack.length - 1]));
@@ -189,29 +194,30 @@ class Not {
     }
 }
 
-class TokenList {
-    tokens = [];
+class TokenList implements TokenWrap {
+    private tokens: Token[] = [];
     
-    append(token) {
+    append(token: Token) {
         this.tokens.push(token);
         return false;
     }
 
-    pop() {
-        return this.tokens.pop();
+    pop(): Token | null {
+        return this.tokens.pop() ?? null;
     }
 
-    merge(fromModsStack) {
-        let mergeIndex = 0;
+    merge(fromModsStack: mods[][]) {
+        let mergeIndex: number = 0;
         for (; mergeIndex < this.tokens.length; mergeIndex++) {
-            if (!this.tokens[mergeIndex]) continue;
-            if (typeof this.tokens[mergeIndex] == 'string') {
-                fromModsStack.push(parseTokenForFilter(this.tokens[mergeIndex])(fromModsStack[fromModsStack.length - 1]));
+            const token: Token = this.tokens[mergeIndex];
+            if (!token) continue;
+            if (typeof token == 'string') {
+                fromModsStack.push(parseTokenForFilter(token)(fromModsStack[fromModsStack.length - 1]));
             } else {
-                this.tokens[mergeIndex].merge(fromModsStack);
+                (token as TokenWrap).merge(fromModsStack);
             }
         }
-        const last = fromModsStack.pop();
+        const last: mods[] = fromModsStack.pop()!;
         for (; mergeIndex > 1; mergeIndex--) {
             fromModsStack.pop();
         }
@@ -219,21 +225,21 @@ class TokenList {
     }
 }
 
-export function searchForMods(result, fromMods = modList) {
-    const tokenListStack = [new TokenList()];
-    const tokenList = tokenListStack[0];
-    let lastIndex = -1;
+export function searchForMods(result: string, fromMods: mods[] = modList) {
+    const tokenListStack: TokenWrap[] = [new TokenList()];
+    const tokenList: TokenWrap = tokenListStack[0];
+    let lastIndex: number = -1;
 
-    function appendThenPopIfFull(token) {
-        const isFull = tokenListStack[tokenListStack.length - 1].append(token);
+    function appendThenPopIfFull(token: Token) {
+        const isFull: boolean = tokenListStack[tokenListStack.length - 1].append(token);
         if (isFull) {
             tokenListStack.pop();
         }
     }
 
-    for (let i = 0; i < result.length; i++) {
-        const char = result[i];
-        const nextChar = result[i + 1] || " ";
+    for (let i: number = 0; i < result.length; i++) {
+        const char: string = result[i];
+        const nextChar: string = result[i + 1] || " ";
         if (char == "(") {
             if (lastIndex != i - 1) {
                 appendThenPopIfFull(result.slice(lastIndex + 1, i));
@@ -257,7 +263,7 @@ export function searchForMods(result, fromMods = modList) {
                 i++;
                 lastIndex++;
             }
-            const or = new Or(tokenListStack[tokenListStack.length - 1].pop());
+            const or = new Or((tokenListStack[tokenListStack.length - 1] as TokenList).pop()!);
             appendThenPopIfFull(or);
             tokenListStack.push(or);
         } else if (char == "!" || char == "-") {
@@ -282,22 +288,18 @@ export function searchForMods(result, fromMods = modList) {
         appendThenPopIfFull(result.slice(lastIndex + 1, result.length));
     }
 
-    let mods = fromMods.slice();
-    const modsStack = [mods, mods];
+    let mods: mods[] = fromMods.slice();
+    const modsStack: mods[][] = [mods, mods];
     tokenList.merge(modsStack);
     renderFilters(modsStack[modsStack.length - 1]);
 
     if (result.length == 0) {
         window.history.replaceState(null, "", location.pathname);
-
-        if (currentView == 2) {
-            switchView(2);
-        }
     }
 }
 
-function filterNot(mods, prevMods = modList) {
-    const foundMods = [];
+function filterNot(mods: mods[], prevMods: mods[] = modList): mods[] {
+    const foundMods: mods[] = [];
 
     for (const mod of prevMods) {
         if (mods.indexOf(mod) <= -1) {
@@ -308,13 +310,13 @@ function filterNot(mods, prevMods = modList) {
     return foundMods;
 }
 
-function filterBefore(mods, date) {
+function filterBefore(mods: mods[], date: number): mods[] {
 
-    const foundMods = [];
+    const foundMods: mods[] = [];
 
-    for (let i = 0; i < mods.length; i++) { //for every mod..
-        for (let j = 0; j < modTags[mods[i]].length; j++) { //for every tag in that mod..
-            let dateTag = parseInt(modTags[mods[i]][j].toLowerCase().replace("#", "")); 
+    for (let i: number = 0; i < mods.length; i++) { //for every mod..
+        for (let j: number = 0; j < modTags[mods[i]].length; j++) { //for every tag in that mod..
+            let dateTag: number = parseInt(modTags[mods[i]][j].toLowerCase().replace("#", "")); 
             if (!Number.isNaN(dateTag) && dateTag <= date) { //check if tag is a date and push mod to found mods if date is less than the filtered one
                 foundMods.push(mods[i]);
                 break;
@@ -325,13 +327,13 @@ function filterBefore(mods, date) {
     return foundMods;
 }
 
-function filterAfter(mods, date) {
+function filterAfter(mods: mods[], date: number): mods[] {
 
-    const foundMods = [];
+    const foundMods: mods[] = [];
 
-    for (let i = 0; i < mods.length; i++) { //for every mod..
-        for (let j = 0; j < modTags[mods[i]].length; j++) { //for every tag in that mod..
-            let dateTag = parseInt(modTags[mods[i]][j].toLowerCase().replace("#", ""));
+    for (let i: number = 0; i < mods.length; i++) { //for every mod..
+        for (let j: number = 0; j < modTags[mods[i]].length; j++) { //for every tag in that mod..
+            let dateTag: number = parseInt(modTags[mods[i]][j].toLowerCase().replace("#", ""));
             if (!Number.isNaN(dateTag) && dateTag >= date) { //check if tag is a date and push mod to found mods if date is greater than the filtered one
                 foundMods.push(mods[i]);
                 break;
@@ -342,22 +344,22 @@ function filterAfter(mods, date) {
     return foundMods;
 }
 
-function filterDescendants(mods, forked) {
-    const foundMods = [];
+function filterDescendants(mods: mods[], forked: string): mods[] {
+    const foundMods: mods[] = [];
 
     //make a map for easy lookup
-    const refMap = new Map();
-    for (const index in window.Mods) {
-        const Mod = window.Mods[index];
+    const refMap = new Map<mods, Mod>();
+    for (const index in Mods) {
+        const Mod = Mods[index];
         refMap.set(Mod.id, Mod);
     }
-    for (let i = 0; i < mods.length; i++) {
-        const Mod = refMap.get(mods[i]);
+    for (let i: number = 0; i < mods.length; i++) {
+        const Mod: Mod = refMap.get(mods[i])!;
         if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
             foundMods.push(mods[i]);
             continue;
         }
-        for (let j = 0; j < Mod.tree.length; j++) {
+        for (let j: number = 0; j < Mod.tree.length; j++) {
             if (Mod.tree[j].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
                 foundMods.push(mods[i]);
                 break;
@@ -368,23 +370,23 @@ function filterDescendants(mods, forked) {
     return foundMods;
 }
 
-function filterChildren(mods, forked) {
-    const foundMods = [];
+function filterChildren(mods: mods[], forked: string): mods[] {
+    const foundMods: mods[] = [];
 
     //make a map for easy lookup
-    const refMap = new Map();
-    for (const index in window.Mods) {
-        const Mod = window.Mods[index];
+    const refMap = new Map<mods, Mod>();
+    for (const index in Mods) {
+        const Mod = Mods[index];
         refMap.set(Mod.id, Mod);
     }
 
-    for (let i = 0; i < mods.length; i++) {
-        const Mod = refMap.get(mods[i])
+    for (let i: number = 0; i < mods.length; i++) {
+        const Mod: Mod = refMap.get(mods[i])!;
         if (Mod.id.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) { //is the mod
             foundMods.push(mods[i]);
             continue;
         }
-        const lastIndex = Mod.tree.length - 1;
+        const lastIndex: number = Mod.tree.length - 1;
         if (lastIndex >= 0 && Mod.tree[lastIndex].toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(forked) > -1) {
             foundMods.push(mods[i]);
         }
@@ -399,18 +401,18 @@ function filterChildren(mods, forked) {
     return foundMods;
 }
 
-function filterModder(mods, modder) {
-    const foundMods = [];
+function filterModder(mods: mods[], modder: string): mods[] {
+    const foundMods: mods[] = [];
 
     //make a map for easy lookup
-    const refMap = new Map();
-    for (const index in window.Mods) {
-        const Mod = window.Mods[index];
+    const refMap = new Map<mods, Mod>();
+    for (const index in Mods) {
+        const Mod = Mods[index];
         refMap.set(Mod.id, Mod);
     }
 
-    for (let i = 0; i < mods.length; i++) {
-        const Mod = refMap.get(mods[i]);
+    for (let i: number = 0; i < mods.length; i++) {
+        const Mod: Mod = refMap.get(mods[i])!;
         const modderList = typeof Mod.modder == "string" ? [Mod.modder] : Mod.modder
         for (const m of modderList) {
             if (m.toLowerCase().replaceAll(" ", "").replaceAll("'", "").indexOf(modder) > -1) {
@@ -423,19 +425,18 @@ function filterModder(mods, modder) {
     return foundMods;
 }
 
-function filterTag(mods, tag) {
-    const foundMods = [];
+function filterTag(mods: mods[], tag: string): mods[] {
+    const foundMods: mods[] = [];
 
-    for (let i = 0; i < modTags.all.length; i++) { //for every tag..
-        var thing = modTags.all[i];
-        var lowercaseThing = thing.toLowerCase();
+    for (let i: number = 0; i < tags.length; i++) { //for every tag..
+        let lowercaseThing: string = tags[i];
         if (lowercaseThing.indexOf(tag.toLowerCase()) > -1) { //if filtered tag is a slice of a tag..
-            for (let j = 0; j < mods.length; j++) { //for every mod..
+            for (let j: number = 0; j < mods.length; j++) { //for every mod..
                 if (!modTags[mods[j]]) {
                     console.error("Tags not implemented for " + mods[j] + " yet");
                     continue;
                 }
-                for (let k = 0; k < modTags[mods[j]].length; k++) { //for every tag of that mod..
+                for (let k: number = 0; k < modTags[mods[j]].length; k++) { //for every tag of that mod..
                     if (modTags[mods[j]][k].toLowerCase() == (lowercaseThing)) {
                         foundMods.push(mods[j]); //push mod to found mods if that mod has the tag
                         break;
@@ -448,12 +449,12 @@ function filterTag(mods, tag) {
     return foundMods;
 }
 
-function filterPhrase(mods, phrase) {
-    const foundMods = [];
+function filterPhrase(mods: mods[], phrase: string): mods[] {
+    const foundMods: mods[] = [];
 
-    for (let i = 0; i < mods.length; i++) {
-        var thing = mods[i];
-        var lowercaseThing = thing.toLowerCase();
+    for (let i: number = 0; i < mods.length; i++) {
+        let thing: mods = mods[i];
+        let lowercaseThing: string = thing.toLowerCase();
         if (lowercaseThing.indexOf(phrase.toLowerCase()) > -1) {
             foundMods.push(mods[i]);
         } 
@@ -462,17 +463,15 @@ function filterPhrase(mods, phrase) {
     return foundMods;
 }
 
-function filterPhraseWildcard(mods, phrase) {
-    const foundMods = [];
+function filterPhraseWildcard(mods: mods[], phrase: string): mods[] {
+    const foundMods: mods[] = [];
 
-    for (let i = 0; i < mods.length; i++) {
-        var thing = mods[i];
-        var lowercaseThing = thing.toLowerCase();
-        console.log(lowercaseThing);
-        for (let thingIndex = 0; thingIndex < lowercaseThing.length - phrase.length; thingIndex++) {
-            let matches = true;
+    for (let i: number = 0; i < mods.length; i++) {
+        let thing: mods = mods[i];
+        let lowercaseThing: string = thing.toLowerCase();
+        for (let thingIndex: number = 0; thingIndex < lowercaseThing.length - phrase.length; thingIndex++) {
+            let matches: boolean = true;
             for (let charIndex = 0; charIndex < phrase.length; charIndex++) {
-                if (lowercaseThing.includes("paandora")) console.log(charIndex, charIndex + thingIndex, phrase[charIndex], lowercaseThing[charIndex + thingIndex])
                 if (phrase[charIndex] != "*" && phrase[charIndex] != lowercaseThing[charIndex+thingIndex]) {
                     matches = false;
                     break;
@@ -488,29 +487,29 @@ function filterPhraseWildcard(mods, phrase) {
     return foundMods;
 }
 
-function filterSurprise(mods) {
+function filterSurprise(mods: mods[]): mods[] {
     return [mods[Math.floor(Math.random() * mods.length)]];
 }
 
-function renderFilters(mods) {
+function renderFilters(mods: mods[]) {
 
-    for (let i = 0; i < modList.length; i++) {
+    for (let i: number = 0; i < modList.length; i++) {
         if (mods.indexOf(modList[i]) > -1) {
-            document.getElementById(modList[i]).style.display = "flex";
-            document.getElementById("noResults").style.display = "none";
+            document.getElementById(modList[i])!.style.display = "flex";
+            document.getElementById("noResults")!.style.display = "none";
         } else {
-            document.getElementById(modList[i]).style.display = "none";
+            document.getElementById(modList[i])!.style.display = "none";
         }
     }
 
     if (mods.length == 0) {
-        document.getElementById("noResults").style.display = "unset";
+        document.getElementById("noResults")!.style.display = "unset";
     } else {
-        document.getElementById("noResults").style.display = "none";
+        document.getElementById("noResults")!.style.display = "none";
     }
     if (mods.length == modList.length) {
-        document.getElementById("comingSoon").style.display = "flex";
+        document.getElementById("comingSoon")!.style.display = "flex";
     } else {
-        document.getElementById("comingSoon").style.display = "none";
+        document.getElementById("comingSoon")!.style.display = "none";
     }
 }

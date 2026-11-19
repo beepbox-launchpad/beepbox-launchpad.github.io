@@ -1,8 +1,9 @@
+import { HTML } from "./imperative-html/elements-strict";
 
-export const themes = {
-    "dark": `
+export const themes: Record<string, string> = {
+    dark: `
 	`,
-    "light": `
+    light: `
         :root {
             --page-margin: #edecf9;
             --editor-background: #a19cca;
@@ -33,7 +34,7 @@ export const themes = {
             color: var(--inverted-text)
         }
 	`,
-    "midnight": `
+    midnight: `
         :root {
             --page-margin: #070709;
             --editor-background: #070709;
@@ -60,7 +61,7 @@ export const themes = {
             --gradient-background: linear-gradient(to bottom, #373640, #23222b);
         }
 	`,
-    "beepbox": `
+    beepbox: `
         :root {
             --page-margin: #000;
             --editor-background: #1a1a1a;
@@ -87,7 +88,7 @@ export const themes = {
             --gradient-background: linear-gradient(to bottom, #555, #0f0f0f);
         }
 	`,
-    "jummbox": `
+    jummbox: `
         :root {
             --page-margin: #040410;
             --editor-background: #140f22;
@@ -114,7 +115,7 @@ export const themes = {
             --gradient-background: linear-gradient(to bottom, #2a2240, #040410);
         }
 	`,
-    "abyssbox": `
+    abyssbox: `
         :root {
             --page-margin: #1e0915;
             --editor-background: #351427;
@@ -141,7 +142,7 @@ export const themes = {
             --gradient-background: linear-gradient(to bottom, #643650, #440f2e);
         }
 	`,
-    "slarmoosbox": `
+    slarmoosbox: `
         :root {
             --page-margin: #07051a;
             --editor-background: #0a2018;
@@ -183,8 +184,8 @@ export const themes = {
     // for custom fonts
     export const _themeStyleElement = document.head.appendChild(HTML.style({ type: "text/css" }));
 
-    export function setTheme(name) {
-    let theme = themes[name];
+    export function setTheme(name: string) {
+    let theme: string | undefined = themes[name];
         if (theme == undefined) theme = themes["dark"];
         _themeStyleElement.textContent = theme;
         if (window.localStorage.getItem("colorTheme") != name) {
